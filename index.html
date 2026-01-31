@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="tr" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <title>Yıldız Kurs | Ankara'nın En Kapsamlı LGS & Özel Ders Merkezi</title>
+    <meta name="description" content="Ankara Yenimahalle LGS hazırlık, birebir özel ders, profesyonel eğitim koçluğu ve yeni nesil deneme kulübü. Başarıyı şansa bırakmayın.">
+    <meta name="keywords" content="yıldız kurs, ankara dershane, lgs kursu, özel ders, yenimahalle etüt, deneme sınavı, eğitim koçluğu">
+    <meta name="author" content="Yıldız Kurs Yazılım Ekibi">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f1738">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* #######################################################################
+        BÖLÜM 1: CSS RESET & NORMALIZATION (TARAYICI SIFIRLAMA)
+        #######################################################################
+        */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        
+        body {
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        
+        ol, ul {
+            list-style: none;
+        }
+        
+        blockquote, q {
+            quotes: none;
+        }
+        
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        /* #######################################################################
+        BÖLÜM 2: KÖK DEĞİŞKENLER (ROOT VARIABLES)
+        #######################################################################
+        */
+        :root {
+            /* Renk Paleti */
+            --color-primary: #0f1738;
+            --color-primary-dark: #080c1f;
+            --color-primary-light: #1a2355;
+            
+            --color-secondary: #e30613;
+            --color-secondary-dark: #b3000b;
+            --color-secondary-light: #ff4d58;
+            
+            --color-text-main: #333333;
+            --color-text-light: #666666;
+            --color-text-lighter: #999999;
+            
+            --color-bg-body: #ffffff;
+            --color-bg-light: #f8f9fa;
+            --color-bg-dark: #111111;
+            
+            --color-border: #e9ecef;
+            --color-white: #ffffff;
+            --color-black: #000000;
+
+            /* Tipografi */
+            --font-primary: 'Montserrat', sans-serif;
+            --font-secondary: 'Open Sans', sans-serif;
+            
+            /* Ölçüler */
+            --container-width-xl: 1200px;
+            --container-width-lg: 992px;
+            --container-width-md: 768px;
+            --header-height: 90px;
+            
+            /* Gölgeler */
+            --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
+            --shadow-lg: 0 8px 16px rgba(0,0,0,0.15);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.2);
+            
+            /* Geçişler */
+            --transition-fast: all 0.2s ease;
+            --transition-normal: all 0.3s ease-in-out;
+            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* #######################################################################
+        BÖLÜM 3: GELİŞMİŞ GRID SİSTEMİ (LAYOUT ENGINE)
+        #######################################################################
+        */
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (min-width: 576px) {
+            .container { max-width: 540px; }
+        }
+        @media (min-width: 768px) {
+            .container { max-width: 720px; }
+        }
+        @media (min-width: 992px) {
+            .container { max-width: 960px; }
+        }
+        @media (min-width: 1200px) {
+            .container { max-width: 1140px; }
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .col-12, .col-lg-3, .col-lg-4, .col-lg-6, .col-lg-8, .col-md-6, .col-sm-12 {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .col-12 { flex: 0 0 100%; max-width: 100%; }
+
+        @media (min-width: 768px) {
+            .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+        }
+
+        @media (min-width: 992px) {
+            .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+            .col-lg-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+            .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+            .col-lg-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+        }
+
+        /* #######################################################################
+        BÖLÜM 4: GENEL STİL TANIMLAMALARI (GLOBAL STYLES)
+        #######################################################################
+        */
+        body {
+            background-color: var(--color-bg-body);
+            color: var(--color-text-main);
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition-normal);
+        }
+
+        a:hover {
+            color: var(--color-secondary);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        h1 { font-size: 3.5rem; line-height: 1.2; }
+        h2 { font-size: 2.5rem; line-height: 1.3; }
+        h3 { font-size: 1.75rem; line-height: 1.4; }
+        h4 { font-size: 1.5rem; line-height: 1.4; }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: var(--color-text-light);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            border-style: none;
+        }
+
+        /* Yardımcı Sınıflar */
+        .text-center { text-align: center !important; }
+        .text-left { text-align: left !important; }
+        .text-right { text-align: right !important; }
+        .d-flex { display: flex !important; }
+        .justify-content-center { justify-content: center !important; }
+        .justify-content-between { justify-content: space-between !important; }
+        .align-items-center { align-items: center !important; }
+        .w-100 { width: 100% !important; }
+        .h-100 { height: 100% !important; }
+        .m-0 { margin: 0 !important; }
+        .p-0 { padding: 0 !important; }
+        
+        .section-padding {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        
+        .bg-light {
+            background-color: var(--color-bg-light) !important;
+        }
+
+        /* #######################################################################
+        BÖLÜM 5: UI BİLEŞENLERİ (BUTTONS, INPUTS, ETC.)
+        #######################################################################
+        */
+        .btn {
+            display: inline-block;
+            font-weight: 600;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border: 2px solid transparent;
+            padding: 12px 35px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            border-radius: 5px;
+            transition: var(--transition-normal);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            font-family: var(--font-primary);
+        }
+
+        .btn-primary {
+            color: var(--color-white);
+            background-color: var(--color-secondary);
+            border-color: var(--color-secondary);
+            box-shadow: 0 4px 10px rgba(227, 6, 19, 0.3);
+        }
+
+        .btn-primary:hover {
+            color: var(--color-white);
+            background-color: var(--color-secondary-dark);
+            border-color: var(--color-secondary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(227, 6, 19, 0.4);
+        }
+
+        .btn-outline-white {
+            color: var(--color-white);
+            background-color: transparent;
+            border-color: var(--color-white);
+        }
+
+        .btn-outline-white:hover {
+            color: var(--color-primary);
+            background-color: var(--color-white);
+            border-color: var(--color-white);
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .section-header span {
+            display: block;
+            color: var(--color-secondary);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 0;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--color-secondary);
+            border-radius: 2px;
+        }
+
+        /* #######################################################################
+        BÖLÜM 6: HEADER & NAVIGATION (ÜST MENÜ YAPISI)
+        #######################################################################
+        */
+        .top-bar {
+            background-color: var(--color-primary);
+            color: rgba(255, 255, 255, 0.9);
+            padding-top: 12px;
+            padding-bottom: 12px;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 1002;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-info-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .top-info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.95);
+            transition: var(--transition-fast);
+        }
+
+        .top-info-item i {
+            color: var(--color-secondary);
+            font-size: 14px;
+        }
+
+        .top-info-item:hover {
+            color: var(--color-secondary);
+            text-decoration: underline;
+        }
+
+        .top-social-list {
+            display: flex;
+            gap: 15px;
+        }
+
+        .top-social-link {
+            color: var(--color-white);
+            font-size: 14px;
+            transition: var(--transition-fast);
+        }
+
+        .top-social-link:hover {
+            color: var(--color-secondary);
+            transform: translateY(-2px);
+        }
+
+        .main-header {
+            background-color: var(--color-white);
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+            transition: var(--transition-normal);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .brand-logo img {
+            height: 65px;
+            width: auto;
+            transition: var(--transition-fast);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-left: 30px;
+        }
+
+        .nav-link {
+            font-family: var(--font-primary);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            padding: 10px 0;
+            position: relative;
+            transition: var(--transition-fast);
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-secondary);
+            transition: var(--transition-normal);
+        }
+
+        .nav-link:hover {
+            color: var(--color-secondary);
+        }
+
+        .nav-link:hover::before {
+            width: 100%;
+        }
+
+        .header-cta-btn {
+            margin-left: 30px;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* #######################################################################
+        BÖLÜM 7: HERO SLIDER (ANA GİRİŞ SLAYTI)
+        #######################################################################
+        */
+        .hero-section {
+            position: relative;
+            height: 85vh;
+            min-height: 600px;
+            width: 100%;
+            overflow: hidden;
+            background-color: var(--color-black);
+        }
+
+        .hero-video-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(15, 23, 56, 0.9) 0%, rgba(15, 23, 56, 0.6) 100%);
+            z-index: 2;
+        }
+
+        .hero-content-wrapper {
+            position: relative;
+            z-index: 3;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--color-white);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(227, 6, 19, 0.2);
+            border: 1px solid var(--color-secondary);
+            color: var(--color-white);
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            color: var(--color-white);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.3s forwards;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.6s forwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.9s forwards;
+        }
+
+        /* #######################################################################
+        BÖLÜM 8: FEATURES (ÖZELLİK KUTULARI)
+        #######################################################################
+        */
+        .features-section {
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+            padding-bottom: 60px;
+        }
+
+        .feature-card {
+            background-color: var(--color-white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            height: 100%;
+            transition: var(--transition-normal);
+            border-bottom: 4px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--color-secondary);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .feature-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            transition: var(--transition-normal);
+        }
+
+        .feature-icon-wrapper i {
+            font-size: 2rem;
+            color: var(--color-primary);
+        }
+
+        .feature-card:hover .feature-icon-wrapper {
+            background-color: var(--color-primary);
+        }
+
+        .feature-card:hover .feature-icon-wrapper i {
+            color: var(--color-white);
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--color-primary);
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* #######################################################################
+        BÖLÜM 9: ABOUT SECTION (HAKKIMIZDA)
+        #######################################################################
+        */
+        .about-image-wrapper {
+            position: relative;
+            padding-right: 30px;
+            padding-bottom: 30px;
+        }
+
+        .about-main-image {
+            border-radius: 10px;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+            padding: 30px;
+            border-radius: 10px;
+            z-index: 3;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            min-width: 180px;
+        }
+
+        .experience-year {
+            display: block;
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+            font-family: var(--font-primary);
+        }
+
+        .experience-text {
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .about-content-list {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .about-list-item {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            color: var(--color-text-main);
+        }
+
+        .about-list-icon {
+            color: var(--color-secondary);
+            background-color: rgba(227, 6, 19, 0.1);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 0.8rem;
+        }
+
+        /* #######################################################################
+        BÖLÜM 10: SERVICES (HİZMETLER)
+        #######################################################################
+        */
+        .service-card {
+            background-color: var(--color-white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-normal);
+            margin-bottom: 30px;
+            border: 1px solid var(--color-border);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: transparent;
+        }
+
+        .service-image-box {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .service-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .service-card:hover .service-image-box img {
+            transform: scale(1.1);
+        }
+
+        .service-card-body {
+            padding: 30px;
+        }
+
+        .service-card-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--color-primary);
+        }
+
+        .service-card-text {
+            margin-bottom: 20px;
+            color: var(--color-text-light);
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--color-secondary);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .service-link i {
+            margin-left: 8px;
+            transition: var(--transition-fast);
+        }
+
+        .service-link:hover i {
+            margin-left: 12px;
+        }
+
+        /* #######################################################################
+        BÖLÜM 11: GALLERY (MASONRY SIMULATION)
+        #######################################################################
+        */
+        .gallery-filter-menu {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-filter-btn {
+            background-color: transparent;
+            border: 2px solid var(--color-border);
+            padding: 8px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            color: var(--color-text-light);
+            cursor: pointer;
+            transition: var(--transition-fast);
+            font-family: var(--font-primary);
+        }
+
+        .gallery-filter-btn:hover,
+        .gallery-filter-btn.active {
+            background-color: var(--color-secondary);
+            border-color: var(--color-secondary);
+            color: var(--color-white);
+        }
+
+        .gallery-grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 260px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-normal);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 56, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition-normal);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-zoom-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            font-size: 1.2rem;
+            transform: scale(0);
+            transition: var(--transition-normal);
+        }
+
+        .gallery-item:hover .gallery-zoom-icon {
+            transform: scale(1);
+        }
+
+        /* #######################################################################
+        BÖLÜM 12: CONTACT AREA (İLETİŞİM)
+        #######################################################################
+        */
+        .contact-info-box {
+            background-color: var(--color-white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            height: 100%;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 35px;
+        }
+
+        .contact-detail-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon-wrapper {
+            width: 55px;
+            height: 55px;
+            background-color: rgba(15, 23, 56, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--color-secondary);
+            margin-right: 20px;
+            flex-shrink: 0;
+            transition: var(--transition-fast);
+        }
+
+        .contact-detail-item:hover .contact-icon-wrapper {
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+        }
+
+        .contact-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--color-primary);
+        }
+
+        .contact-link {
+            color: var(--color-text-main);
+            font-weight: 600;
+            transition: var(--transition-fast);
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .contact-link:hover {
+            color: var(--color-secondary);
+            text-decoration: underline;
+        }
+
+        .contact-map-wrapper {
+            height: 100%;
+            min-height: 450px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* #######################################################################
+        BÖLÜM 13: FOOTER (ALT KISIM)
+        #######################################################################
+        */
+        .footer-section {
+            background-color: #0b1129;
+            color: #aab0c6;
+            padding-top: 80px;
+            margin-top: 50px;
+        }
+
+        .footer-widget-title {
+            color: var(--color-white);
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-widget-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--color-secondary);
+        }
+
+        .footer-nav-list li {
+            margin-bottom: 12px;
+        }
+
+        .footer-nav-link {
+            color: #aab0c6;
+            transition: var(--transition-fast);
+            display: inline-block;
+        }
+
+        .footer-nav-link:hover {
+            color: var(--color-secondary);
+            padding-left: 5px;
+        }
+
+        .footer-contact-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .footer-contact-list i {
+            color: var(--color-secondary);
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+
+        .footer-copyright {
+            background-color: #050814;
+            padding: 25px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* #######################################################################
+        BÖLÜM 14: EXTRAS & ANIMATIONS
+        #######################################################################
+        */
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: #25d366;
+            color: #ffffff;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 9999;
+            transition: var(--transition-normal);
+            animation: pulse-animation 2s infinite;
+        }
+
+        .whatsapp-float-btn:hover {
+            transform: scale(1.1);
+            color: #fff;
+        }
+
+        /* Modal (Popup) */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-container {
+            background-color: var(--color-white);
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: var(--shadow-xl);
+            animation: slideDown 0.4s ease;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            color: #999;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .modal-close-btn:hover {
+            color: var(--color-secondary);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--color-border);
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition-fast);
+        }
+
+        .form-input:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(15, 23, 56, 0.1);
+        }
+
+        /* Animasyon Keyframes */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* #######################################################################
+        BÖLÜM 15: RESPONSIVE MEDIA QUERIES (MOBİL UYUMLULUK)
+        #######################################################################
+        */
+        @media (max-width: 991.98px) {
+            .top-bar { display: none; }
+            .hero-title { font-size: 2.5rem; }
+            .mobile-menu-toggle { display: block; }
+            
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                display: none;
+                border-top: 3px solid var(--color-secondary);
+            }
+            
+            .nav-menu.active { display: flex; }
+            .nav-item { margin: 10px 0; width: 100%; text-align: center; }
+            .nav-link { display: block; width: 100%; }
+            .header-cta-btn { display: none; }
+            
+            .about-image-wrapper { margin-bottom: 50px; padding: 0; }
+            .experience-badge { padding: 20px; min-width: auto; }
+            .experience-year { font-size: 2.5rem; }
+        }
+
+        @media (max-width: 575.98px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            .hero-buttons { flex-direction: column; width: 100%; }
+            .hero-buttons .btn { width: 100%; margin: 5px 0; }
+            .feature-card { margin-bottom: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page-loader" style="position:fixed; top:0; left:0; width:100%; height:100%; background-color:#0f1738; z-index:99999; display:flex; justify-content:center; align-items:center; transition: opacity 0.5s ease;">
+        <div class="spinner" style="width:60px; height:60px; border:4px solid rgba(255,255,255,0.2); border-top-color:#e30613; border-radius:50%; animation:spin 1s infinite linear;"></div>
+    </div>
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-info-list">
+                    <a href="tel:03123460633" class="top-info-item">
+                        <i class="fas fa-phone-alt"></i> 0312 346 06 33
+                    </a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Aşağı+Yahyalar+Mah.+994+Cad.+No:6/A+Yenimahalle+ANKARA" target="_blank" class="top-info-item">
+                        <i class="fas fa-map-marker-alt"></i> Aşağı Yahyalar Mah. 994 Cad. No:6/A
+                    </a>
+                    <span class="top-info-item" style="cursor: default;">
+                        <i class="far fa-clock"></i> Her Gün: 08.00 - 19.30
+                    </span>
+                </div>
+                
+                <div class="top-social-list">
+                    <a href="https://instagram.com/yildizkursankara" target="_blank" class="top-social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="top-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="top-social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="brand-logo">
+                    <img src="img/logo.jpg" alt="Yıldız Kurs Logo">
+                </a>
+
+                <button class="mobile-menu-toggle" aria-label="Menüyü Aç">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <nav class="nav-menu">
+                    <div class="nav-item">
+                        <a href="index.html" class="nav-link">ANASAYFA</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#about" class="nav-link">KURUMSAL</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#services" class="nav-link">EĞİTİMLERİMİZ</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#gallery" class="nav-link">GALERİ</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#contact" class="nav-link">İLETİŞİM</a>
+                    </div>
+                </nav>
+
+                <div class="header-cta-btn">
+                    <button onclick="openModal()" class="btn btn-primary">RANDEVU AL</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <video autoplay muted loop playsinline class="hero-video-background">
+            <source src="img/slider-video.mp4" type="video/mp4">
+        </video>
+        
+        <div class="hero-overlay"></div>
+        
+        <div class="container h-100">
+            <div class="hero-content-wrapper">
+                <div>
+                    <span class="hero-badge">2026 ERKEN KAYIT DÖNEMİ BAŞLADI</span>
+                    <h1 class="hero-title">GELECEĞİN YILDIZLARINI<br>YETİŞTİRİYORUZ</h1>
+                    <p class="hero-description">
+                        Ankara Yenimahalle'de LGS Hazırlık, Birebir Özel Ders ve Yeni Nesil Deneme Kulübü ile
+                        başarıyı şansa bırakmayın. Profesyonel kadro, butik sınıflar ve tam öğrenme modeli.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary" style="margin: 0 10px;">PROGRAMLARI İNCELE</a>
+                        <a href="#contact" class="btn btn-outline-white" style="margin: 0 10px;">BİZE ULAŞIN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="features-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-30">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper"><i class="fas fa-users"></i></div>
+                        <h3>12 Kişilik Sınıflar</h3>
+                        <p>Kalabalıkta kaybolmayın. Butik sınıflarda birebir ilgi ve yüksek odaklanma.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-30">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h3>Uzman Kadro</h3>
+                        <p>Alanında en az 10 yıl deneyimli, sınav sistemine tam hakim öğretmenler.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-30">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper"><i class="fas fa-chart-line"></i></div>
+                        <h3>Ölçme & Değerlendirme</h3>
+                        <p>Haftalık düzenli denemeler ve yapay zeka destekli detaylı karne analizi.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-30">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper"><i class="fas fa-book-open"></i></div>
+                        <h3>Yeni Nesil Yayınlar</h3>
+                        <p>LGS müfredatına %100 uyumlu, zengin kaynak ve döküman desteği.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-50">
+                    <div class="about-image-wrapper">
+                        <img src="img/kutu-etut.jpg" alt="Yıldız Kurs Sınıf Ortamı" class="about-main-image">
+                        <div class="experience-badge">
+                            <span class="experience-year">15+</span>
+                            <p class="experience-text">YILLIK EĞİTİM<br>TECRÜBESİ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-header text-left" style="margin-bottom: 30px;">
+                        <span>BİZ KİMİZ?</span>
+                        <h2>Eğitimde Mükemmeliyetin<br>Adresi Yıldız Kurs</h2>
+                    </div>
+                    <p>
+                        Yıldız Kurs olarak, her öğrencinin potansiyelini en üst düzeye çıkarmayı hedefliyoruz. 
+                        Ankara Yenimahalle'deki modern kampüsümüzde, öğrencilerimizi sadece akademik olarak değil, 
+                        sosyal ve zihinsel olarak da geleceğe hazırlıyoruz.
+                    </p>
+                    <p>
+                        Ezberci eğitimden uzak, analitik düşünmeyi teşvik eden, sorgulayan ve çözüm üreten bireyler
+                        yetiştirmek temel misyonumuzdur.
+                    </p>
+                    
+                    <div class="about-content-list">
+                        <div class="about-list-item">
+                            <span class="about-list-icon"><i class="fas fa-check"></i></span>
+                            Profesyonel Eğitim Koçluğu
+                        </div>
+                        <div class="about-list-item">
+                            <span class="about-list-icon"><i class="fas fa-check"></i></span>
+                            Sınav Kaygısı Yönetimi
+                        </div>
+                        <div class="about-list-item">
+                            <span class="about-list-icon"><i class="fas fa-check"></i></span>
+                            Akıllı Kütüphane Sistemi
+                        </div>
+                        <div class="about-list-item">
+                            <span class="about-list-icon"><i class="fas fa-check"></i></span>
+                            7/24 Soru Çözüm Desteği
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 40px;">KURUMU ZİYARET ET</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span>NELER YAPIYORUZ?</span>
+                <h2>Eğitim Programlarımız</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image-box">
+                            <img src="img/kutu-lgs.jpg" alt="LGS Hazırlık">
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">LGS Hazırlık</h3>
+                            <p class="service-card-text">8. sınıf öğrencilerine özel, yeni nesil sorularla zenginleştirilmiş yoğun kamp programı.</p>
+                            <a href="lgs.html" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image-box">
+                            <img src="img/kutu-ozel.jpg" alt="Özel Ders">
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Özel Ders</h3>
+                            <p class="service-card-text">Matematik, Fen ve Türkçe başta olmak üzere birebir eksik kapatma dersleri.</p>
+                            <a href="ozel-ders.html" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image-box">
+                            <img src="img/kutu-deneme.jpg" alt="Deneme Kulübü">
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Deneme Kulübü</h3>
+                            <p class="service-card-text">Gerçek sınav provası. Türkiye geneli denemeler ve detaylı karne analizi.</p>
+                            <a href="deneme.html" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image-box">
+                            <img src="img/kutu-etut.jpg" alt="Etüt Sistemi">
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Etüt Sistemi</h3>
+                            <p class="service-card-text">Okul sonrası ödev takibi, konu tekrarı ve sessiz çalışma ortamı.</p>
+                            <a href="etut.html" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image-box">
+                            <img src="img/kutu-yaz.jpg" alt="Yaz Okulu">
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Yaz Okulu</h3>
+                            <p class="service-card-text">Hem eğlence hem eğitim. Sosyal aktivitelerle birleştirilmiş yaz programı.</p>
+                            <a href="yaz-okulu.html" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image-box">
+                            <img src="img/kutu-ingilizce.jpg" alt="İngilizce Kursu">
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">İngilizce Kursu</h3>
+                            <p class="service-card-text">Konuşma odaklı, pratik İngilizce eğitimi ve okul desteği.</p>
+                            <a href="ingilizce.html" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span>FOTOĞRAFLARLA BİZ</span>
+                <h2>Kursumuzdan Kareler</h2>
+            </div>
+
+            <div class="gallery-filter-menu">
+                <button class="gallery-filter-btn active" onclick="filterGallery('all')">Tümü</button>
+                <button class="gallery-filter-btn" onclick="filterGallery('sinif')">Sınıflar</button>
+                <button class="gallery-filter-btn" onclick="filterGallery('etkinlik')">Etkinlikler</button>
+            </div>
+
+            <div class="gallery-grid-wrapper">
+                <div class="gallery-item category-sinif">
+                    <img src="img/galeri-1.jpg" alt="Sınıf">
+                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
+                </div>
+                <div class="gallery-item category-sinif">
+                    <img src="img/galeri-2.jpg" alt="Sınıf">
+                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
+                </div>
+                <div class="gallery-item category-etkinlik">
+                    <img src="img/galeri-3.jpg" alt="Etkinlik">
+                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
+                </div>
+                <div class="gallery-item category-etkinlik">
+                    <img src="img/galeri-4.jpg" alt="Etkinlik">
+                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
+                </div>
+                <div class="gallery-item category-sinif">
+                    <img src="img/galeri-5.jpg" alt="Sınıf">
+                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
+                </div>
+                <div class="gallery-item category-etkinlik">
+                    <img src="img/galeri-6.jpg" alt="Etkinlik">
+                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
+                </div>
+                <div class="gallery-item category-sinif">
+                    <img src="img/galeri-7.jpg" alt="Sınıf">
+                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
+                </div>
+                <div class="gallery-item category-etkinlik">
+                    <img src="img/galeri-8.jpg" alt="Etkinlik">
+                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span>BİZE ULAŞIN</span>
+                <h2>İletişim Bilgileri</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 mb-30">
+                    <div class="contact-info-box">
+                        <div class="contact-detail-item">
+                            <div class="contact-icon-wrapper"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-text">
+                                <h4>Adres</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Aşağı+Yahyalar+Mah.+994+Cad.+No:6/A+Yenimahalle+ANKARA" target="_blank" class="contact-link">
+                                    Aşağı Yahyalar Mah. 994 Cad.<br>No:6/A Yenimahalle/ANKARA
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-icon-wrapper"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-text">
+                                <h4>Telefon</h4>
+                                <a href="tel:03123460633" class="contact-link">0312 346 06 33</a>
+                                <a href="tel:05324790668" class="contact-link">0532 479 06 68</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-icon-wrapper"><i class="fas fa-clock"></i></div>
+                            <div class="contact-text">
+                                <h4>Çalışma Saatleri</h4>
+                                <p style="margin:0; color:var(--color-text-light);">
+                                    Haftanın Her Günü:<br>
+                                    08.00 - 19.30
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-icon-wrapper"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <h4>E-Posta</h4>
+                                <p style="margin:0; color:var(--color-text-light);">bilgi@yildizkurs.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="contact-map-wrapper">
+                       <iframe 
+    src="https://maps.google.com/maps?q=Aşağı%20Yahyalar%20Mah.%20994%20Cad.%20No:6/A%20Yenimahalle/ANKARA&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+    width="100%" 
+    height="100%" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget-title">Yıldız Kurs</div>
+                    <p style="margin-bottom: 25px; line-height: 1.8;">
+                        Yıldız Kurs, eğitimde kaliteyi ve öğrenci başarısını ilke edinmiş, Ankara'nın öncü eğitim kurumlarından biridir.
+                        Modern sınıflarımız, teknolojik altyapımız ve uzman kadromuzla geleceği inşa ediyoruz.
+                    </p>
+                    <div class="top-social-list">
+                        <a href="#" class="top-social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="top-social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="top-social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget-title">Hızlı Menü</div>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html" class="footer-nav-link">Anasayfa</a></li>
+                        <li><a href="#about" class="footer-nav-link">Kurumsal</a></li>
+                        <li><a href="#services" class="footer-nav-link">Eğitimler</a></li>
+                        <li><a href="#gallery" class="footer-nav-link">Galeri</a></li>
+                        <li><a href="#contact" class="footer-nav-link">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-50">
+                    <div class="footer-widget-title">Programlar</div>
+                    <ul class="footer-nav-list">
+                        <li><a href="lgs.html" class="footer-nav-link">LGS Hazırlık</a></li>
+                        <li><a href="ozel-ders.html" class="footer-nav-link">Özel Ders</a></li>
+                        <li><a href="deneme.html" class="footer-nav-link">Deneme Kulübü</a></li>
+                        <li><a href="etut.html" class="footer-nav-link">Etüt Sistemi</a></li>
+                        <li><a href="yaz-okulu.html" class="footer-nav-link">Yaz Okulu</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-50">
+                    <div class="footer-widget-title">İletişim</div>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Aşağı+Yahyalar+Mah.+994+Cad.+No:6/A+Yenimahalle+ANKARA" target="_blank" class="footer-nav-link">
+                                Aşağı Yahyalar Mah. 994 Cad. No:6/A Yenimahalle / ANKARA
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:03123460633" class="footer-nav-link">0312 346 06 33</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>bilgi@yildizkurs.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                <p>© 2026 Yıldız Kurs Eğitim Kurumları. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/905324790668" class="whatsapp-float-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div id="kayitModal" class="modal-overlay">
+        <div class="modal-container">
+            <span class="modal-close-btn" onclick="closeModal()">&times;</span>
+            <div class="text-center" style="margin-bottom:25px;">
+                <h3 style="color:var(--color-primary);">ERKEN KAYIT FIRSATI</h3>
+                <p>Formu doldurun, eğitim danışmanlarımız size özel indirimlerle dönüş yapsın.</p>
+            </div>
+            <form onsubmit="event.preventDefault(); alert('Talebiniz alınmıştır. En kısa sürede aranacaksınız.'); closeModal();">
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Adınız Soyadınız" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-input" placeholder="Telefon Numaranız" required>
+                </div>
+                <div class="form-group">
+                    <select class="form-input">
+                        <option value="">İlgilendiğiniz Program</option>
+                        <option value="LGS">LGS Hazırlık</option>
+                        <option value="Ozel">Özel Ders</option>
+                        <option value="Deneme">Deneme Kulübü</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">BENİ ARAYIN</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 1. Sayfa Yüklenince Loader'ı Gizle
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('page-loader');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        });
+
+        // 2. Mobil Menü Aç/Kapa
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // 3. Galeri Filtreleme
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.gallery-filter-btn');
+
+            // Buton aktiflik durumu
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains('category-' + category)) {
+                    item.style.display = 'block';
+                    // Animasyonlu görünüm
+                    item.style.opacity = '0';
+                    setTimeout(() => item.style.opacity = '1', 50);
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // 4. Modal (Popup) İşlemleri
+        const modal = document.getElementById('kayitModal');
+        
+        function openModal() {
+            modal.style.display = 'flex';
+        }
+        
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Modal dışına tıklayınca kapatma
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
