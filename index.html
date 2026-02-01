@@ -682,11 +682,27 @@
             letter-spacing: 1px;
         }
 
-        .about-content-list {
+       .about-content-list {
             margin-top: 30px;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr; /* Zorla 2'ye böl */
             gap: 20px;
+        }
+
+        /* Mobil Ekran Ayarı (Sadece telefonlarda devreye girer) */
+        @media (max-width: 575.98px) {
+            .about-content-list {
+                gap: 10px; /* Boşlukları azalt */
+            }
+            .about-list-item {
+                font-size: 0.8rem; /* Yazıyı biraz küçült ki sığsın */
+            }
+            .about-list-icon {
+                width: 20px;
+                height: 20px;
+                font-size: 0.7rem;
+                margin-right: 8px; /* İkonu da orantılı küçült */
+            }
         }
 
         .about-list-item {
@@ -1127,7 +1143,7 @@
         BÖLÜM 15: RESPONSIVE MEDIA QUERIES (MOBİL UYUMLULUK)
         #######################################################################
         */
-        @media (max-width: 991.98px) {
+     @media (max-width: 991.98px) {
             .top-bar { display: none; }
             .hero-title { font-size: 2.5rem; }
             .mobile-menu-toggle { display: block; }
@@ -1155,6 +1171,26 @@
             .experience-year { font-size: 2.5rem; }
         }
 
+        /* YENİ EKLENEN ÖZELLİKLER */
+        .highlight-item {
+            color: #e30613 !important;
+            font-weight: 800 !important;
+        }
+
+        .new-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #e30613;
+            color: #ffffff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 0.75rem;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            letter-spacing: 1px;
+        }
         @media (max-width: 575.98px) {
             h1 { font-size: 2.2rem; }
             h2 { font-size: 1.8rem; }
@@ -1419,15 +1455,16 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
+               <div class="col-lg-4 col-md-6">
+                    <div class="service-card" style="position: relative;">
+                        <div class="new-badge">YENİ</div>
                         <div class="service-image-box">
-                            <img src="img/kutu-ingilizce.jpg" alt="İngilizce Kursu">
+                            <img src="img/kutu-ingilizce.jpg" alt="KAGS 2028">
                         </div>
                         <div class="service-card-body">
-                            <h3 class="service-card-title">İngilizce Kursu</h3>
-                            <p class="service-card-text">Konuşma odaklı, pratik İngilizce eğitimi ve okul desteği.</p>
-                            <a href="ingilizce.html" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
+                            <h3 class="service-card-title">KAGS 2028</h3>
+                            <p class="service-card-text">LGS'nin yerini alacak yeni sınav sistemine (KAGS) bugünden, öncü kadromuzla hazırlanın.</p>
+                            <a href="#" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
