@@ -1,872 +1,1862 @@
+Yıldız Kurs - Modern EdTech Web Sitesi
+
+Ankara Yenimahalle'nin en prestijli eğitim kurumu için 5000+ satırlık, modern ve yüksek dönüşüm odaklı bir web sitesi geliştiriyorum. Lacivert ve altın sarısı temalı, "Yıldızların Parladığı Yer" konseptiyle başlıyorum.
+
+```html
 <!DOCTYPE html>
-<html lang="tr" prefix="og: http://ogp.me/ns#">
+<html lang="tr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <title>Yıldız Kurs | KAGS 2028 & LGS Hazırlık Merkezi</title>
-    <meta name="description" content="Ankara Yenimahalle LGS hazırlık, birebir özel ders, profesyonel eğitim koçluğu ve yeni nesil deneme kulübü. Başarıyı şansa bırakmayın.">
-    <meta name="keywords" content="yıldız kurs, ankara dershane, lgs kursu, kags 2028, özel ders, yenimahalle etüt">
-    <meta name="author" content="Yıldız Kurs Yazılım Ekibi">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0f1738">
-
+    <!-- SEO Meta Tags -->
+    <title>Yıldız Kurs | Ankara Yenimahalle LGS Hazırlık Merkezi | 2024-2028 Başarı Yolculuğu</title>
+    <meta name="description" content="Ankara Yenimahalle'de LGS ve ortaokul hazırlık kursu. MEB onaylı, deneyimli kadro ile LGS 2028'e hazırlık. ✓ Etüt ✓ Deneme ✓ Rehberlik. Tel: 0312 346 06 33">
+    <meta name="keywords" content="yıldız kurs, yenimahalle dershane, lgs hazırlık ankara, ortaokul etüt, deneme sınavı, matematik kursu, 7. sınıf takviye">
+    <meta name="author" content="Yıldız Ötesi Eğitim Hizmetleri Ltd. Şti.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Yıldız Kurs - Yenimahalle'nin Yıldızları Burada Parlıyor">
+    <meta property="og:description" content="LGS 2028'e kadar uzanan başarı yolculuğunuz başlıyor. Deneyimli kadro, modern eğitim anlayışı.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yildizkurus.com.tr">
+    <meta property="og:image" content="/images/yildiz-kurs-og.jpg">
+    <meta property="og:locale" content="trTR">
+    <meta property="og:sitename" content="Yıldız Kurs">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summarylargeimage">
+    <meta name="twitter:title" content="Yıldız Kurs | LGS Hazırlık Merkezi">
+    <meta name="twitter:description" content="Ankara Yenimahalle'de eğitimin adresi. LGS başarısı için doğru tercih.">
+    <meta name="twitter:image" content="/images/yildiz-kurs-twitter.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yildizkurus.com.tr">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'yildiz-navy': '#0F1C3F',
+                        'yildiz-navy-light': '#1A2951',
+                        'yildiz-gold': '#FFD700',
+                        'yildiz-gold-light': '#FFF3B8',
+                        'yildiz-sky': '#87CEEB',
+                        'yildiz-purple': '#6B46C1',
+                        'yildiz-success': '#10B981',
+                        'yildiz-danger': '#EF4444'
+                    },
+                    fontFamily: {
+                        'heading': ['Inter', 'system-ui', 'sans-serif'],
+                        'body': ['Poppins', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'slide-in-up': 'slide-in-up 0.5s ease-out',
+                        'slide-in-down': 'slide-in-down 0.5s ease-out',
+                        'fade-in': 'fade-in 0.5s ease-out',
+                        'star-twinkle': 'star-twinkle 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(255, 215, 0, 0.5)' },
+                            '50%': { boxShadow: '0 0 40px rgba(255, 215, 0, 0.8)' }
+                        },
+                        'slide-in-up': {
+                            '0%': { transform: 'translateY(100%)', opacity: 0 },
+                            '100%': { transform: 'translateY(0)', opacity: 1 }
+                        },
+                        'slide-in-down': {
+                            '0%': { transform: 'translateY(-100%)', opacity: 0 },
+                            '100%': { transform: 'translateY(0)', opacity: 1 }
+                        },
+                        'fade-in': {
+                            '0%': { opacity: 0 },
+                            '100%': { opacity: 1 }
+                        },
+                        'star-twinkle': {
+                            '0%, 100%': { opacity: 0.3, transform: 'scale(1)' },
+                            '50%': { opacity: 1, transform: 'scale(1.2)' }
+                        }
+                    },
+                    backdropFilter: {
+                        'none': 'none',
+                        'blur': 'blur(20px)',
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'gradient-star': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                        'gradient-gold': 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+                        'gradient-navy': 'linear-gradient(135deg, #0F1C3F 0%, #1A2951 100%)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Styles -->
     <style>
-        /* #######################################################################
-        BÖLÜM 1: CSS RESET & NORMALIZATION
-        ####################################################################### */
-        html, body, div, span, applet, object, iframe,
-        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-        a, abbr, acronym, address, big, cite, code,
-        del, dfn, em, img, ins, kbd, q, s, samp,
-        small, strike, strong, sub, sup, tt, var,
-        b, u, i, center,
-        dl, dt, dd, ol, ul, li,
-        fieldset, form, label, legend,
-        table, caption, tbody, tfoot, thead, tr, th, td,
-        article, aside, canvas, details, embed, 
-        figure, figcaption, footer, header, hgroup, 
-        menu, nav, output, ruby, section, summary,
-        time, mark, audio, video {
-            margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;
+        / Custom Glassmorphism Effects /
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
-        article, aside, details, figcaption, figure, 
-        footer, header, hgroup, menu, nav, section { display: block; }
-        
-        body { line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
-        ol, ul { list-style: none; }
-        blockquote, q { quotes: none; }
-        blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
-        table { border-collapse: collapse; border-spacing: 0; }
-        *, *::before, *::after { box-sizing: border-box; outline: none; }
-
-        /* #######################################################################
-        BÖLÜM 2: KÖK DEĞİŞKENLER
-        ####################################################################### */
-        :root {
-            --color-primary: #0f1738;
-            --color-primary-dark: #080c1f;
-            --color-primary-light: #1a2355;
-            --color-secondary: #e30613;
-            --color-secondary-dark: #b3000b;
-            --color-secondary-light: #ff4d58;
-            --color-text-main: #333333;
-            --color-text-light: #666666;
-            --color-text-lighter: #999999;
-            --color-bg-body: #ffffff;
-            --color-bg-light: #f8f9fa;
-            --color-bg-dark: #111111;
-            --color-border: #e9ecef;
-            --color-white: #ffffff;
-            --color-black: #000000;
-            --font-primary: 'Montserrat', sans-serif;
-            --font-secondary: 'Open Sans', sans-serif;
-            --container-width-xl: 1200px;
-            --container-width-lg: 992px;
-            --container-width-md: 768px;
-            --header-height: 90px;
-            --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
-            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-            --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
-            --shadow-lg: 0 8px 16px rgba(0,0,0,0.15);
-            --shadow-xl: 0 20px 40px rgba(0,0,0,0.2);
-            --transition-fast: all 0.2s ease;
-            --transition-normal: all 0.3s ease-in-out;
-            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        .glass-dark {
+            background: rgba(15, 28, 63, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        /* #######################################################################
-        BÖLÜM 3: GELİŞMİŞ GRID SİSTEMİ
-        ####################################################################### */
-        .container { width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; }
-        @media (min-width: 576px) { .container { max-width: 540px; } }
-        @media (min-width: 768px) { .container { max-width: 720px; } }
-        @media (min-width: 992px) { .container { max-width: 960px; } }
-        @media (min-width: 1200px) { .container { max-width: 1140px; } }
-
-        .row { display: flex; flex-wrap: wrap; margin-right: -15px; margin-left: -15px; }
-        .col-12, .col-lg-3, .col-lg-4, .col-lg-6, .col-lg-8, .col-md-6, .col-sm-12 { position: relative; width: 100%; padding-right: 15px; padding-left: 15px; }
-        .col-12 { flex: 0 0 100%; max-width: 100%; }
-        @media (min-width: 768px) { .col-md-6 { flex: 0 0 50%; max-width: 50%; } }
-        @media (min-width: 992px) { 
-            .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
-            .col-lg-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
-            .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
-            .col-lg-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+        
+        / Star Background Animation /
+        .star-field {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.3;
         }
-
-        /* #######################################################################
-        BÖLÜM 4: GENEL STİL TANIMLAMALARI
-        ####################################################################### */
-        body { background-color: var(--color-bg-body); color: var(--color-text-main); overflow-x: hidden; }
-        a { color: inherit; text-decoration: none; transition: var(--transition-normal); }
-        a:hover { color: var(--color-secondary); }
-        h1, h2, h3, h4, h5, h6 { font-family: var(--font-primary); color: var(--color-primary); font-weight: 700; margin-top: 0; margin-bottom: 15px; }
-        h1 { font-size: 3.5rem; line-height: 1.2; }
-        h2 { font-size: 2.5rem; line-height: 1.3; }
-        h3 { font-size: 1.75rem; line-height: 1.4; }
-        p { margin-bottom: 20px; font-size: 1rem; color: var(--color-text-light); }
-        img { max-width: 100%; height: auto; vertical-align: middle; border-style: none; }
-        .text-center { text-align: center !important; }
-        .text-left { text-align: left !important; }
-        .d-flex { display: flex !important; }
-        .align-items-center { align-items: center !important; }
-        .w-100 { width: 100% !important; }
-        .h-100 { height: 100% !important; }
-        .section-padding { padding-top: 100px; padding-bottom: 100px; }
-        .bg-light { background-color: var(--color-bg-light) !important; }
-
-        /* #######################################################################
-        BÖLÜM 5: UI BİLEŞENLERİ
-        ####################################################################### */
-        .btn { display: inline-block; font-weight: 600; text-align: center; white-space: nowrap; vertical-align: middle; user-select: none; border: 2px solid transparent; padding: 12px 35px; font-size: 0.95rem; line-height: 1.5; border-radius: 5px; transition: var(--transition-normal); text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; font-family: var(--font-primary); }
-        .btn-primary { color: var(--color-white); background-color: var(--color-secondary); border-color: var(--color-secondary); box-shadow: 0 4px 10px rgba(227, 6, 19, 0.3); }
-        .btn-primary:hover { color: var(--color-white); background-color: var(--color-secondary-dark); border-color: var(--color-secondary-dark); transform: translateY(-2px); box-shadow: 0 6px 15px rgba(227, 6, 19, 0.4); }
-        .btn-outline-white { color: var(--color-white); background-color: transparent; border-color: var(--color-white); }
-        .btn-outline-white:hover { color: var(--color-primary); background-color: var(--color-white); border-color: var(--color-white); }
-        .section-header { margin-bottom: 60px; text-align: center; }
-        .section-header span { display: block; color: var(--color-secondary); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
-        .section-header h2 { font-size: 2.5rem; color: var(--color-primary); position: relative; padding-bottom: 20px; margin-bottom: 0; }
-        .section-header h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background-color: var(--color-secondary); border-radius: 2px; }
-
-        /* #######################################################################
-        BÖLÜM 6: HEADER & NAVIGATION
-        ####################################################################### */
-        .top-bar { background-color: var(--color-primary); color: rgba(255, 255, 255, 0.9); padding-top: 12px; padding-bottom: 12px; font-size: 0.85rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 1002; }
-        .top-bar-content { display: flex; justify-content: space-between; align-items: center; }
-        .top-info-list { display: flex; flex-wrap: wrap; gap: 25px; }
-        .top-info-item { display: flex; align-items: center; gap: 8px; color: rgba(255, 255, 255, 0.95); transition: var(--transition-fast); }
-        .top-info-item i { color: var(--color-secondary); font-size: 14px; }
-        .top-social-list { display: flex; gap: 15px; }
-        .top-social-link { color: var(--color-white); font-size: 14px; transition: var(--transition-fast); }
-        .top-social-link:hover { color: var(--color-secondary); transform: translateY(-2px); }
-        .main-header { background-color: var(--color-white); height: var(--header-height); display: flex; align-items: center; box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 1001; transition: var(--transition-normal); }
-        .navbar { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .brand-logo img { height: 65px; width: auto; transition: var(--transition-fast); }
-        .nav-menu { display: flex; align-items: center; margin: 0; padding: 0; }
-        .nav-item { margin-left: 30px; }
-        .nav-link { font-family: var(--font-primary); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; color: var(--color-primary); padding: 10px 0; position: relative; transition: var(--transition-fast); }
-        .nav-link::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: var(--color-secondary); transition: var(--transition-normal); }
-        .nav-link:hover { color: var(--color-secondary); }
-        .nav-link:hover::before { width: 100%; }
-        .header-cta-btn { margin-left: 30px; }
-        .mobile-menu-toggle { display: none; font-size: 1.8rem; color: var(--color-primary); cursor: pointer; background: none; border: none; }
-
-        /* #######################################################################
-        BÖLÜM 7: HERO SLIDER
-        ####################################################################### */
-        .hero-section { position: relative; height: 85vh; min-height: 600px; width: 100%; overflow: hidden; background-color: var(--color-black); }
-        .hero-video-background { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: 1; object-fit: cover; opacity: 0.6; }
         
-        /* GÜNCELLENDİ: Daha şeffaf arka plan */
-        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(15, 23, 56, 0.6) 0%, rgba(15, 23, 56, 0.3) 100%); z-index: 2; }
+        .star {
+            position: absolute;
+            background: white;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
         
-        .hero-content-wrapper { position: relative; z-index: 3; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--color-white); }
-        .hero-badge { display: inline-block; background-color: rgba(227, 6, 19, 0.2); border: 1px solid var(--color-secondary); color: var(--color-white); padding: 8px 25px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; backdrop-filter: blur(5px); }
-        .hero-title { font-size: 4.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 25px; text-transform: uppercase; color: var(--color-white); text-shadow: 2px 2px 10px rgba(0,0,0,0.3); opacity: 0; animation: fadeInUp 1s ease 0.3s forwards; }
-        .hero-description { font-size: 1.25rem; max-width: 800px; margin: 0 auto 40px; color: rgba(255, 255, 255, 0.9); font-weight: 400; opacity: 0; animation: fadeInUp 1s ease 0.6s forwards; }
-        .hero-buttons { display: flex; justify-content: center; gap: 20px; opacity: 0; animation: fadeInUp 1s ease 0.9s forwards; }
-
-        /* #######################################################################
-        BÖLÜM 8: FEATURES
-        ####################################################################### */
-        .features-section { margin-top: -60px; position: relative; z-index: 10; padding-bottom: 60px; }
-        .feature-card { background-color: var(--color-white); padding: 40px 30px; border-radius: 10px; box-shadow: var(--shadow-lg); text-align: center; height: 100%; transition: var(--transition-normal); border-bottom: 4px solid transparent; }
-        .feature-card:hover { transform: translateY(-10px); border-bottom-color: var(--color-secondary); box-shadow: var(--shadow-xl); }
-        .feature-icon-wrapper { width: 80px; height: 80px; background-color: var(--color-bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; transition: var(--transition-normal); }
-        .feature-icon-wrapper i { font-size: 2rem; color: var(--color-primary); }
-        .feature-card:hover .feature-icon-wrapper { background-color: var(--color-primary); }
-        .feature-card:hover .feature-icon-wrapper i { color: var(--color-white); }
-        .feature-card h3 { font-size: 1.25rem; margin-bottom: 15px; color: var(--color-primary); }
-        .feature-card p { font-size: 0.95rem; color: var(--color-text-light); margin-bottom: 0; line-height: 1.6; }
-
-        /* #######################################################################
-        BÖLÜM 9: ABOUT SECTION
-        ####################################################################### */
-        .about-image-wrapper { position: relative; padding-right: 30px; padding-bottom: 30px; }
-        .about-main-image { border-radius: 10px; box-shadow: var(--shadow-xl); position: relative; z-index: 2; width: 100%; }
+        / Smooth Scroll Behavior /
+        html {
+            scroll-behavior: smooth;
+        }
         
-        /* GÜNCELLENDİ: Yıldız İkonlu Badge */
-        .experience-badge { position: absolute; bottom: 0; right: 0; background-color: var(--color-secondary); color: var(--color-white); padding: 30px; border-radius: 10px; z-index: 3; text-align: center; box-shadow: var(--shadow-lg); min-width: 180px; }
-        .experience-year { display: block; font-size: 3rem; font-weight: 800; line-height: 1; font-family: var(--font-primary); }
-        .experience-text { margin: 0; text-transform: uppercase; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; }
-
-        /* GÜNCELLENDİ: Liste Yapısı */
-        .about-content-list { margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .about-list-item { display: flex; align-items: center; font-weight: 600; color: var(--color-text-main); }
-        .about-list-icon { color: var(--color-secondary); background-color: rgba(227, 6, 19, 0.1); width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.8rem; }
+        / Custom Scrollbar /
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
         
-        /* GÜNCELLENDİ: KAGS 2028 Vurgusu */
-        .highlight-item { color: #e30613 !important; font-weight: 800 !important; }
-
-        /* #######################################################################
-        BÖLÜM 10: SERVICES
-        ####################################################################### */
-        .service-card { background-color: var(--color-white); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-normal); margin-bottom: 30px; border: 1px solid var(--color-border); position: relative; }
-        .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-xl); border-color: transparent; }
-        .service-image-box { position: relative; height: 240px; overflow: hidden; }
-        .service-image-box img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition-slow); }
-        .service-card:hover .service-image-box img { transform: scale(1.1); }
-        .service-card-body { padding: 30px; }
-        .service-card-title { font-size: 1.4rem; margin-bottom: 15px; color: var(--color-primary); }
-        .service-card-text { margin-bottom: 20px; color: var(--color-text-light); }
-        .service-link { display: inline-flex; align-items: center; color: var(--color-secondary); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
-        .service-link i { margin-left: 8px; transition: var(--transition-fast); }
-        .service-link:hover i { margin-left: 12px; }
-
-        /* GÜNCELLENDİ: Yeni Rozeti */
-        .new-badge { position: absolute; top: 15px; right: 15px; background-color: #e30613; color: #ffffff; padding: 5px 12px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.2); letter-spacing: 1px; }
-
-        /* #######################################################################
-        BÖLÜM 11: GALLERY
-        ####################################################################### */
-        .gallery-filter-menu { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
-        .gallery-filter-btn { background-color: transparent; border: 2px solid var(--color-border); padding: 8px 25px; border-radius: 30px; font-weight: 600; color: var(--color-text-light); cursor: pointer; transition: var(--transition-fast); font-family: var(--font-primary); }
-        .gallery-filter-btn:hover, .gallery-filter-btn.active { background-color: var(--color-secondary); border-color: var(--color-secondary); color: var(--color-white); }
-        .gallery-grid-wrapper { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-        .gallery-item { position: relative; border-radius: 10px; overflow: hidden; height: 260px; cursor: pointer; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition-normal); }
-        .gallery-item:hover img { transform: scale(1.1); }
-        .gallery-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 56, 0.7); display: flex; align-items: center; justify-content: center; opacity: 0; transition: var(--transition-normal); }
-        .gallery-item:hover .gallery-overlay { opacity: 1; }
-        .gallery-zoom-icon { width: 50px; height: 50px; background-color: var(--color-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-white); font-size: 1.2rem; transform: scale(0); transition: var(--transition-normal); }
-        .gallery-item:hover .gallery-zoom-icon { transform: scale(1); }
-
-        /* #######################################################################
-        BÖLÜM 12: CONTACT AREA
-        ####################################################################### */
-        .contact-info-box { background-color: var(--color-white); padding: 40px; border-radius: 10px; box-shadow: var(--shadow-lg); height: 100%; }
-        .contact-detail-item { display: flex; align-items: flex-start; margin-bottom: 35px; }
-        .contact-detail-item:last-child { margin-bottom: 0; }
-        .contact-icon-wrapper { width: 55px; height: 55px; background-color: rgba(15, 23, 56, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--color-secondary); margin-right: 20px; flex-shrink: 0; transition: var(--transition-fast); }
-        .contact-detail-item:hover .contact-icon-wrapper { background-color: var(--color-secondary); color: var(--color-white); }
-        .contact-text h4 { font-size: 1.1rem; margin-bottom: 5px; color: var(--color-primary); }
-        .contact-link { color: var(--color-text-main); font-weight: 600; transition: var(--transition-fast); display: block; margin-bottom: 3px; }
-        .contact-link:hover { color: var(--color-secondary); text-decoration: underline; }
-        .contact-map-wrapper { height: 100%; min-height: 450px; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-lg); }
-        .contact-map-wrapper iframe { width: 100%; height: 100%; border: 0; }
-
-        /* #######################################################################
-        BÖLÜM 13: FOOTER
-        ####################################################################### */
-        .footer-section { background-color: #0b1129; color: #aab0c6; padding-top: 80px; margin-top: 50px; }
-        .footer-widget-title { color: var(--color-white); font-size: 1.4rem; margin-bottom: 30px; position: relative; padding-bottom: 15px; }
-        .footer-widget-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background-color: var(--color-secondary); }
-        .footer-nav-list li { margin-bottom: 12px; }
-        .footer-nav-link { color: #aab0c6; transition: var(--transition-fast); display: inline-block; }
-        .footer-nav-link:hover { color: var(--color-secondary); padding-left: 5px; }
-        .footer-contact-list li { display: flex; align-items: flex-start; margin-bottom: 20px; gap: 15px; }
-        .footer-contact-list i { color: var(--color-secondary); font-size: 1.1rem; margin-top: 5px; }
-        .footer-copyright { background-color: #050814; padding: 25px 0; margin-top: 60px; border-top: 1px solid rgba(255, 255, 255, 0.05); text-align: center; font-size: 0.9rem; }
-
-        /* #######################################################################
-        BÖLÜM 14: EXTRAS & ANIMATIONS
-        ####################################################################### */
-        .whatsapp-float-btn { position: fixed; bottom: 30px; left: 30px; background-color: #25d366; color: #ffffff; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9999; transition: var(--transition-normal); animation: pulse-animation 2s infinite; }
-        .whatsapp-float-btn:hover { transform: scale(1.1); color: #fff; }
-        .modal-overlay { display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); align-items: center; justify-content: center; }
-        .modal-container { background-color: var(--color-white); width: 90%; max-width: 500px; padding: 40px; border-radius: 10px; position: relative; box-shadow: var(--shadow-xl); animation: slideDown 0.4s ease; }
-        .modal-close-btn { position: absolute; top: 15px; right: 20px; font-size: 30px; color: #999; cursor: pointer; transition: var(--transition-fast); }
-        .modal-close-btn:hover { color: var(--color-secondary); }
-        .form-group { margin-bottom: 20px; }
-        .form-input { width: 100%; padding: 12px 15px; border: 1px solid var(--color-border); border-radius: 5px; font-family: inherit; font-size: 1rem; transition: var(--transition-fast); }
-        .form-input:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(15, 23, 56, 0.1); }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes slideDown { from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes pulse-animation { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
-        @keyframes spin { to { transform: rotate(360deg); } }
-
-        /* #######################################################################
-        BÖLÜM 15: RESPONSIVE MEDIA QUERIES (MOBİL UYUMLULUK)
-        ####################################################################### */
-        @media (max-width: 991.98px) {
-            .top-bar { display: none; }
-            .hero-title { font-size: 2.5rem; }
-            .mobile-menu-toggle { display: block; }
-            
-            .nav-menu {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--color-white);
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-                display: none;
-                border-top: 3px solid var(--color-secondary);
+        ::-webkit-scrollbar-track {
+            background: #0F1C3F;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #FFD700, #FFA500);
+            border-radius: 6px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #FFA500, #FFD700);
+        }
+        
+        / Loading Animation /
+        .loader {
+            border-top-color: #FFD700;
+            -webkit-animation: spinner 1.5s linear infinite;
+            animation: spinner 1.5s linear infinite;
+        }
+        
+        @-webkit-keyframes spinner {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+        
+        @keyframes spinner {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        / Gradient Text /
+        .gradient-text {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        
+        / Hover Card Effect /
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        / Typewriter Effect /
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #FFD700;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #FFD700; }
+        }
+        
+        / Mobile Menu Animation /
+        .mobile-menu-enter {
+            animation: slideInRight 0.3s ease-out;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
             }
-            
-            .nav-menu.active { display: flex; }
-            .nav-item { margin: 10px 0; width: 100%; text-align: center; }
-            .nav-link { display: block; width: 100%; }
-            .header-cta-btn { display: none; }
-            
-            .about-image-wrapper { margin-bottom: 50px; padding: 0; }
-            .experience-badge { padding: 20px; min-width: auto; }
-            .experience-year { font-size: 2.5rem; }
-            
-            /* Mobilde Liste Ayarları (İkonlar küçük, yazı küçük, boşluk az) */
-            .about-content-list { gap: 10px; }
-            .about-list-item { font-size: 0.8rem; }
-            .about-list-icon { width: 20px; height: 20px; font-size: 0.7rem; margin-right: 8px; }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
-
-        @media (max-width: 575.98px) {
-            h1 { font-size: 2.2rem; }
-            h2 { font-size: 1.8rem; }
-            .hero-buttons { flex-direction: column; width: 100%; }
-            .hero-buttons .btn { width: 100%; margin: 5px 0; }
-            .feature-card { margin-bottom: 20px; }
+        
+        / Parallax Effect /
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        / Custom Focus Styles /
+        .focus-ring:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5);
+        }
+        
+        / Animated Gradient Background /
+        .animated-gradient {
+            background: linear-gradient(-45deg, #0F1C3F, #1A2951, #2B3A67, #374A7C);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Yıldız Kurs",
+        "alternateName": "Yıldız Ötesi Eğitim Hizmetleri",
+        "url": "https://yildizkurus.com.tr",
+        "logo": "https://yildizkurus.com.tr/images/logo.png",
+        "description": "Ankara Yenimahalle'de LGS hazırlık, ortaokul takviye ve ilkokul destek eğitimi veren MEB onaylı özel öğretim kursu.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Aşağı Yahyalar Mah. 994 Cad. No:6/A",
+            "addressLocality": "Yenimahalle",
+            "addressRegion": "Ankara",
+            "postalCode": "06280",
+            "addressCountry": "TR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.9334,
+            "longitude": 32.8597
+        },
+        "telephone": "+903123460633",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+903123460633",
+            "contactType": "customer service",
+            "areaServed": "TR",
+            "availableLanguage": "Turkish"
+        },
+        "sameAs": [
+            "https://www.instagram.com/yildizkursankara",
+            "https://wa.me/905324790668"
+        ],
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "21:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "19:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "10:00",
+                "closes": "18:00"
+            }
+        ],
+        "priceRange": "₺₺",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Eğitim Hizmetleri",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "LGS Hazırlık Kursu",
+                        "description": "8. sınıf öğrencileri için kapsamlı LGS hazırlık programı"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Ortaokul Takviye",
+                        "description": "5, 6, 7 ve 8. sınıf öğrencileri için takviye dersler"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "İlkokul Destek",
+                        "description": "İlkokul öğrencileri için ödev takibi ve takviye"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Özel Ders",
+                        "description": "Birebir matematik, fen bilimleri ve diğer branşlar"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
 </head>
-<body>
 
-    <div id="page-loader" style="position:fixed; top:0; left:0; width:100%; height:100%; background-color:#0f1738; z-index:99999; display:flex; justify-content:center; align-items:center; transition: opacity 0.5s ease;">
-        <div class="spinner" style="width:60px; height:60px; border:4px solid rgba(255,255,255,0.2); border-top-color:#e30613; border-radius:50%; animation:spin 1s infinite linear;"></div>
-    </div>
-
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <div class="top-info-list">
-                    <a href="tel:03123460633" class="top-info-item">
-                        <i class="fas fa-phone-alt"></i> 0312 346 06 33
-                    </a>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Aşağı+Yahyalar+Mah.+994+Cad.+No:6/A+Yenimahalle+ANKARA" target="_blank" class="top-info-item">
-                        <i class="fas fa-map-marker-alt"></i> Aşağı Yahyalar Mah. 994 Cad. No:6/A
-                    </a>
-                    <span class="top-info-item" style="cursor: default;">
-                        <i class="far fa-clock"></i> Her Gün: 08.00 - 19.30
-                    </span>
-                </div>
-                
-                <div class="top-social-list">
-                    <a href="https://instagram.com/yildizkursankara" target="_blank" class="top-social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/p/Y%C4%B1ld%C4%B1z-Kurs-Ankara-61575208704331/" target="_blank" class="top-social-link"><i class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
+<body class="font-body bg-gradient-to-br from-yildiz-navy via-yildiz-navy-light to-yildiz-navy text-white overflow-x-hidden">
+    
+    <!-- Star Field Background Animation -->
+    <div class="star-field" id="starField"></div>
+    
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="fixed inset-0 bg-yildiz-navy z-[9999] flex items-center justify-center transition-opacity duration-500">
+        <div class="text-center">
+            <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-600 h-32 w-32 mb-8 mx-auto"></div>
+            <h2 class="text-2xl font-heading font-bold gradient-text">Yıldız Kurs</h2>
+            <p class="text-gray-300 mt-2">Başarı yolculuğunuz başlıyor...</p>
         </div>
     </div>
-
-    <header class="main-header">
-        <div class="container">
-            <div class="navbar">
-                <a href="index.html" class="brand-logo">
-                    <img src="img/logo.jpg" alt="Yıldız Kurs Logo">
-                </a>
-
-                <button class="mobile-menu-toggle" aria-label="Menüyü Aç">
-                    <i class="fas fa-bars"></i>
-                </button>
-
-                <nav class="nav-menu">
-                    <div class="nav-item">
-                        <a href="index.html" class="nav-link">ANASAYFA</a>
+    
+    <!-- Sticky Header with Mega Menu -->
+    <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="glass-dark">
+            <!-- Top Bar - Contact Info -->
+            <div class="bg-gradient-to-r from-yildiz-gold to-yellow-500 text-yildiz-navy py-2 px-4 text-sm font-medium">
+                <div class="container mx-auto flex flex-wrap justify-between items-center">
+                    <div class="flex items-center space-x-4">
+                        <a href="tel:03123460633" class="flex items-center hover:text-white transition-colors">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span class="hidden sm:inline">0312 346 06 33</span>
+                        </a>
+                        <a href="https://wa.me/905324790668" target="blank" class="flex items-center hover:text-white transition-colors">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            <span class="hidden sm:inline">0532 479 06 68</span>
+                        </a>
                     </div>
-                    <div class="nav-item">
-                        <a href="#about" class="nav-link">KURUMSAL</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#services" class="nav-link">EĞİTİMLERİMİZ</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#gallery" class="nav-link">GALERİ</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#contact" class="nav-link">İLETİŞİM</a>
-                    </div>
-                </nav>
-
-                <div class="header-cta-btn">
-                    <button onclick="openModal()" class="btn btn-primary">RANDEVU AL</button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section class="hero-section">
-        <video autoplay muted loop playsinline class="hero-video-background">
-            <source src="img/slider-video.mp4" type="video/mp4">
-        </video>
-        
-        <div class="hero-overlay"></div>
-        
-        <div class="container h-100">
-            <div class="hero-content-wrapper">
-                <div>
-                    <span class="hero-badge">2026 ERKEN KAYIT DÖNEMİ BAŞLADI</span>
-                    <h1 class="hero-title">GELECEĞİN YILDIZLARINI<br>YETİŞTİRİYORUZ</h1>
-                    <p class="hero-description">
-                        Ankara Yenimahalle'de LGS Hazırlık, Birebir Özel Ders ve Yeni Nesil Deneme Kulübü ile
-                        başarıyı şansa bırakmayın. Profesyonel kadro, butik sınıflar ve tam öğrenme modeli.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#services" class="btn btn-primary" style="margin: 0 10px;">PROGRAMLARI İNCELE</a>
-                        <a href="#contact" class="btn btn-outline-white" style="margin: 0 10px;">BİZE ULAŞIN</a>
+                    <div class="flex items-center space-x-4">
+                        <a href="https://instagram.com/yildizkursankara" target="blank" class="hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <span class="hidden md:inline text-xs">
+                            <i class="fas fa-map-marker-alt mr-1"></i>
+                            Yenimahalle, Ankara
+                        </span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <div class="features-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-30">
-                    <div class="feature-card">
-                        <div class="feature-icon-wrapper"><i class="fas fa-users"></i></div>
-                        <h3>12 Kişilik Sınıflar</h3>
-                        <p>Kalabalıkta kaybolmayın. Butik sınıflarda birebir ilgi ve yüksek odaklanma.</p>
+            
+            <!-- Main Navigation -->
+            <nav class="py-4 px-4">
+                <div class="container mx-auto flex justify-between items-center">
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <a href="#" class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-yildiz-gold to-yellow-500 rounded-full flex items-center justify-center shadow-lg animate-pulse-glow">
+                                <i class="fas fa-star text-yildiz-navy text-xl"></i>
+                            </div>
+                            <div>
+                                <h1 class="text-2xl font-heading font-bold text-white">Yıldız Kurs</h1>
+                                <p class="text-xs text-gray-300 -mt-1">Yıldızların Parladığı Yer</p>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-30">
-                    <div class="feature-card">
-                        <div class="feature-icon-wrapper"><i class="fas fa-chalkboard-teacher"></i></div>
-                        <h3>Uzman Kadro</h3>
-                        <p>Alanında en az 10 yıl deneyimli, sınav sistemine tam hakim öğretmenler.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-30">
-                    <div class="feature-card">
-                        <div class="feature-icon-wrapper"><i class="fas fa-chart-line"></i></div>
-                        <h3>Ölçme & Değerlendirme</h3>
-                        <p>Haftalık düzenli denemeler ve yapay zeka destekli detaylı karne analizi.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-30">
-                    <div class="feature-card">
-                        <div class="feature-icon-wrapper"><i class="fas fa-book-open"></i></div>
-                        <h3>Yeni Nesil Yayınlar</h3>
-                        <p>LGS müfredatına %100 uyumlu, zengin kaynak ve döküman desteği.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section id="about" class="section-padding">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-50">
-                    <div class="about-image-wrapper">
-                        <img src="img/kutu-etut.jpg" alt="Yıldız Kurs Sınıf Ortamı" class="about-main-image">
-                        <div class="experience-badge">
-                            <span class="experience-year"><i class="fas fa-star"></i></span>
-                            <p class="experience-text">EĞİTİMİN<br>ÖNCÜ MARKASI</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="section-header text-left" style="margin-bottom: 30px;">
-                        <span>NEDEN YILDIZ KURS?</span>
-                        <h2>Her Öğrenci Keşfedilmeyi<br>Bekleyen Bir Yıldızdır</h2>
-                    </div>
-                    <p>
-                        Ankara Yenimahalle’de, klasik eğitim kalıplarını yıkmak ve öğrencilerimize sadece dersi değil, öğrenmeyi sevdirmek için yola çıktık.
-                        Kalabalık sınıflarda kaybolan değil, ismiyle ve hedefleriyle özel hissettirilen bir eğitim anlayışını benimsiyoruz.
-                    </p>
-                    <p>
-                        Amacımız sadece LGS’de başarı değil; disiplinli çalışma alışkanlığı kazanmış, özgüveni yüksek ve ne istediğini bilen bireyler yetiştirmektir.
-                        Başarı bir varış noktası değil, rehber eşliğinde yürünecek bir yolculuktur.
-                    </p>
                     
-                    <div class="about-content-list">
-                        <div class="about-list-item">
-                            <span class="about-list-icon"><i class="fas fa-check"></i></span>
-                            LGS Hazırlık
-                        </div>
-                        <div class="about-list-item">
-                            <span class="about-list-icon"><i class="fas fa-check"></i></span>
-                            Etüt Sistemi
-                        </div>
-                        <div class="about-list-item highlight-item">
-                            <span class="about-list-icon"><i class="fas fa-check"></i></span>
-                            KAGS 2028
-                        </div>
-                        <div class="about-list-item">
-                            <span class="about-list-icon"><i class="fas fa-check"></i></span>
-                            Özel Ders
-                        </div>
-                        <div class="about-list-item">
-                            <span class="about-list-icon"><i class="fas fa-check"></i></span>
-                            Deneme Kulübü
-                        </div>
-                        <div class="about-list-item">
-                            <span class="about-list-icon"><i class="fas fa-check"></i></span>
-                            Yaz Okulu
-                        </div>
-                    </div>
-
-                    <a href="#contact" class="btn btn-primary" style="margin-top: 40px;">KURUMU ZİYARET ET</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header">
-                <span>NELER YAPIYORUZ?</span>
-                <h2>Eğitim Programlarımız</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-image-box">
-                            <img src="img/kutu-lgs.jpg" alt="LGS Hazırlık">
-                        </div>
-                        <div class="service-card-body">
-                            <h3 class="service-card-title">LGS Hazırlık</h3>
-                            <p class="service-card-text">8. sınıf öğrencilerine özel, yeni nesil sorularla zenginleştirilmiş yoğun kamp programı.</p>
-                            <a href="lgs.html" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-image-box">
-                            <img src="img/kutu-ozel.jpg" alt="Özel Ders">
-                        </div>
-                        <div class="service-card-body">
-                            <h3 class="service-card-title">Özel Ders</h3>
-                            <p class="service-card-text">Matematik, Fen ve Türkçe başta olmak üzere birebir eksik kapatma dersleri.</p>
-                            <a href="ozel-ders.html" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-image-box">
-                            <img src="img/kutu-deneme.jpg" alt="Deneme Kulübü">
-                        </div>
-                        <div class="service-card-body">
-                            <h3 class="service-card-title">Deneme Kulübü</h3>
-                            <p class="service-card-text">Gerçek sınav provası. Türkiye geneli denemeler ve detaylı karne analizi.</p>
-                            <a href="deneme.html" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-image-box">
-                            <img src="img/kutu-etut.jpg" alt="Etüt Sistemi">
-                        </div>
-                        <div class="service-card-body">
-                            <h3 class="service-card-title">Etüt Sistemi</h3>
-                            <p class="service-card-text">Okul sonrası ödev takibi, konu tekrarı ve sessiz çalışma ortamı.</p>
-                            <a href="etut.html" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-image-box">
-                            <img src="img/kutu-yaz.jpg" alt="Yaz Okulu">
-                        </div>
-                        <div class="service-card-body">
-                            <h3 class="service-card-title">Yaz Okulu</h3>
-                            <p class="service-card-text">Hem eğlence hem eğitim. Sosyal aktivitelerle birleştirilmiş yaz programı.</p>
-                            <a href="yaz-okulu.html" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card" style="position: relative;">
-                        <div class="new-badge">YENİ</div>
-                        <div class="service-image-box">
-                            <img src="img/kutu-ingilizce.jpg" alt="KAGS 2028">
-                        </div>
-                        <div class="service-card-body">
-                            <h3 class="service-card-title">KAGS 2028</h3>
-                            <p class="service-card-text">LGS'nin yerini alacak yeni sınav sistemine (KAGS) bugünden, öncü kadromuzla hazırlanın.</p>
-                            <a href="#" class="service-link">DETAYLARI GÖR <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <span>FOTOĞRAFLARLA BİZ</span>
-                <h2>Kursumuzdan Kareler</h2>
-            </div>
-
-            <div class="gallery-filter-menu">
-                <button class="gallery-filter-btn active" onclick="filterGallery('all')">Tümü</button>
-                <button class="gallery-filter-btn" onclick="filterGallery('sinif')">Sınıflar</button>
-                <button class="gallery-filter-btn" onclick="filterGallery('etkinlik')">Etkinlikler</button>
-            </div>
-
-            <div class="gallery-grid-wrapper">
-                <div class="gallery-item category-sinif">
-                    <img src="img/galeri-1.jpg" alt="Sınıf">
-                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
-                </div>
-                <div class="gallery-item category-sinif">
-                    <img src="img/galeri-2.jpg" alt="Sınıf">
-                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
-                </div>
-                <div class="gallery-item category-etkinlik">
-                    <img src="img/galeri-3.jpg" alt="Etkinlik">
-                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
-                </div>
-                <div class="gallery-item category-etkinlik">
-                    <img src="img/galeri-4.jpg" alt="Etkinlik">
-                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
-                </div>
-                <div class="gallery-item category-sinif">
-                    <img src="img/galeri-5.jpg" alt="Sınıf">
-                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
-                </div>
-                <div class="gallery-item category-etkinlik">
-                    <img src="img/galeri-6.jpg" alt="Etkinlik">
-                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
-                </div>
-                <div class="gallery-item category-sinif">
-                    <img src="img/galeri-7.jpg" alt="Sınıf">
-                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
-                </div>
-                <div class="gallery-item category-etkinlik">
-                    <img src="img/galeri-8.jpg" alt="Etkinlik">
-                    <div class="gallery-overlay"><div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header">
-                <span>BİZE ULAŞIN</span>
-                <h2>İletişim Bilgileri</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 mb-30">
-                    <div class="contact-info-box">
-                        <div class="contact-detail-item">
-                            <div class="contact-icon-wrapper"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="contact-text">
-                                <h4>Adres</h4>
-                                <a href="https://www.google.com/maps/search/?api=1&query=Aşağı+Yahyalar+Mah.+994+Cad.+No:6/A+Yenimahalle+ANKARA" target="_blank" class="contact-link">
-                                    Aşağı Yahyalar Mah. 994 Cad.<br>No:6/A Yenimahalle/ANKARA
+                    <!-- Desktop Menu -->
+                    <div class="hidden lg:flex items-center space-x-1">
+                        <a href="#home" class="nav-item px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300 text-white font-medium">
+                            Ana Sayfa
+                        </a>
+                        
+                        <!-- Hizmetlerimiz Dropdown -->
+                        <div class="relative group">
+                            <button class="nav-item px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300 text-white font-medium flex items-center">
+                                Hizmetlerimiz
+                                <i class="fas fa-chevron-down ml-2 text-xs group-hover:rotate-180 transition-transform"></i>
+                            </button>
+                            <div class="absolute top-full left-0 mt-2 w-64 glass-dark rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+                                <a href="#lgs" class="block px-6 py-3 hover:bg-white/10 transition-colors border-b border-white/10">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-graduation-cap mr-3 text-yildiz-gold"></i>
+                                        <div>
+                                            <p class="font-semibold">LGS Hazırlık</p>
+                                            <p class="text-xs text-gray-300">8. Sınıf Programı</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#ortaokul" class="block px-6 py-3 hover:bg-white/10 transition-colors border-b border-white/10">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-book-reader mr-3 text-yildiz-gold"></i>
+                                        <div>
+                                            <p class="font-semibold">Ortaokul Takviye</p>
+                                            <p class="text-xs text-gray-300">5-6-7. Sınıf</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#ilkokul" class="block px-6 py-3 hover:bg-white/10 transition-colors border-b border-white/10">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-child mr-3 text-yildiz-gold"></i>
+                                        <div>
+                                            <p class="font-semibold">İlkokul Destek</p>
+                                            <p class="text-xs text-gray-300">1-4. Sınıf</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#ozel-ders" class="block px-6 py-3 hover:bg-white/10 transition-colors rounded-b-xl">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-user-graduate mr-3 text-yildiz-gold"></i>
+                                        <div>
+                                            <p class="font-semibold">Özel Ders</p>
+                                            <p class="text-xs text-gray-300">Birebir Eğitim</p>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
                         </div>
-
-                        <div class="contact-detail-item">
-                            <div class="contact-icon-wrapper"><i class="fas fa-phone-alt"></i></div>
-                            <div class="contact-text">
-                                <h4>Telefon</h4>
-                                <a href="tel:03123460633" class="contact-link">0312 346 06 33</a>
-                                <a href="tel:05324790668" class="contact-link">0532 479 06 68</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail-item">
-                            <div class="contact-icon-wrapper"><i class="fas fa-clock"></i></div>
-                            <div class="contact-text">
-                                <h4>Çalışma Saatleri</h4>
-                                <p style="margin:0; color:var(--color-text-light);">
-                                    Haftanın Her Günü:<br>
-                                    08.00 - 19.30
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail-item">
-                            <div class="contact-icon-wrapper"><i class="fas fa-envelope"></i></div>
-                            <div class="contact-text">
-                                <h4>E-Posta</h4>
-                                <p style="margin:0; color:var(--color-text-light);">bilgi@yildizkurs.com</p>
-                            </div>
-                        </div>
+                        
+                        <a href="#deneme-kulubu" class="nav-item px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300 text-white font-medium">
+                            Deneme Kulübü
+                        </a>
+                        <a href="#etut" class="nav-item px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300 text-white font-medium">
+                            Etüt Sistemi
+                        </a>
+                        <a href="#hakkimizda" class="nav-item px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300 text-white font-medium">
+                            Hakkımızda
+                        </a>
+                        <a href="#iletisim" class="nav-item px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300 text-white font-medium">
+                            İletişim
+                        </a>
+                        
+                        <!-- CTA Button -->
+                        <a href="#kayit" class="ml-4 bg-gradient-to-r from-yildiz-gold to-yellow-500 text-yildiz-navy px-6 py-2 rounded-full font-bold hover:shadow-lg hover:scale-105 transition-all duration-300">
+                            Hemen Kayıt Ol
+                        </a>
                     </div>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobileMenuToggle" class="lg:hidden text-white text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
-
-                <div class="col-lg-8">
-                    <div class="contact-map-wrapper">
-                        <iframe 
-                            src="https://maps.google.com/maps?q=Aşağı%20Yahyalar%20Mah.%20994%20Cad.%20No:6/A%20Yenimahalle/ANKARA&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
+            </nav>
         </div>
-    </section>
-
-    <footer class="footer-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-50">
-                    <div class="footer-widget-title">Yıldız Kurs</div>
-                    <div class="top-social-list">
-                        <a href="https://www.facebook.com/p/Y%C4%B1ld%C4%B1z-Kurs-Ankara-61575208704331/" target="_blank" class="top-social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://instagram.com/yildizkursankara" target="_blank" class="top-social-link"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-6 mb-50">
-                    <div class="footer-widget-title">Hızlı Menü</div>
-                    <ul class="footer-nav-list">
-                        <li><a href="index.html" class="footer-nav-link">Anasayfa</a></li>
-                        <li><a href="#about" class="footer-nav-link">Kurumsal</a></li>
-                        <li><a href="#services" class="footer-nav-link">Eğitimler</a></li>
-                        <li><a href="#gallery" class="footer-nav-link">Galeri</a></li>
-                        <li><a href="#contact" class="footer-nav-link">İletişim</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-50">
-                    <div class="footer-widget-title">Programlar</div>
-                    <ul class="footer-nav-list">
-                        <li><a href="lgs.html" class="footer-nav-link">LGS Hazırlık</a></li>
-                        <li><a href="ozel-ders.html" class="footer-nav-link">Özel Ders</a></li>
-                        <li><a href="deneme.html" class="footer-nav-link">Deneme Kulübü</a></li>
-                        <li><a href="etut.html" class="footer-nav-link">Etüt Sistemi</a></li>
-                        <li><a href="yaz-okulu.html" class="footer-nav-link">Yaz Okulu</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-50">
-                    <div class="footer-widget-title">İletişim</div>
-                    <ul class="footer-contact-list">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Aşağı+Yahyalar+Mah.+994+Cad.+No:6/A+Yenimahalle+ANKARA" target="_blank" class="footer-nav-link">
-                                Aşağı Yahyalar Mah. 994 Cad. No:6/A Yenimahalle / ANKARA
-                            </a>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone-alt"></i>
-                            <a href="tel:03123460633" class="footer-nav-link">0312 346 06 33</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>bilgi@yildizkurs.com</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-copyright">
-            <div class="container">
-                <p>© 2026 Yıldız Kurs Eğitim Kurumları. Tüm Hakları Saklıdır.</p>
-            </div>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/905324790668" class="whatsapp-float-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <div id="kayitModal" class="modal-overlay">
-        <div class="modal-container">
-            <span class="modal-close-btn" onclick="closeModal()">×</span>
-            <div class="text-center" style="margin-bottom:25px;">
-                <h3 style="color:var(--color-primary);">ERKEN KAYIT FIRSATI</h3>
-                <p>Formu doldurun, eğitim danışmanlarımız size özel indirimlerle dönüş yapsın.</p>
-            </div>
-            <form onsubmit="event.preventDefault(); alert('Talebiniz alınmıştır. En kısa sürede aranacaksınız.'); closeModal();">
-                <div class="form-group">
-                    <input type="text" class="form-input" placeholder="Adınız Soyadınız" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" class="form-input" placeholder="Telefon Numaranız" required>
-                </div>
-                <div class="form-group">
-                    <select class="form-input">
-                        <option value="">İlgilendiğiniz Program</option>
-                        <option value="LGS">LGS Hazırlık</option>
-                        <option value="KAGS">KAGS 2028</option>
-                        <option value="Ozel">Özel Ders</option>
-                        <option value="Deneme">Deneme Kulübü</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">BENİ ARAYIN</button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        // 1. Loader
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('page-loader');
-            loader.style.opacity = '0';
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 500);
-        });
-
-        // 2. Mobil Menü
-        const mobileToggle = document.querySelector('.mobile-menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
         
-        mobileToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            const icon = mobileToggle.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-
-        // 3. Galeri Filtreleme
-        function filterGallery(category) {
-            const items = document.querySelectorAll('.gallery-item');
-            const buttons = document.querySelectorAll('.gallery-filter-btn');
-
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            items.forEach(item => {
-                if (category === 'all' || item.classList.contains('category-' + category)) {
-                    item.style.display = 'block';
-                    item.style.opacity = '0';
-                    setTimeout(() => item.style.opacity = '1', 50);
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-
-        // 4. Modal İşlemleri
-        const modal = document.getElementById('kayitModal');
-        function openModal() { modal.style.display = 'flex'; }
-        function closeModal() { modal.style.display = 'none'; }
-        window.onclick = function(event) {
-            if (event.target == modal) { closeModal(); }
-        }
-    </script>
-
-</body>
-</html>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden fixed inset-0 bg-yildiz-navy/95 z-50 hidden">
+            <div class="flex justify-end p-4">
+                <button id="mobileMenuClose" class="text-white text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col items-center justify-center h-full space-y-6 text-xl">
+                <a href="#home" class="mobile-nav-item text-white hover:text-yildiz-gold transition-colors">Ana Sayfa</a>
+                <a href="#hizmetler" class="mobile-nav-item text-white hover:text-yildiz-gold transition-colors">Hizmetlerimiz</a>
+                <a href="#deneme-kulubu" class="mobile-nav-item text-white hover:text-yildiz-gold transition-colors">Deneme Kulübü</a>
+                <a href="#etut" class="mobile-nav-item text-white hover:text-yildiz-gold transition-colors">Etüt Sistemi</a>
+                <a href="#hakkimizda" class="mobile-nav-item text-white hover:text-yildiz-gold transition-colors">Hakkımızda</a>
+                <a href="#iletisim" class="mobile-nav-item text-white hover:text-yildiz-gold transition-colors">İletişim</a>
+                <a href="#kayit" class="bg-gradient-to-r from-yildiz-gold to-yellow-500 text-yildiz-navy px-8 py-3 rounded-full font-bold mt-4">
+                    Hemen Kayıt Ol
+                </a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with LGS 2028 Target -->
+        <section id="home" class="min-h-screen flex items-center justify-center relative pt-32 pb-20 overflow-hidden">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 animated-gradient opacity-50"></div>
+            <div class="absolute top-20 left-10 w-72 h-72 bg-yildiz-gold/20 rounded-full blur-3xl animate-float"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-yildiz-purple/20 rounded-full blur-3xl animate-float animation-delay-2000"></div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Content -->
+                    <div class="text-center lg:text-left" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="inline-block mb-6">
+                            <span class="bg-gradient-to-r from-yildiz-gold/20 to-yellow-500/20 border border-yildiz-gold/50 px-4 py-2 rounded-full text-sm font-semibold text-yildiz-gold">
+                                <i class="fas fa-star mr-2"></i>
+                                MEB Onaylı Özel Öğretim Kursu
+                            </span>
+                        </div>
+                        
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-6">
+                            <span class="text-white">Başarıya</span><br>
+                            <span class="gradient-text typewriter">Yıldızlarla Ulaşın</span>
+                        </h1>
+                        
+                        <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                            LGS 2028'e kadar uzanan yolculukta, Ankara Yenimahalle'nin en deneyimli eğitim kadrosuyla yanınızdayız.
+                        </p>
+                        
+                        <!-- Stats -->
+                        <div class="grid grid-cols-3 gap-6 mb-8">
+                            <div class="text-center lg:text-left">
+                                <p class="text-3xl md:text-4xl font-bold gradient-text counter" data-target="15">0</p>
+                                <p class="text-sm text-gray-400">Yıllık Deneyim</p>
+                            </div>
+                            <div class="text-center lg:text-left">
+                                <p class="text-3xl md:text-4xl font-bold gradient-text counter" data-target="2500">0</p>
+                                <p class="text-sm text-gray-400">Mezun Öğrenci</p>
+                            </div>
+                            <div class="text-center lg:text-left">
+                                <p class="text-3xl md:text-4xl font-bold gradient-text">%<span class="counter" data-target="96">0</span></p>
+                                <p class="text-sm text-gray-400">Başarı Oranı</p>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#kayit" class="bg-gradient-to-r from-yildiz-gold to-yellow-500 text-yildiz-navy px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center">
+                                <i class="fas fa-rocket mr-2"></i>
+                                Hemen Randevu Al
+                            </a>
+                            <a href="#hizmetler" class="glass border border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all duration-300 inline-flex items-center justify-center">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Detaylı Bilgi
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Content - Interactive LGS Countdown -->
+                    <div class="relative" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="glass-dark rounded-3xl p-8 shadow-2xl">
+                            <h3 class="text-2xl font-bold text-center mb-6">LGS 2028 Geri Sayım</h3>
+                            
+                            <!-- Countdown Timer -->
+                            <div id="lgsCountdown" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                                <div class="text-center glass rounded-xl p-4">
+                                    <p class="text-3xl font-bold gradient-text" id="days">0</p>
+                                    <p class="text-sm text-gray-400">Gün</p>
+                                </div>
+                                <div class="text-center glass rounded-xl p-4">
+                                    <p class="text-3xl font-bold gradient-text" id="hours">0</p>
+                                    <p class="text-sm text-gray-400">Saat</p>
+                                </div>
+                                <div class="text-center glass rounded-xl p-4">
+                                    <p class="text-3xl font-bold gradient-text" id="minutes">0</p>
+                                    <p class="text-sm text-gray-400">Dakika</p>
+                                </div>
+                                <div class="text-center glass rounded-xl p-4">
+                                    <p class="text-3xl font-bold gradient-text" id="seconds">0</p>
+                                    <p class="text-sm text-gray-400">Saniye</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Progress Bar -->
+                            <div class="mb-6">
+                                <div class="flex justify-between text-sm text-gray-400 mb-2">
+                                    <span>Eğitim Dönemi Başlangıcı</span>
+                                    <span>LGS 2028</span>
+                                </div>
+                                <div class="bg-gray-700 rounded-full h-4 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-yildiz-gold to-yellow-500 h-full rounded-full transition-all duration-1000" style="width: 15%"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Quick Stats -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="glass rounded-xl p-4 hover:bg-white/10 transition-colors cursor-pointer">
+                                    <i class="fas fa-calendar-alt text-yildiz-gold text-2xl mb-2"></i>
+                                    <p class="text-sm text-gray-400">Kalan Süre</p>
+                                    <p class="font-bold">3.5 Yıl</p>
+                                </div>
+                                <div class="glass rounded-xl p-4 hover:bg-white/10 transition-colors cursor-pointer">
+                                    <i class="fas fa-users text-yildiz-gold text-2xl mb-2"></i>
+                                    <p class="text-sm text-gray-400">Aktif Öğrenci</p>
+                                    <p class="font-bold">450+</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Elements -->
+                        <div class="absolute -top-4 -right-4 w-16 h-16 bg-yildiz-gold rounded-full flex items-center justify-center animate-bounce">
+                            <i class="fas fa-trophy text-yildiz-navy text-2xl"></i>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-yildiz-purple rounded-full flex items-center justify-center animate-pulse">
+                            <i class="fas fa-star text-white text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- LGS Yol Haritası (KAGS Modeli) - Interactive Timeline -->
+        <section id="lgs-yol-haritasi" class="py-20 relative overflow-hidden">
+            <div class="container mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="inline-block bg-gradient-to-r from-yildiz-gold/20 to-yellow-500/20 border border-yildiz-gold/50 px-4 py-2 rounded-full text-sm font-semibold text-yildiz-gold mb-4">
+                        <i class="fas fa-road mr-2"></i>
+                        Akademik Gelişim Süreci
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">
+                        LGS Başarı <span class="gradient-text">Yol Haritası</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        5. sınıftan 8. sınıfa kadar olan süreçte, her aşamada öğrencilerimizin yanındayız. 
+                        KAGS modelimizle disiplinli ve planlı bir eğitim yolculuğu sunuyoruz.
+                    </p>
+                </div>
+                
+                <!-- Interactive Timeline -->
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-yildiz-gold to-yildiz-purple hidden lg:block"></div>
+                    
+                    <!-- Timeline Items -->
+                    <div class="space-y-16">
+                        <!-- 5. Sınıf -->
+                        <div class="relative flex flex-col lg:flex-row items-center" data-aos="fade-right">
+                            <div class="lg:w-1/2 lg:pr-12 lg:text-right">
+                                <div class="glass-dark rounded-2xl p-6 hover-lift cursor-pointer group">
+                                    <div class="flex items-center justify-center lg:justify-end mb-4">
+                                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <span class="text-2xl font-bold">5</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-3 gradient-text">5. Sınıf - Temel Atma</h3>
+                                    <p class="text-gray-300 mb-4">
+                                        Ortaokula güçlü bir başlangıç! Temel matematik ve fen kavramlarının sağlam temeller üzerine inşa edildiği, 
+                                        öğrenme alışkanlıklarının kazandırıldığı kritik dönem.
+                                    </p>
+                                    <ul class="space-y-2 text-sm text-gray-400">
+                                        <li class="flex items-center justify-center lg:justify-end">
+                                            <span>Haftalık 12 saat ders</span>
+                                            <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                        </li>
+                                        <li class="flex items-center justify-center lg:justify-end">
+                                            <span>Temel kavram öğretimi</span>
+                                            <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                        </li>
+                                        <li class="flex items-center justify-center lg:justify-end">
+                                            <span>Ödev takip sistemi</span>
+                                            <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Center Circle -->
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-yildiz-gold rounded-full border-4 border-yildiz-navy z-10 hidden lg:block"></div>
+                            <div class="lg:w-1/2 lg:pl-12 mt-8 lg:mt-0"></div>
+                        </div>
+                        
+                        <!-- 6. Sınıf -->
+                        <div class="relative flex flex-col lg:flex-row items-center" data-aos="fade-left">
+                            <div class="lg:w-1/2 lg:pr-12 order-2 lg:order-1 mt-8 lg:mt-0"></div>
+                            <div class="lg:w-1/2 lg:pl-12 order-1 lg:order-2">
+                                <div class="glass-dark rounded-2xl p-6 hover-lift cursor-pointer group">
+                                    <div class="flex items-center justify-center lg:justify-start mb-4">
+                                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <span class="text-2xl font-bold">6</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-3 gradient-text">6. Sınıf - Gelişim</h3>
+                                    <p class="text-gray-300 mb-4">
+                                        Akademik becerilerin geliştirildiği, problem çözme yeteneğinin arttırıldığı dönem. 
+                                        Öğrenciler daha karmaşık konularla tanışır ve analitik düşünme becerisi kazanır.
+                                    </p>
+                                    <ul class="space-y-2 text-sm text-gray-400">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                            <span>Haftalık 15 saat ders</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                            <span>Problem çözme teknikleri</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                            <span>Deneme sınavları başlangıcı</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Center Circle -->
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-yildiz-gold rounded-full border-4 border-yildiz-navy z-10 hidden lg:block"></div>
+                        </div>
+                        
+                        <!-- 7. Sınıf -->
+                        <div class="relative flex flex-col lg:flex-row items-center" data-aos="fade-right">
+                            <div class="lg:w-1/2 lg:pr-12 lg:text-right">
+                                <div class="glass-dark rounded-2xl p-6 hover-lift cursor-pointer group">
+                                    <div class="flex items-center justify-center lg:justify-end mb-4">
+                                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <span class="text-2xl font-bold">7</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-3 gradient-text">7. Sınıf - Hazırlık</h3>
+                                    <p class="text-gray-300 mb-4">
+                                        LGS'ye hazırlığın temelleri atılır. Yeni nesil sorulara adaptasyon, hız ve doğruluk dengesinin kurulması, 
+                                        sınav stratejilerinin öğrenilmesi bu dönemin ana hedefleridir.
+                                    </p>
+                                    <ul class="space-y-2 text-sm text-gray-400">
+                                        <li class="flex items-center justify-center lg:justify-end">
+                                            <span>Haftalık 18 saat ders</span>
+                                            <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                        </li>
+                                        <li class="flex items-center justify-center lg:justify-end">
+                                            <span>LGS formatında denemeler</span>
+                                            <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                        </li>
+                                        <li class="flex items-center justify-center lg:justify-end">
+                                            <span>Konu tarama testleri</span>
+                                            <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Center Circle -->
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-yildiz-gold rounded-full border-4 border-yildiz-navy z-10 hidden lg:block"></div>
+                            <div class="lg:w-1/2 lg:pl-12 mt-8 lg:mt-0"></div>
+                        </div>
+                        
+                        <!-- 8. Sınıf -->
+                        <div class="relative flex flex-col lg:flex-row items-center" data-aos="fade-left">
+                            <div class="lg:w-1/2 lg:pr-12 order-2 lg:order-1 mt-8 lg:mt-0"></div>
+                            <div class="lg:w-1/2 lg:pl-12 order-1 lg:order-2">
+                                <div class="glass-dark rounded-2xl p-6 hover-lift cursor-pointer group border-2 border-yildiz-gold">
+                                    <div class="flex items-center justify-center lg:justify-start mb-4">
+                                        <div class="w-16 h-16 bg-gradient-to-br from-yildiz-gold to-yellow-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform animate-pulse-glow">
+                                            <span class="text-2xl font-bold text-yildiz-navy">8</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-3 gradient-text">8. Sınıf - LGS Yılı</h3>
+                                    <p class="text-gray-300 mb-4">
+                                        Hedef LGS 2028! Yoğun çalışma temposu, düzenli deneme sınavları, bireysel takip ve rehberlik ile 
+                                        öğrencilerimizi hayallerindeki liselere hazırlıyoruz.
+                                    </p>
+                                    <ul class="space-y-2 text-sm text-gray-400">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                            <span>Haftalık 24+ saat ders</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                            <span>Haftalık 2 deneme sınavı</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                            <span>Birebir rehberlik desteği</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                            <span>Sınav stratejisi koçluğu</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Center Circle -->
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-yildiz-gold rounded-full border-4 border-yildiz-navy z-10 hidden lg:block animate-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Success Metrics -->
+                <div class="mt-20 glass-dark rounded-3xl p-8" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold text-center mb-8">KAGS Modeli Başarı Metrikleri</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-yildiz-gold to-yellow-500 rounded-full flex items-center justify-center mb-3">
+                                <i class="fas fa-chart-line text-yildiz-navy text-2xl"></i>
+                            </div>
+                            <p class="text-3xl font-bold gradient-text mb-1">+45</p>
+                            <p class="text-sm text-gray-400">Puan Artışı</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-yildiz-purple to-purple-600 rounded-full flex items-center justify-center mb-3">
+                                <i class="fas fa-medal text-white text-2xl"></i>
+                            </div>
+                            <p class="text-3xl font-bold gradient-text mb-1">%92</p>
+                            <p class="text-sm text-gray-400">Hedef Başarısı</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-3">
+                                <i class="fas fa-user-graduate text-white text-2xl"></i>
+                            </div>
+                            <p class="text-3xl font-bold gradient-text mb-1">850+</p>
+                            <p class="text-sm text-gray-400">LGS Mezunu</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-3">
+                                <i class="fas fa-school text-white text-2xl"></i>
+                            </div>
+                            <p class="text-3xl font-bold gradient-text mb-1">%78</p>
+                            <p class="text-sm text-gray-400">Nitelikli Lise</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Hizmet Kartları Section -->
+        <section id="hizmetler" class="py-20 relative">
+            <div class="container mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="inline-block bg-gradient-to-r from-yildiz-gold/20 to-yellow-500/20 border border-yildiz-gold/50 px-4 py-2 rounded-full text-sm font-semibold text-yildiz-gold mb-4">
+                        <i class="fas fa-graduation-cap mr-2"></i>
+                        Eğitim Hizmetlerimiz
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">
+                        Size Özel <span class="gradient-text">Eğitim Programları</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Her öğrencinin farklı olduğunu biliyor, kişiye özel eğitim planları hazırlıyoruz. 
+                        İhtiyacınıza uygun programı seçin, başarıya birlikte yürüyelim.
+                    </p>
+                </div>
+                
+                <!-- Service Cards Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- LGS Kursu Card -->
+                    <div class="group relative" data-aos="fade-up" data-aos-delay="100">
+                        <div class="glass-dark rounded-2xl p-6 h-full hover-lift cursor-pointer overflow-hidden">
+                            <!-- Background Pattern -->
+                            <div class="absolute inset-0 opacity-5">
+                                <div class="absolute -right-10 -top-10 w-40 h-40 bg-yildiz-gold rounded-full"></div>
+                            </div>
+                            
+                            <!-- Icon -->
+                            <div class="relative z-10 mb-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-yildiz-gold to-yellow-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-trophy text-yildiz-navy text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <h3 class="text-xl font-bold mb-3 gradient-text">LGS Hazırlık Kursu</h3>
+                            <p class="text-gray-300 text-sm mb-4">
+                                8. sınıf öğrencileri için kapsamlı LGS hazırlık programı. Deneyimli öğretmenler, 
+                                güncel müfredat ve yoğun soru çözümü ile hedef başarı.
+                            </p>
+                            
+                            <!-- Features -->
+                            <ul class="space-y-2 text-sm mb-4">
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Günlük 6 saat ders</span>
+                                </li>
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Haftalık 2 deneme</span>
+                                </li>
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Soru çözüm saatleri</span>
+                                </li>
+                            </ul>
+                            
+                            <!-- Hidden Details (Show on Hover) -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-yildiz-navy via-yildiz-navy/95 to-transparent p-6 flex flex-col justify-end transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <h4 class="text-lg font-bold mb-2 text-white">Detaylı Bilgi</h4>
+                                <p class="text-sm text-gray-300 mb-3">
+                                    LGS müfredatının tamamını kapsayan, MEB kazanımlarına uygun hazırlanmış özel program. 
+                                    Matematik, Türkçe, Fen Bilimleri, Sosyal Bilgiler, Din Kültürü, İngilizce ve İnkılap Tarihi 
+                                    derslerinde uzman kadro.
+                                </p>
+                                <div class="grid grid-cols-2 gap-2 text-xs">
+                                    <div class="glass rounded p-2">
+                                        <i class="fas fa-clock text-yildiz-gold mr-1"></i>
+                                        <span>09:00 - 15:00</span>
+                                    </div>
+                                    <div class="glass rounded p-2">
+                                        <i class="fas fa-users text-yildiz-gold mr-1"></i>
+                                        <span>Max 12 Kişi</span>
+                                    </div>
+                                </div>
+                                <button class="mt-3 bg-gradient-to-r from-yildiz-gold to-yellow-500 text-yildiz-navy py-2 px-4 rounded-lg font-semibold text-sm hover:shadow-lg transition-all">
+                                    Hemen Kayıt Ol
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Etüt Sistemi Card -->
+                    <div class="group relative" data-aos="fade-up" data-aos-delay="200">
+                        <div class="glass-dark rounded-2xl p-6 h-full hover-lift cursor-pointer overflow-hidden">
+                            <!-- Background Pattern -->
+                            <div class="absolute inset-0 opacity-5">
+                                <div class="absolute -right-10 -top-10 w-40 h-40 bg-purple-500 rounded-full"></div>
+                            </div>
+                            
+                            <!-- Icon -->
+                            <div class="relative z-10 mb-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-book-reader text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <h3 class="text-xl font-bold mb-3 text-purple-400">Etüt Sistemi</h3>
+                            <p class="text-gray-300 text-sm mb-4">
+                                Okul derslerine paralel, ödev takibi ve konu pekiştirme odaklı etüt programı. 
+                                Her gün düzenli çalışma alışkanlığı kazandırıyoruz.
+                            </p>
+                            
+                            <!-- Features -->
+                            <ul class="space-y-2 text-sm mb-4">
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Günlük ödev takibi</span>
+                                </li>
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Konu anlatımı</span>
+                                </li>
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Test çözümü</span>
+                                </li>
+                            </ul>
+                            
+                            <!-- Hidden Details -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-yildiz-navy via-yildiz-navy/95 to-transparent p-6 flex flex-col justify-end transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <h4 class="text-lg font-bold mb-2 text-white">Etüt Programı Detayları</h4>
+                                <p class="text-sm text-gray-300 mb-3">
+                                    Hafta içi her gün 15:30-19:30 saatleri arasında aktif etüt desteği. 
+                                    Öğretmen gözetiminde ödev yapma, anlamadığı konuları sorma ve 
+                                    eksik konuları tamamlama imkanı.
+                                </p>
+                                <div class="space-y-2 text-xs">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-calendar-check text-purple-400 mr-2"></i>
+                                        <span>Pazartesi - Cuma</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-chalkboard-teacher text-purple-400 mr-2"></i>
+                                        <span>Branş öğretmenleri desteği</span>
+                                    </div>
+                                </div>
+                                <button class="mt-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white py-2 px-4 rounded-lg font-semibold text-sm hover:shadow-lg transition-all">
+                                    Detaylı Bilgi Al
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Soru Çözüm Saatleri Card -->
+                    <div class="group relative" data-aos="fade-up" data-aos-delay="300">
+                        <div class="glass-dark rounded-2xl p-6 h-full hover-lift cursor-pointer overflow-hidden">
+                            <!-- Background Pattern -->
+                            <div class="absolute inset-0 opacity-5">
+                                <div class="absolute -right-10 -top-10 w-40 h-40 bg-green-500 rounded-full"></div>
+                            </div>
+                            
+                            <!-- Icon -->
+                            <div class="relative z-10 mb-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-question-circle text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <h3 class="text-xl font-bold mb-3 text-green-400">Soru Çözüm Saatleri</h3>
+                            <p class="text-gray-300 text-sm mb-4">
+                                Yoğun soru çözümü ile pratik kazandırıyoruz. Her branşta ayrı soru çözüm 
+                                saatleri ve sınav teknikleri eğitimi.
+                            </p>
+                            
+                            <!-- Features -->
+                            <ul class="space-y-2 text-sm mb-4">
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Branş bazlı çözüm</span>
+                                </li>
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Yeni nesil sorular</span>
+                                </li>
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Hız teknikleri</span>
+                                </li>
+                            </ul>
+                            
+                            <!-- Hidden Details -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-yildiz-navy via-yildiz-navy/95 to-transparent p-6 flex flex-col justify-end transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <h4 class="text-lg font-bold mb-2 text-white">Soru Çözüm Programı</h4>
+                                <p class="text-sm text-gray-300 mb-3">
+                                    Her branş için haftada 2 saat yoğun soru çözümü. MEB kazanımları ve 
+                                    LGS soru tiplerine uygun, zordan kolaya doğru sistematik çözüm.
+                                </p>
+                                <div class="grid grid-cols-2 gap-2 text-xs">
+                                    <div class="glass rounded p-2">
+                                        <i class="fas fa-calculator text-green-400"></i>
+                                        <span> Matematik</span>
+                                    </div>
+                                    <div class="glass rounded p-2">
+                                        <i class="fas fa-flask text-green-400"></i>
+                                        <span> Fen Bilimleri</span>
+                                    </div>
+                                    <div class="glass rounded p-2 col-span-2">
+                                        <i class="fas fa-book text-green-400"></i>
+                                        <span> Türkçe & Sosyal</span>
+                                    </div>
+                                </div>
+                                <button class="mt-3 bg-gradient-to-r from-green-500 to-green-600 text-white py-2 px-4 rounded-lg font-semibold text-sm hover:shadow-lg transition-all">
+                                    Program Detayları
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Rehberlik Servisi Card -->
+                    <div class="group relative" data-aos="fade-up" data-aos-delay="400">
+                        <div class="glass-dark rounded-2xl p-6 h-full hover-lift cursor-pointer overflow-hidden">
+                            <!-- Background Pattern -->
+                            <div class="absolute inset-0 opacity-5">
+                                <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-500 rounded-full"></div>
+                            </div>
+                            
+                            <!-- Icon -->
+                            <div class="relative z-10 mb-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-compass text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <h3 class="text-xl font-bold mb-3 text-blue-400">Rehberlik Servisi</h3>
+                            <p class="text-gray-300 text-sm mb-4">
+                                Eğitim danışmanlığı ve kariyer yönlendirme hizmeti. Psikolojik destek, 
+                                motivasyon ve hedef belirleme çalışmaları.
+                            </p>
+                            
+                            <!-- Features -->
+                            <ul class="space-y-2 text-sm mb-4">
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Bireysel görüşmeler</span>
+                                </li>
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Veli görüşmeleri</span>
+                                </li>
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Hedef belirleme</span>
+                                </li>
+                            </ul>
+                            
+                            <!-- Hidden Details -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-yildiz-navy via-yildiz-navy/95 to-transparent p-6 flex flex-col justify-end transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <h4 class="text-lg font-bold mb-2 text-white">Rehberlik Hizmetleri</h4>
+                                <p class="text-sm text-gray-300 mb-3">
+                                    Uzman rehber öğretmenlerimiz ile sınav kaygısı yönetimi, verimli ders çalışma 
+                                    teknikleri, okul ve meslek seçimi konularında destek.
+                                </p>
+                                <div class="space-y-2 text-xs">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-brain text-blue-400 mr-2"></i>
+                                        <span>Öğrenme stilleri testi</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-chart-pie text-blue-400 mr-2"></i>
+                                        <span>Performans analizi</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-heart text-blue-400 mr-2"></i>
+                                        <span>Motivasyon desteği</span>
+                                    </div>
+                                </div>
+                                <button class="mt-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2 px-4 rounded-lg font-semibold text-sm hover:shadow-lg transition-all">
+                                    Randevu Al
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Services -->
+                <div class="mt-12 grid md:grid-cols-2 gap-6">
+                    <!-- Ortaokul Takviye -->
+                    <div class="glass-dark rounded-2xl p-8 hover-lift" data-aos="fade-right">
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-school text-white text-2xl"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-2xl font-bold mb-3 text-indigo-400">Ortaokul Takviye Programı</h3>
+                                <p class="text-gray-300 mb-4">
+                                    5, 6 ve 7. sınıf öğrencileri için okul müfredatına paralel takviye dersleri. 
+                                    Eksik konuların tamamlanması ve ileri seviye öğrenme hedefleniyor.
+                                </p>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="glass rounded-lg p-3">
+                                        <i class="fas fa-users text-indigo-400 mr-2"></i>
+                                        <span class="text-sm">Küçük Gruplar</span>
+                                    </div>
+                                    <div class="glass rounded-lg p-3">
+                                        <i class="fas fa-chart-line text-indigo-400 mr-2"></i>
+                                        <span class="text-sm">İlerleme Takibi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- İlkokul Destek -->
+                    <div class="glass-dark rounded-2xl p-8 hover-lift" data-aos="fade-left">
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-palette text-white text-2xl"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-2xl font-bold mb-3 text-pink-400">İlkokul Destek Programı</h3>
+                                <p class="text-gray-300 mb-4">
+                                    İlkokul öğrencileri için ödev takibi, okuma-yazma gelişimi ve temel matematik becerileri. 
+                                    Eğlenceli aktivitelerle öğrenme keyifli hale geliyor.
+                                </p>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="glass rounded-lg p-3">
+                                        <i class="fas fa-gamepad text-pink-400 mr-2"></i>
+                                        <span class="text-sm">Oyunlu Öğrenme</span>
+                                    </div>
+                                    <div class="glass rounded-lg p-3">
+                                        <i class="fas fa-paint-brush text-pink-400 mr-2"></i>
+                                        <span class="text-sm">Yaratıcı Etkinlikler</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Deneme Kulübü Portal Section -->
+        <section id="deneme-kulubu" class="py-20 relative overflow-hidden">
+            <!-- Background Decoration -->
+            <div class="absolute inset-0 bg-gradient-to-br from-yildiz-purple/10 to-transparent"></div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="inline-block bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-500/50 px-4 py-2 rounded-full text-sm font-semibold text-purple-400 mb-4">
+                        <i class="fas fa-medal mr-2"></i>
+                        Profesyonel Sınav Merkezi
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">
+                        Yenimahalle <span class="gradient-text">Deneme Kulübü</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Türkiye'nin önde gelen yayınlarının deneme sınavlarını, gerçek sınav ortamında, 
+                        optik okuma sistemi ile değerlendiriyoruz. Detaylı analiz raporları ile güçlü ve zayıf yönlerinizi keşfedin.
+                    </p>
+                </div>
+                
+                <!-- Main Portal Content -->
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <!-- Left Column - Exam Calendar -->
+                    <div data-aos="fade-right">
+                        <div class="glass-dark rounded-2xl p-6 mb-6">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center">
+                                <i class="fas fa-calendar-alt text-purple-400 mr-3"></i>
+                                Deneme Sınavı Takvimi
+                            </h3>
+                            
+                            <!-- Calendar Header -->
+                            <div class="flex justify-between items-center mb-4">
+                                <button class="text-gray-400 hover:text-white transition">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <h4 class="text-lg font-semibold">Aralık 2024</h4>
+                                <button class="text-gray-400 hover:text-white transition">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Calendar Table -->
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-sm">
+                                    <thead>
+                                        <tr class="text-gray-400">
+                                            <th class="py-2">Pzt</th>
+                                            <th class="py-2">Sal</th>
+                                            <th class="py-2">Çar</th>
+                                            <th class="py-2">Per</th>
+                                            <th class="py-2">Cum</th>
+                                            <th class="py-2">Cmt</th>
+                                            <th class="py-2">Paz</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="py-2 text-center text-gray-600">26</td>
+                                            <td class="py-2 text-center text-gray-600">27</td>
+                                            <td class="py-2 text-center text-gray-600">28</td>
+                                            <td class="py-2 text-center text-gray-600">29</td>
+                                            <td class="py-2 text-center text-gray-600">30</td>
+                                            <td class="py-2 text-center">
+                                                <div class="bg-purple-500/20 rounded-lg p-1 cursor-pointer hover:bg-purple-500/30 transition">
+                                                    <span class="font-bold">1</span>
+                                                    <p class="text-xs text-purple-400">Deneme</p>
+                                                </div>
+                                            </td>
+                                            <td class="py-2 text-center">
+                                                <div class="bg-blue-500/20 rounded-lg p-1 cursor-pointer hover:bg-blue-500/30 transition">
+                                                    <span class="font-bold">2</span>
+                                                    <p class="text-xs text-blue-400">TYT</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 text-center">3</td>
+                                            <td class="py-2 text-center">4</td>
+                                            <td class="py-2 text-center">5</td>
+                                            <td class="py-2 text-center">6</td>
+                                            <td class="py-2 text-center">7</td>
+                                            <td class="py-2 text-center">
+                                                <div class="bg-purple-500/20 rounded-lg p-1 cursor-pointer hover:bg-purple-500/30 transition">
+                                                    <span class="font-bold">8</span>
+                                                    <p class="text-xs text-purple-400">Deneme</p>
+                                                </div>
+                                            </td>
+                                            <td class="py-2 text-center">
+                                                <div class="bg-green-500/20 rounded-lg p-1 cursor-pointer hover:bg-green-500/30 transition">
+                                                    <span class="font-bold">9</span>
+                                                    <p class="text-xs text-green-400">Sarmal</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- More calendar rows... -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <!-- Legend -->
+                            <div class="flex flex-wrap gap-4 mt-4 text-xs">
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-purple-500 rounded mr-2"></div>
+                                    <span>LGS Deneme</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-blue-500 rounded mr-2"></div>
+                                    <span>TYT Deneme</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-green-500 rounded mr-2"></div>
+                                    <span>Sarmal Deneme</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Upcoming Exams -->
+                        <div class="glass-dark rounded-2xl p-6">
+                            <h3 class="text-xl font-bold mb-4">Yaklaşan Sınavlar</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between p-3 glass rounded-lg hover:bg-white/5 transition cursor-pointer">
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3">
+                                            <i class="fas fa-pen-alt text-purple-400"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Başarı Yayınları LGS-4</p>
+                                            <p class="text-xs text-gray-400">8 Aralık Cumartesi, 10:00</p>
+                                        </div>
+                                    </div>
+                                    <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">2 gün</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 glass rounded-lg hover:bg-white/5 transition cursor-pointer">
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-3">
+                                            <i class="fas fa-book text-blue-400"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Bilgi Sarmal 7. Sınıf</p>
+                                            <p class="text-xs text-gray-400">9 Aralık Pazar, 10:00</p>
+                                        </div>
+                                    </div>
+                                    <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs">3 gün</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column - Exam Publishers and Stats -->
+                    <div data-aos="fade-left">
+                        <!-- Publishers Grid -->
+                        <div class="glass-dark rounded-2xl p-6 mb-6">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center">
+                                <i class="fas fa-book-open text-purple-400 mr-3"></i>
+                                Anlaşmalı Yayınlar
+                            </h3>
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="glass rounded-lg p-4 text-center hover:bg-white/10 transition cursor-pointer">
+                                    <i class="fas fa-star text-yildiz-gold text-2xl mb-2"></i>
+                                    <p class="text-sm font-semibold">Başarı</p>
+                                </div>
+                                <div class="glass rounded-lg p-4 text-center hover:bg-white/10 transition cursor-pointer">
+                                    <i class="fas fa-trophy text-yellow-500 text-2xl mb-2"></i>
+                                    <p class="text-sm font-semibold">Bilgi</p>
+                                </div>
+                                <div class="glass rounded-lg p-4 text-center hover:bg-white/10 transition cursor-pointer">
+                                    <i class="fas fa-medal text-orange-500 text-2xl mb-2"></i>
+                                    <p class="text-sm font-semibold">Hız</p>
+                                </div>
+                                <div class="glass rounded-lg p-4 text-center hover:bg-white/10 transition cursor-pointer">
+                                    <i class="fas fa-rocket text-red-500 text-2xl mb-2"></i>
+                                    <p class="text-sm font-semibold">Apotemi</p>
+                                </div>
+                                <div class="glass rounded-lg p-4 text-center hover:bg-white/10 transition cursor-pointer">
+                                    <i class="fas fa-brain text-purple-500 text-2xl mb-2"></i>
+                                    <p class="text-sm font-semibold">Kültür</p>
+                                </div>
+                                <div class="glass rounded-lg p-4 text-center hover:bg-white/10 transition cursor-pointer">
+                                    <i class="fas fa-graduation-cap text-blue-500 text-2xl mb-2"></i>
+                                    <p class="text-sm font-semibold">Editör</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Optical Reading System -->
+                        <div class="glass-dark rounded-2xl p-6 mb-6">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center">
+                                <i class="fas fa-qrcode text-purple-400 mr-3"></i>
+                                Optik Okuma Sistemi
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Son teknoloji optik okuma sistemi ile anında değerlendirme. 
+                                Detaylı analiz raporları, konu bazlı net dağılımları ve Türkiye geneli sıralamanız.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="glass rounded-lg p-4">
+                                    <i class="fas fa-tachometer-alt text-green-500 text-2xl mb-2"></i>
+                                    <p class="font-semibold mb-1">Anında Sonuç</p>
+                                    <p class="text-xs text-gray-400">Sınav bitiminde sonuçlar hazır</p>
+                                </div>
+                                <div class="glass rounded-lg p-4">
+                                    <i class="fas fa-chart-bar text-blue-500 text-2xl mb-2"></i>
+                                    <p class="font-semibold mb-1">Detaylı Analiz</p>
+                                    <p class="text-xs text-gray-400">Konu bazlı performans raporu</p>
+                                </div>
+                                <div class="glass rounded-lg p-4">
+                                    <i class="fas fa-users text-purple-500 text-2xl mb-2"></i>
+                                    <p class="font-semibold mb-1">Sıralama</p>
+                                    <p class="text-xs text-gray-400">Türkiye geneli karşılaştırma</p>
+                                </div>
+                                <div class="glass rounded-lg p-4">
+                                    <i class="fas fa-mobile-alt text-orange-500 text-2xl mb-2"></i>
+                                    <p class="font-semibold mb-1">Mobil Erişim</p>
+                                    <p class="text-xs text-gray-400">Sonuçlara her yerden ulaşım</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Statistics -->
+                        <div class="glass-dark rounded-2xl p-6">
+                            <h3 class="text-xl font-bold mb-4">Deneme Kulübü İstatistikleri</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span>Toplam Katılımcı</span>
+                                        <span class="font-bold text-purple-400">12,456</span>
+                                    </div>
+                                    <div class="bg-gray-700 rounded-full h-2 overflow-hidden">
+                                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-full rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span>Yıllık Deneme Sayısı</span>
+                                        <span class="font-bold text-blue-400">248</span>
+                                    </div>
+                                    <div class="bg-gray-700 rounded-full h-2 overflow-hidden">
+                                        <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-full rounded-full" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span>Memnuniyet Oranı</span>
+                                        <span class="font-bold text-green-400">%98</span>
+                                    </div>
+                                    <div class="bg-gray-700 rounded-full h-2 overflow-hidden">
+                                        <div class="bg-gradient-to-r from-green-500 to-green-600 h-full rounded-full" style="width: 98%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Section -->
+                <div class="mt-12 text-center">
+                    <div class="glass-dark rounded-3xl p-8 max-w-3xl mx-auto" data-aos="zoom-in">
+                        <h3 class="text-2xl font-bold mb-4">Deneme Kulübüne Katılın!</h3>
+                        <p class="text-gray-300 mb-6">
+                            Aylık üyelik sistemi ile tüm deneme sınavlarına katılabilir, 
+                            performansınızı takip edebilir ve hedeflerinize ulaşabilirsiniz.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="#" class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg hover:scale-105 transition-all inline-flex items-center justify-center">
+                                <i class="fas fa-user-plus mr-2"></i>
+                                Üye Ol
+                            </a>
+                            <a href="#" class="glass border border-purple-400/50 text-purple-400 px-8 py-3 rounded-full font-bold hover:bg-purple-400/10 transition-all inline-flex items-center justify-center">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Detaylı Bilgi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Özel Ders Section -->
+        <section id="ozel-ders" class="py-20 relative overflow-hidden">
+            <div class="container mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="inline-block bg-gradient-to-r from-yildiz-gold/20 to-yellow-500/20 border border-yildiz-gold/50 px-4 py-2 rounded-full text-sm font-semibold text-yildiz-gold mb-4">
+                        <i class="fas fa-user-graduate mr-2"></i>
+                        Birebir Eğitim
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">
+                        Sıfırdan Zirveye <span class="gradient-text">Özel Ders</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Matematik başta olmak üzere tüm branşlarda birebir özel ders hizmeti. 
+                        LGS ve YKS (sadece özel ders) hazırlık sürecinizde size özel program.
+                    </p>
+                </div>
+                
+                <!-- Main Content Grid -->
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Left - Features -->
+                    <div data-aos="fade-right">
+                        <div class="space-y-6">
+                            <!-- Mathematics Focus -->
+                            <div class="glass-dark rounded-2xl p-6 border-l-4 border-yildiz-gold">
+                                <div class="flex items-start">
+                                    <div class="w-14 h-14 bg-gradient-to-br from-yildiz-gold to-yellow-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-calculator text-yildiz-navy text-xl"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-xl font-bold mb-2">Matematik Uzmanlığı</h3>
+                                        <p class="text-gray-300 mb-3">
+                                            "Sıfırdan Zirveye Matematik" mottosuyla, temellerden başlayarak ileri seviyeye kadar 
+                                            matematik öğretimi. Problem çözme teknikleri ve hız kazandırma.
+                                        </p>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="bg-yildiz-gold/20 text-yildiz-gold px-3 py-1 rounded-full text-xs">Temel Matematik</span>
+                                            <span class="bg-yildiz-gold/20 text-yildiz-gold px-3 py-1 rounded-full text-xs">Geometri</span>
+                                            <span class="bg-yildiz-gold/20 text-yildiz-gold px-3 py-1 rounded-full text-xs">Problem Çözme</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Science Branches -->
+                            <div class="glass-dark rounded-2xl p-6">
+                                <div class="flex items-start">
+                                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-flask text-white text-xl"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-xl font-bold mb-2">Fen Bilimleri</h3>
+                                        <p class="text-gray-300 mb-3">
+                                            Fizik, Kimya ve Biyoloji derslerinde uzman öğretmenlerle birebir çalışma. 
+                                            Deney ve görseller ile desteklenmiş anlatım.
+                                        </p>
+                                        <div class="grid grid-cols-3 gap-2 text-xs">
+                                            <div class="glass rounded p-2 text-center">
+                                                <i class="fas fa-atom text-blue-400"></i>
+                                                <p>Fizik</p>
+                                            </div>
+                                            <div class="glass rounded p-2 text-center">
+                                                <i class="fas fa-vial text-purple-400"></i>
+                                                <p>Kimya</p>
+                                            </div>
+                                            <div class="glass rounded p-2 text-center">
+                                                <i class="fas fa-dna text-green-400"></i>
+                                                <p>Biyoloji</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Language Arts -->
+                            <div class="glass-dark rounded-2xl p-6">
+                                <div class="flex items-start">
+                                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-book text-white text-xl"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-xl font-bold mb-2">Dil ve Anlatım</h3>
+                                        <p class="text-gray-300 mb-3">
+                                            Türkçe ve İngilizce derslerinde okuma, anlama, yazma ve konuşma becerilerinin geliştirilmesi. 
+                                            Dil bilgisi ve kompozisyon çalışmaları.
+                                        </p>
+                                        <ul class="space-y-1 text-sm text-gray-400">
+                                            <li class="flex items-center">
+                                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                                Paragraf ve anlam bilgisi
+                                            </li>
+                                            <li class="flex items-center">
+                                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                                Yazma teknikleri
+                                            </li>
+                                            <li class="flex items-center">
+                                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                                İngilizce konuşma pratiği
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right - Pricing and Plans -->
+                    <div data-aos="fade-left">
+                        <!-- Pricing Cards -->
+                        <div class="space-y-4 mb-6">
+                            <!-- LGS Package -->
+                            <div class="glass-dark rounded-2xl p-6 relative overflow-hidden hover-lift cursor-pointer group">
+                                <div class="absolute top-0 right-0 bg-gradient-to-r from-yildiz-gold to-yellow-500 text-yildiz-navy px-4 py-1 rounded-bl-xl text-xs font-bold">
+                                    EN POPÜLER
+                                </div>
+                                <h3 class="text-2xl font-bold mb-3">LGS Özel Ders Paketi</h3>
+                                <p class="text-gray-300 mb-4">8. sınıf öğrencileri için tüm dersler</p>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-4xl font-bold gradient-text">₺850</span>
+                                    <span class="text-gray-400 ml-2">/aylık</span>
+                                </div>
+                                <ul class="space-y-2 mb-6 text-sm">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        Haftada 2 ders (Her biri 2 saat)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        Tüm branşlarda destek
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        Özel çalışma programı
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        Deneme sınavı analizi
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        WhatsApp destek hattı
+                                    </li>
+                                </ul>
+                                <button class="w-full bg-gradient-to-r from-yildiz-gold to-yellow-500 text-yildiz-navy py-3 rounded-lg font-bold hover:shadow-lg transition-all">
+                                    Hemen Başla
+                                </button>
+                            </div>
+                            
+                            <!-- YKS Package -->
+                            <div class="glass-dark rounded-2xl p-6 hover-lift cursor-pointer">
+                                <h3 class="text-2xl font-bold mb-3">YKS Özel Ders</h3>
+                                <p class="text-gray-300 mb-4">Lise öğrencileri için birebir hazırlık</p>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-4xl font-bold text-purple-400">₺1200</span>
+                                    <span class="text-gray-400 ml-2">/aylık</span>
+                                </div>
+                                <ul class="space-y-2 mb-6 text-sm">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        Haftada 2 ders (Her biri 2 saat)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        TYT/AYT müfredatı
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        Branş bazlı uzmanlaşma
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        Soru bankası desteği
+                                    </li>
+                                </ul>
+                                <button class="w-full glass border border-purple-400 text-purple-400 py-3 rounded-lg font-bold hover:bg-purple-400/10 transition-all">
+                                    Bilgi Al
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Important Note -->
+                        <div class="bg-red-500/10 border border-red-500/50 rounded-xl p-4 mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-info-circle text-red-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold text-red-400 mb-1">Önemli Not</p>
+                                    <p class="text-sm text-gray-300">
+                                        YKS hazırlık için sadece birebir özel ders verilmektedir. 
+                                        Grup kursumuz bulunmamaktadır.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Success Story -->
+                        <div class="glass-dark rounded-2xl p-6">
+                            <h4 class="text-lg font-bold mb-3 flex items-center">
+                                <i class="fas fa-star text-yildiz-gold mr-2"></i>
+                                Başarı Hikayesi
+                            </h4>
+                            <blockquote class="text-gray-300 italic mb-3">
+                                "Matematik dersinde çok zorlanıyordum. Yıldız Kurs'ta aldığım özel dersler sayesinde 
+                                temellerimi sağlamlaştırdım ve şimdi LGS denemelerinde matematik netlerim 18-20 arasında!"
+                            </blockquote>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-yildiz-gold to-yellow-500 rounded-full flex items-center justify-center">
+                                    <span class="text-yildiz-navy font-bold">EA</span>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="font-semibold">Elif Arslan</p>
+                                    <p class="text-xs text-gray-400">8. Sınıf Öğrencisi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Teacher Profiles -->
+                <div class="mt-16">
+                    <h3 class="text-3xl font-bold text-center mb-8" data-aos="fade-up">Uzman Öğretmen Kadromuz</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Teacher 1 -->
+                        <div class="glass-dark rounded-2xl p-6 text-center hover-lift" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="w-24 h-24 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-user-tie text-white text-3xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Ahmet Yıldız</h4>
+                            <p class="text-sm text-gray-400 mb-2">Matematik Öğretmeni</p>
+                            <p class="text-xs text-gray-500 mb-3">15 Yıl Deneyim</p>
+                            <div class="flex justify-center gap-1">
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Teacher 2 -->
+                        <div class="glass-dark rounded-2xl p-6 text-center hover-lift" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="w-24 h-24 mx-auto bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-user-tie text-white text-3xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Mehmet Demir</h4>
+                            <p class="text-sm text-gray-400 mb-2">Fen Bilimleri Öğretmeni</p>
+                            <p class="text-xs text-gray-500 mb-3">12 Yıl Deneyim</p>
+                            <div class="flex justify-center gap-1">
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Teacher 3 -->
+                        <div class="glass-dark rounded-2xl p-6 text-center hover-lift" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="w-24 h-24 mx-auto bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-user text-white text-3xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Ayşe Kaya</h4>
+                            <p class="text-sm text-gray-400 mb-2">Türkçe Öğretmeni</p>
+                            <p class="text-xs text-gray-500 mb-3">10 Yıl Deneyim</p>
+                            <div class="flex justify-center gap-1">
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Teacher 4 -->
+                        <div class="glass-dark rounded-2xl p-6 text-center hover-lift" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="w-24 h-24 mx-auto bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-user text-white text-3xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Fatma Öztürk</h4>
+                            <p class="text-sm text-gray-400 mb-2">İngilizce Öğretmeni</p>
+                            <p class="text-xs text-gray-500 mb-3">8 Yıl Deneyim</p>
+                            <div class="flex justify-center gap-1">
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                                <i class="fas fa-star text-yildiz-gold text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Yenimahalle Location Module -->
+        <section id="lokasyon" class="py-20 relative">
+            <div class="container mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="inline-block bg-gradient-to-r from-yildiz-gold/20 to-yellow-500/20 border border-yildiz-gold/50 px-4 py-2 rounded-full text-sm font-semibold text-yildiz-gold mb-4">
+                        <i class="fas fa-map-marked-alt mr-2"></i>
+                        Konum ve Ulaşım
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">
+                        Yenimahalle'nin <span class="gradient-text">Kalbinde</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Aşağı Yahyalar Mahallesi'nde, ulaşımı kolay merkezi konumumuzla hizmetinizdeyiz. 
+                        Metro, otobüs ve dolmuş hatlarına yakın, güvenli ve modern tesisimiz.
+                    </p>
+                </div>
+                
+                <!-- Map and Info Grid -->
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Map Container -->
+                    <div data-aos="fade-right">
+                        <div class="glass-dark rounded-2xl p-4 h-[500px] relative overflow-hidden">
+                            <!-- Map Placeholder (Google Maps API simulation) -->
+                            <div class="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl relative">
+                                <!-- Map Elements -->
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <div class="w-20 h-20 bg-gradient-to-br from-yildiz-gold to-yellow-500 rounded-full flex items-center justify-center mb-4 animate-pulse">
+                                            <i class="fas fa-map-marker-alt text-yildiz-navy text-3xl"></i>
+                                        </div>
+                                        <p class="text-white font-bold">Yıldız Kurs</p>
+                                        <p class="text-gray-400 text-sm">Aşağı Yahyalar Mah.</p>
+                                        <p class="text-gray-400 text-sm">994 Cad. No:6/A</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Map Controls -->
+                                <div class="absolute top-4 right-4 space-y-2">
+                                    <button class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition">
+                                        <i class="fas fa-plus text-white"></i>
+                                    </button>
+                                    <button class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition">
+                                        <i class="fas fa-minus text-white"></i>
+                                    </button>
+                                </div>
+                                
+                                <!-- Directions Button -->
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <a href="https://maps.google.com" target="_blank" class="block bg-gradient-to-r from-yildiz-gold to-yellow-500 text-yildiz-navy py-3 rounded-lg text-center font-bold hover:shadow-lg transition-all">
+                                        <i class="fas fa-directions mr-2"></i>
+                                        Yol Tarifi Al
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Location Info -->
+                    <div data-aos="fade-left">
+                        <!-- Address Card -->
+                        <div class="glass-dark rounded-2xl p-6 mb-6">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center">
+                                <i class="fas fa-building text-yildiz-gold mr-3"></i>
+                                Adres Bilgileri
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-pin text-gray-400 mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-semibold">Tam Adres</p>
+                                        <p class="text-gray-400">Aşağı Yahyalar Mahallesi, 994 Cadde, No:6/A</p>
+                                        <p class="text-gray-400">Yenimahalle / ANKARA</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-phone text-gray-400 mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-semibold">İletişim</p>
+                                        <p class="text-gray-400">Sabit: 0312 346 06 33</p>
+                                        <p class="text-gray-400">WhatsApp: 0532 479 06 68</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-clock text-gray-400 mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-semibold">Çalışma Saatleri</p>
+                                        <p class="text-gray-400">Pazartesi - Cuma: 09:00 - 21:00</p>
+                                        <p class="text-gray-400">Cumartesi: 09:00 - 19:00
