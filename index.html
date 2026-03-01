@@ -1,4 +1,12 @@
-<?php
-// basit kontrol
-echo "Site çalışıyor! 📡";
-?>
+import requests
+
+url = "https://www.google.com"
+
+try:
+    response = requests.get(url)
+    if response.status_code == 200:
+        print(f"{url} aktif ve çalışıyor!")
+    else:
+        print(f"{url} sorunlu. Durum kodu: {response.status_code}")
+except Exception as e:
+    print(f"Siteye ulaşılamadı: {e}")
