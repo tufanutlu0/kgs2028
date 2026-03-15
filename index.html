@@ -2139,15 +2139,28 @@
                 });
             });
         });
-        // Mobil cihazlarda videonun oynamasını zorla
-window.addEventListener('load', function() {
-    const video = document.querySelector('.hero-video-bg');
-    if (video) {
-        video.play().catch(function(error) {
-            // Otomatik oynatma engellenirse (örn. Düşük Güç Modu)
-            console.log("Video otomatik başlatılamadı, tarayıcı kısıtlaması.");
-        });
-    }
+// Mobil cihazlarda videoyu oynatmak için zorlayıcı kod
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.querySelector('.hero-video-bg');
+    
+    // Videonun oynamasını her saniye kontrol et, oynamıyorsa başlatmayı dene
+    var playVideo = setInterval(function() {
+        if (video.paused) {
+            video.play().then(function() {
+                clearInterval(playVideo);
+            }).catch(function(error) {
+                // Kullanıcı etkileşimi bekliyor olabilir veya tasarruf modu aktiftir
+                console.log("Video oynatma denemesi başarısız: ", error);
+            });
+        } else {
+            clearInterval(playVideo);
+        }
+    }, 1000);
+
+    // İlk dokunuşta videoyu başlat (Tasarruf modu için kesin çözüm)
+    document.body.addEventListener('touchstart', function() {
+        video.play();
+    }, {once: true});
 });
     </script>
 </body>
