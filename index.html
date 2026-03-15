@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,156 +7,418 @@
     <meta name="theme-color" content="#0f1738">
     
     <title>Yıldız Kurs | Yenimahalle Etüt Merkezi ve LGS Hazırlık Kursu</title>
+    <meta name="description" content="Ankara Yenimahalle LGS hazırlık, birebir özel ders, profesyonel eğitim koçluğu ve yeni nesil deneme kulübü. Başarıyı şansa bırakmayın.">
+    <meta name="keywords" content="yıldız kurs, ankara dershane, lgs kursu, özel ders, yenimahalle etüt, deneme sınavı, eğitim koçluğu">
+    <meta name="author" content="Yıldız Kurs Kurumsal">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="Turkish">
     
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yildizkurs.com.tr">
+    <meta property="og:title" content="Yıldız Kurs | Geleceğin Yıldızlarını Yetiştiriyoruz">
+    <meta property="og:description" content="Ankara'nın lider eğitim kurumu. Erken kayıt fırsatları başladı.">
+    <meta property="og:image" content="img/logo.jpg">
+    <meta property="og:site_name" content="Yıldız Kurs">
+    <meta property="og:locale" content="tr_TR">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yıldız Kurs Ankara">
+    <meta name="twitter:description" content="LGS ve Özel Derste Başarının Adresi.">
+    <meta name="twitter:image" content="img/logo.jpg">
+
     <link rel="icon" href="img/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
+        /* ---------------------------------------------------------
+        1. RESET & TEMEL AYARLAR
+        ---------------------------------------------------------
+        */
         :root {
             --primary-color: #0f1738;
+            --primary-light: #1a2355;
+            --primary-dark: #05081c;
             --secondary-color: #e30613;
             --secondary-hover: #c20510;
+            --accent-color: #ffb700;
             --text-main: #333333;
+            --text-light: #666666;
             --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e9ecef;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --info: #17a2b8;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
             --shadow-lg: 0 8px 16px rgba(0,0,0,0.15);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.2);
+            --transition-fast: all 0.2s ease;
+            --transition-normal: all 0.3s ease-in-out;
+            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --container-width: 1200px;
             --header-height: 90px;
         }
 
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Open Sans', sans-serif; color: var(--text-main); line-height: 1.6; }
-        h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: var(--primary-color); }
-        a { text-decoration: none; }
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-white);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        h1 { font-size: 3.5rem; letter-spacing: -1px; }
+        h2 { font-size: 2.5rem; letter-spacing: -0.5px; }
+        h3 { font-size: 1.75rem; }
+        h4 { font-size: 1.5rem; }
+        h5 { font-size: 1.25rem; }
+        h6 { font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        p { margin-bottom: 1.5rem; }
+        a { text-decoration: none; color: inherit; transition: var(--transition-normal); }
+        ul, ol { list-style: none; }
+        img, video { max-width: 100%; height: auto; display: block; }
         
-        .container { width: 100%; max-width: 1200px; padding: 0 15px; margin: 0 auto; }
-        .row { display: flex; flex-wrap: wrap; margin: 0 -15px; }
-        
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+        .col-md-3, .col-md-4, .col-md-6, .col-lg-3, .col-lg-4, .col-lg-6 {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .col-md-3 { flex: 0 0 25%; max-width: 25%; }
+            .col-md-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+            .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+        }
+
+        @media (min-width: 992px) {
+            .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+            .col-lg-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+            .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+            .col-lg-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+        }
+
+        .text-center { text-align: center !important; }
+        .text-left { text-align: left !important; }
+        .text-right { text-align: right !important; }
+        .text-white { color: #fff !important; }
+        .bg-light { background-color: var(--bg-light) !important; }
+        .d-flex { display: flex !important; }
+        .align-items-center { align-items: center !important; }
+        .justify-content-center { justify-content: center !important; }
+        .py-100 { padding-top: 100px; padding-bottom: 100px; }
+        .mb-30 { margin-bottom: 30px; }
+        .w-100 { width: 100% !important; }
+        .h-100 { height: 100% !important; }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-align: center;
+            border: 2px solid transparent;
+            padding: 12px 35px;
+            font-size: 0.95rem;
+            border-radius: 5px;
+            transition: var(--transition-normal);
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(227, 6, 19, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-hover);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline-white {
+            color: #fff;
+            border-color: #fff;
+            background: transparent;
+        }
+
+        .btn-outline-white:hover {
+            background: #fff;
+            color: var(--primary-color);
+        }
+
         /* Header */
-        .top-bar { background: var(--primary-color); color: #fff; padding: 10px 0; font-size: 0.85rem; text-align: center; }
-        .main-header { background: #fff; height: var(--header-height); display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .navbar { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo img { max-height: 60px; }
-        .nav-menu { display: flex; gap: 25px; }
-        .nav-link { font-weight: 600; color: var(--primary-color); }
+        .top-bar {
+            background-color: var(--primary-color);
+            color: rgba(255, 255, 255, 0.85);
+            padding: 10px 0;
+            font-size: 0.85rem;
+        }
+
+        .main-header {
+            background-color: #fff;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .nav-menu {
+            display: flex;
+            margin-left: auto;
+        }
+
+        .nav-item { margin-left: 30px; }
+        .nav-link { font-weight: 600; font-size: 0.9rem; text-transform: uppercase; }
 
         /* Hero */
-        .hero-section { position: relative; height: 70vh; background: #000 url('img/slider-ana.jpg') center/cover; display: flex; align-items: center; color: #fff; text-align: center; }
-        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15,23,56,0.7); }
-        .hero-content { position: relative; z-index: 5; width: 100%; }
-        .hero-title { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
+        .hero-section {
+            position: relative;
+            height: 85vh;
+            min-height: 600px;
+            background-image: url('img/slider-ana.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
 
-        /* Components */
-        .btn { display: inline-block; padding: 12px 30px; border-radius: 5px; font-weight: 700; cursor: pointer; border: none; text-transform: uppercase; transition: 0.3s; }
-        .btn-primary { background: var(--secondary-color); color: #fff; }
-        .btn-primary:hover { background: var(--secondary-hover); transform: translateY(-2px); }
-        .w-100 { width: 100%; }
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(15, 23, 56, 0.8), rgba(15, 23, 56, 0.6));
+            z-index: 1;
+        }
+
+        .hero-content { position: relative; z-index: 2; }
+        .hero-title { font-size: 4.5rem; }
 
         /* Modal */
-        .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
-        .modal-content { background: #fff; margin: 10% auto; padding: 30px; width: 95%; max-width: 450px; border-radius: 12px; position: relative; }
-        .close-modal { position: absolute; top: 10px; right: 15px; font-size: 25px; cursor: pointer; color: #666; }
-        .form-control { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10001;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+        }
 
-        /* Floating WhatsApp */
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            position: relative;
+        }
 
-        @media (max-width: 768px) {
-            .nav-menu, .top-bar { display: none; }
-            .hero-title { font-size: 1.8rem; }
+        .close-modal {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 28px; font-weight: bold; cursor: pointer;
+        }
+
+        .form-group { margin-bottom: 20px; }
+        .form-control {
+            width: 100%; padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+        }
+
+        /* WhatsApp */
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px;
+            background-color: #25d366; color: #FFF;
+            width: 60px; height: 60px; border-radius: 50px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px; z-index: 1000;
+        }
+
+        #loader-wrapper {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--primary-color); z-index: 99999;
+            display: flex; justify-content: center; align-items: center;
+        }
+
+        .loader {
+            width: 50px; height: 50px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%; border-top-color: var(--secondary-color);
+            animation: spin 1s infinite linear;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
+        @media (max-width: 991px) {
+            .hero-title { font-size: 2.5rem; }
+            .top-bar, .header-btn { display: none; }
         }
     </style>
 </head>
 <body>
 
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
     <div class="top-bar">
         <div class="container">
-            <i class="fas fa-phone-alt"></i> 0312 346 06 33 | <i class="fas fa-map-marker-alt"></i> Yenimahalle, Ankara
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                   <div class="top-bar-info d-flex">
+                        <span><i class="fas fa-phone-alt"></i> 0312 346 06 33</span>
+                        <span style="margin-left:20px;"><i class="fas fa-map-marker-alt"></i> Yenimahalle / ANKARA</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <header class="main-header">
         <div class="container">
             <nav class="navbar">
-                <a href="index.html" class="logo"><img src="img/logo.jpg" alt="Yıldız Kurs"></a>
+                <a href="index.html" class="logo">
+                    <img src="img/logo.jpg" alt="Yıldız Kurs" style="max-height:60px;">
+                </a>
                 <div class="nav-menu">
-                    <a href="#" class="nav-link">Anasayfa</a>
-                    <a href="#about" class="nav-link">Kurumsal</a>
-                    <a href="#services" class="nav-link">Eğitimler</a>
-                    <a href="#contact" class="nav-link">İletişim</a>
+                    <div class="nav-item"><a href="#" class="nav-link">Anasayfa</a></div>
+                    <div class="nav-item"><a href="#about" class="nav-link">Kurumsal</a></div>
+                    <div class="nav-item"><a href="#contact" class="nav-link">İletişim</a></div>
                 </div>
-                <button onclick="openModal()" class="btn btn-primary">RANDEVU AL</button>
+                <div class="header-btn">
+                    <button onclick="openModal()" class="btn btn-primary">RANDEVU AL</button>
+                </div>
             </nav>
         </div>
     </header>
 
     <section class="hero-section">
         <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 class="hero-title">GELECEĞİN YILDIZLARINI <br> YETİŞTİRİYORUZ</h1>
-            <p>Ankara Yenimahalle'de LGS ve Özel Derste Doğru Adres</p> <br>
-            <button onclick="openModal()" class="btn btn-primary">BİZE ULAŞIN</button>
+        <div class="container" style="position:relative; z-index:2;">
+            <h1 class="hero-title">GELECEĞİN YILDIZLARINI<br>YETİŞTİRİYORUZ</h1>
+            <p>Ankara Yenimahalle'de LGS ve Özel Derste Başarının Adresi.</p>
+            <div class="hero-btns">
+                <button onclick="openModal()" class="btn btn-primary">KAYIT OL</button>
+                <a href="#contact" class="btn btn-outline-white">BİZE ULAŞIN</a>
+            </div>
         </div>
     </section>
+
+    <div id="kayitModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">×</span>
+            <div class="text-center mb-30">
+                <h3 style="color:var(--primary-color);">ERKEN KAYIT FIRSATI</h3>
+                <p>Formu doldurun, eğitim danışmanlarımız size özel indirimlerle dönüş yapsın.</p>
+            </div>
+            
+            <form action="https://formspree.io/f/mbdzakon" method="POST">
+                <div class="form-group">
+                    <input type="text" name="Ad Soyad" class="form-control" placeholder="Adınız Soyadınız" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="Telefon" class="form-control" placeholder="Telefon Numaranız" required>
+                </div>
+                <div class="form-group">
+                    <select name="Program" class="form-control" required>
+                        <option value="">İlgilendiğiniz Program</option>
+                        <option value="LGS">LGS Hazırlık</option>
+                        <option value="Ozel-Ders">Özel Ders</option>
+                        <option value="Deneme-Kulubu">Deneme Kulübü</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="Mesaj" class="form-control" rows="3" placeholder="Notunuz..."></textarea>
+                </div>
+                
+                <input type="text" name="_gotcha" style="display:none">
+                
+                <button type="submit" class="btn btn-primary w-100">BENİ ARAYIN</button>
+            </form>
+        </div>
+    </div>
 
     <a href="https://wa.me/905324790668" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <div id="kayitModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">×</span>
-            <div style="text-align: center; margin-bottom: 20px;">
-                <h3 style="margin-bottom: 10px;">BİLGİ ALIN</h3>
-                <p style="font-size: 0.9rem; color: #666;">Formu doldurun, sizi WhatsApp üzerinden bilgilendirelim.</p>
-            </div>
-            <form id="whatsappForm">
-                <input type="text" id="wa_name" class="form-control" placeholder="Adınız Soyadınız" required>
-                <input type="tel" id="wa_phone" class="form-control" placeholder="Telefon Numaranız" required>
-                <select id="wa_program" class="form-control" required>
-                    <option value="">Program Seçiniz</option>
-                    <option value="LGS Hazırlık">LGS Hazırlık</option>
-                    <option value="Özel Ders">Özel Ders</option>
-                    <option value="Deneme Kulübü">Deneme Kulübü</option>
-                    <option value="KGS 2028">KGS 2028</option>
-                </select>
-                <textarea id="wa_note" class="form-control" rows="3" placeholder="Notunuz (Opsiyonel)"></textarea>
-                <button type="submit" class="btn btn-primary w-100">WHATSAPP İLE GÖNDER</button>
-            </form>
-        </div>
-    </div>
-
     <script>
-        function openModal() { document.getElementById('kayitModal').style.display = 'block'; }
-        function closeModal() { document.getElementById('kayitModal').style.display = 'none'; }
-        
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('kayitModal')) closeModal();
-        }
-
-        // WhatsApp Form Yönetimi
-        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('wa_name').value;
-            const phone = document.getElementById('wa_phone').value;
-            const program = document.getElementById('wa_program').value;
-            const note = document.getElementById('wa_note').value || "Not yok";
-
-            // WhatsApp mesaj içeriği
-            const message = `*Yeni Randevu Talebi (Yıldız Kurs)*%0A%0A` +
-                            `*Ad Soyad:* ${name}%0A` +
-                            `*Telefon:* ${phone}%0A` +
-                            `*Program:* ${program}%0A` +
-                            `*Not:* ${note}`;
-
-            // api.whatsapp.com üzerinden yönlendirme (En güvenli yöntem)
-            const waUrl = "https://api.whatsapp.com/send?phone=905324790668&text=" + message;
-            
-            // Mevcut sayfayı WhatsApp'a yönlendir (Tarayıcı engeline takılmaz)
-            window.location.href = waUrl;
+        // Preloader
+        window.addEventListener('load', function() {
+            document.getElementById('loader-wrapper').style.display = 'none';
         });
+
+        // Modal Fonksiyonları
+        const modal = document.getElementById('kayitModal');
+        function openModal() { modal.style.display = 'block'; }
+        function closeModal() { modal.style.display = 'none'; }
+        window.onclick = function(event) { if (event.target == modal) closeModal(); }
     </script>
+
 </body>
 </html>
