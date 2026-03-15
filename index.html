@@ -2139,7 +2139,16 @@
                 });
             });
         });
-        
+        // Mobil cihazlarda videonun oynamasını zorla
+window.addEventListener('load', function() {
+    const video = document.querySelector('.hero-video-bg');
+    if (video) {
+        video.play().catch(function(error) {
+            // Otomatik oynatma engellenirse (örn. Düşük Güç Modu)
+            console.log("Video otomatik başlatılamadı, tarayıcı kısıtlaması.");
+        });
+    }
+});
     </script>
 </body>
 </html>
