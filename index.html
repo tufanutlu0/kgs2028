@@ -1129,9 +1129,34 @@
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #20b857;
-        }
+    transform: scale(1.1);
+    background-color: #20b857;
+}
+
+.randevu-float {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 26px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.randevu-float:hover {
+    transform: scale(1.1);
+    background-color: var(--secondary-hover);
+}
 
         /* Scroll Top */
         .scroll-top-btn {
@@ -1828,9 +1853,13 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/905324790668" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+   <a href="https://wa.me/905324790668" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<div class="randevu-float" onclick="openModal()">
+    <i class="fas fa-calendar-check"></i>
+</div>
 
     <div class="scroll-top-btn" onclick="scrollToTop()">
         <i class="fas fa-arrow-up"></i>
