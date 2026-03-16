@@ -1292,11 +1292,22 @@
 }
 
 @media (max-width: 991px) {
-    .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .review-card { padding: 20px 15px; }
+    .review-quote { font-size: 1.8rem; margin-bottom: 5px; }
+    .review-card p { font-size: 0.85rem; margin-bottom: 15px; }
+    .review-stars { margin-bottom: 8px; }
 }
 
 @media (max-width: 576px) {
-    .reviews-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .review-card { padding: 15px 12px; }
+    .review-quote { font-size: 1.5rem; margin-bottom: 3px; }
+    .review-card p { font-size: 0.8rem; margin-bottom: 10px; line-height: 1.5; }
+    .review-author h4 { font-size: 0.85rem; }
+    .review-author span { font-size: 0.75rem; }
+    .review-avatar { width: 35px; height: 35px; font-size: 0.75rem; }
+    .review-stars { font-size: 0.75rem; }
 }
         /* Modal */
         .modal {
