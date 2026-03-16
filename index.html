@@ -1382,14 +1382,16 @@
     .gallery-item { height: 150px; }
 }
 
-    @media (max-width: 991px) {
+   @media (max-width: 991px) {
     .contact-box { margin-bottom: 30px; }
-    .map-container { min-height: 300px !important; }
-    .map-container iframe { height: 300px !important; }
+    #contact .col-lg-8 { flex: 0 0 100%; max-width: 100%; padding: 0 15px; }
+    #contact .col-lg-4 { flex: 0 0 100%; max-width: 100%; }
+    #contact iframe { width: 100% !important; max-width: 100% !important; }
 }
 @media (max-width: 576px) {
     .contact-item { flex-direction: row; align-items: flex-start; }
     .contact-icon-box { width: 45px; height: 45px; font-size: 1.1rem; flex-shrink: 0; }
+    #contact iframe { width: 100% !important; max-width: 100% !important; height: 300px !important; }
 }
     </style>
 </head>
