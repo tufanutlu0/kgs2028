@@ -1870,22 +1870,15 @@
         });
 
         // 2. Sticky Header (Kaydırınca Sabitlenen Menü)
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.main-header');
+       window.addEventListener('scroll', function() {
             const scrollTopBtn = document.querySelector('.scroll-top-btn');
             
             if (window.scrollY > 100) {
-                header.style.height = '70px';
-                header.style.position = 'fixed';
-                header.style.top = '0';
-                header.style.width = '100%';
                 scrollTopBtn.classList.add('active');
             } else {
-                header.style.height = '90px';
                 scrollTopBtn.classList.remove('active');
             }
         });
-
         // 3. Mobil Menü Toggle
         const mobileToggle = document.querySelector('.mobile-toggle');
         const navMenu = document.querySelector('.nav-menu');
