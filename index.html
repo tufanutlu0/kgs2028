@@ -1382,6 +1382,15 @@
     .gallery-item { height: 150px; }
 }
 
+    @media (max-width: 991px) {
+    .contact-box { margin-bottom: 30px; }
+    .map-container { min-height: 300px !important; }
+    .map-container iframe { height: 300px !important; }
+}
+@media (max-width: 576px) {
+    .contact-item { flex-direction: row; align-items: flex-start; }
+    .contact-icon-box { width: 45px; height: 45px; font-size: 1.1rem; flex-shrink: 0; }
+}
     </style>
 </head>
 <body>
@@ -1769,7 +1778,7 @@
 </section>
             
 
-    <section id="contact" class="py-100">
+   <section id="contact" class="py-100">
         <div class="container">
             <div class="section-title text-center">
                 <span>BİZE ULAŞIN</span>
@@ -1779,14 +1788,16 @@
             <div class="row">
                 <div class="col-lg-4 mb-50">
                     <div class="contact-box">
-                        <h3>Adres ve Telefon</h3>
-                        <p class="mb-50">Kayıt ofisimize gelerek eğitim ortamımızı yerinde görebilirsiniz.</p>
+                        <h3>Adres ve İletişim</h3>
+                        <p style="margin-bottom:25px;">Kayıt ofisimize gelerek eğitim ortamımızı yerinde görebilirsiniz.</p>
 
                         <div class="contact-item">
                             <div class="contact-icon-box"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="contact-info">
                                 <h4>Adres</h4>
-                                <p>Aşağı Yahyalar Mah. Yenimahalle / ANKARA</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Aşağı+Yahyalar+Mah.+994+Cad.+No:6/A+Yenimahalle+Ankara" target="_blank" style="color:var(--text-light); font-size:0.95rem;">
+                                    Aşağı Yahyalar Mah. 994 Cad. No:6/A Yenimahalle / ANKARA
+                                </a>
                             </div>
                         </div>
 
@@ -1794,8 +1805,8 @@
                             <div class="contact-icon-box"><i class="fas fa-phone-alt"></i></div>
                             <div class="contact-info">
                                 <h4>Telefon</h4>
-                                <p>0312 346 06 33</p>
-                                <p>0532 479 06 68</p>
+                                <a href="tel:03123460633" style="color:var(--text-light); font-size:0.95rem; display:block;">0312 346 06 33</a>
+                                <a href="https://wa.me/905324790668" target="_blank" style="color:#25d366; font-size:0.95rem; display:block; margin-top:5px;"><i class="fab fa-whatsapp"></i> 0532 479 06 68 (WhatsApp)</a>
                             </div>
                         </div>
 
@@ -1803,15 +1814,39 @@
                             <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
                             <div class="contact-info">
                                 <h4>E-Posta</h4>
-                                <p>bilgi@yildizkurs.com</p>
+                                <a href="mailto:yildizkursankara@gmail.com" style="color:var(--text-light); font-size:0.95rem;">yildizkursankara@gmail.com</a>
                             </div>
                         </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-box"><i class="fab fa-instagram"></i></div>
+                            <div class="contact-info">
+                                <h4>Instagram</h4>
+                                <a href="https://instagram.com/yildizkursankara" target="_blank" style="color:var(--text-light); font-size:0.95rem;">@yildizkursankara</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-box"><i class="fab fa-facebook-f"></i></div>
+                            <div class="contact-info">
+                                <h4>Facebook</h4>
+                                <a href="https://www.facebook.com/p/Y%C4%B1ld%C4%B1z-Kurs-Ankara-61575208704331/" target="_blank" style="color:var(--text-light); font-size:0.95rem;">YILDIZ KURS ANKARA</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
                 <div class="col-lg-8">
-                    <div class="map-container">
-                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.6256272580456!2d32.7844!3d39.9655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU3JzU1LjgiTiAzMsKwNDcnMDMuOCJF!5e0!3m2!1str!2str!4v1625680000000!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="map-container" style="min-height:500px; border-radius:10px; overflow:hidden; box-shadow:var(--shadow-md);">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.2!2d32.7744399!3d39.9852776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34bd7d69c4d29%3A0x381942e4201bc05a!2zWcSxbGTEsXoga3Vyc!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str" 
+                            width="100%" 
+                            height="500" 
+                            style="border:0; display:block;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
                     </div>
                 </div>
             </div>
