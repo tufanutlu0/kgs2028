@@ -1294,6 +1294,8 @@
     .service-list { margin-bottom: 10px; }
     .service-list li { font-size: 0.7rem; margin-bottom: 4px; }
     .read-more { font-size: 0.7rem; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .gallery-item { height: 150px; }
 }
 
     </style>
@@ -1565,7 +1567,7 @@
                 <button class="filter-btn active" onclick="filterGallery('all')">Tümü</button>
                 <button class="filter-btn" onclick="filterGallery('sinif')">Sınıflar</button>
                 <button class="filter-btn" onclick="filterGallery('etkinlik')">Etkinlikler</button>
-                <button class="filter-btn" onclick="filterGallery('kampus')">Kampüs</button>
+            
             </div>
 
             <div class="gallery-grid">
