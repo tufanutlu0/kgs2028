@@ -1404,6 +1404,66 @@
     .contact-icon-box { width: 45px; height: 45px; font-size: 1.1rem; flex-shrink: 0; }
     #contact iframe { width: 100% !important; max-width: 100% !important; height: 300px !important; }
 }
+    .dropdown { position: relative; }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            box-shadow: var(--shadow-lg);
+            border-radius: 8px;
+            min-width: 220px;
+            z-index: 2000;
+            border-top: 3px solid var(--secondary-color);
+            padding: 10px 0;
+        }
+        .dropdown:hover .dropdown-menu,
+        .dropdown-menu:hover { display: block; }
+        .dropdown-menu a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            transition: var(--transition-fast);
+        }
+        .dropdown-menu a:hover {
+            background: var(--bg-light);
+            color: var(--secondary-color);
+            padding-left: 28px;
+        }
+        .dropdown-menu a i.icon-prog {
+            color: var(--secondary-color);
+            font-size: 0.8rem;
+            width: 16px;
+        }
+        .dropdown-toggle i.fa-chevron-down {
+            font-size: 0.7rem;
+            margin-left: 4px;
+            transition: transform 0.3s;
+        }
+        .dropdown:hover .dropdown-toggle i.fa-chevron-down { transform: rotate(180deg); }
+
+        @media (max-width: 991px) {
+            .dropdown-menu {
+                position: static;
+                transform: none;
+                box-shadow: none;
+                border-top: none;
+                border-left: 3px solid var(--secondary-color);
+                border-radius: 0;
+                padding: 0;
+                margin: 5px 0 5px 15px;
+            }
+            .dropdown-menu a { padding: 8px 15px; font-size: 0.8rem; }
+            .mobile-dropdown-open .dropdown-menu { display: block; }
+        }
     </style>
 </head>
 <body>
@@ -1449,13 +1509,24 @@
                         <a href="index.html" class="nav-link">Anasayfa</a>
                     </div>
                     <div class="nav-item">
-                        <a href="#about" class="nav-link">Kurumsal</a>
+                        <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
                     </div>
-                    <div class="nav-item">
-                        <a href="#services" class="nav-link">Eğitimler</a>
+                    <div class="nav-item dropdown">
+                        <a href="#services" class="nav-link dropdown-toggle">Programlar <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="lgs.html"><i class="fas fa-graduation-cap icon-prog"></i> LGS Hazırlık</a>
+                            <a href="ozel-ders.html"><i class="fas fa-user-graduate icon-prog"></i> Özel Ders</a>
+                            <a href="deneme.html"><i class="fas fa-file-alt icon-prog"></i> Deneme Kulübü</a>
+                            <a href="etut.html"><i class="fas fa-book-reader icon-prog"></i> İlkokul Etüt</a>
+                            <a href="yaz-okulu.html"><i class="fas fa-sun icon-prog"></i> Yaz Okulu</a>
+                            <a href="kgs.html"><i class="fas fa-star icon-prog"></i> KGS 2028</a>
+                        </div>
                     </div>
                     <div class="nav-item">
                         <a href="#gallery" class="nav-link">Galeri</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="sss.html" class="nav-link">S.S.S.</a>
                     </div>
                     <div class="nav-item">
                         <a href="#contact" class="nav-link">İletişim</a>
@@ -2193,6 +2264,16 @@ function setStar(n) {
                 behavior: 'smooth'
             });
         }
+
+        // 10. Mobil Dropdown
+        document.querySelectorAll('.dropdown .dropdown-toggle').forEach(function(toggle) {
+            toggle.addEventListener('click', function(e) {
+                if (window.innerWidth <= 991) {
+                    e.preventDefault();
+                    this.closest('.dropdown').classList.toggle('mobile-dropdown-open');
+                }
+            });
+        });
 
         // 9. Form Validasyon (Basit Kontrol)
         const forms = document.querySelectorAll('form');
