@@ -1692,6 +1692,12 @@
                     </div>
                 </div>
             </div>
+
+            <div style="text-align:center; margin-top:35px;">
+                <a href="galeri.html" class="btn btn-primary btn-lg" style="display:inline-flex; align-items:center; gap:10px;">
+                    <i class="fas fa-images"></i> DAHA FAZLA FOTOĞRAF
+                </a>
+            </div>
         </div>
     </section>
 
@@ -1791,7 +1797,67 @@
 </section>
             
 
-   <section id="contact" class="py-100">
+   <div style="text-align:center; margin-top:40px; display:flex; justify-content:center; gap:15px; flex-wrap:wrap; padding-bottom:60px;">
+            <button onclick="document.getElementById('yorumModal').style.display='block'" class="btn btn-primary btn-lg" style="display:inline-flex; align-items:center; gap:10px;">
+                <i class="fas fa-pen"></i> YORUM EKLE
+            </button>
+            <a href="yorumlar.html" class="btn btn-lg" style="display:inline-flex; align-items:center; gap:10px; color:var(--primary-color); border:2px solid var(--primary-color); border-radius:5px; padding:15px 45px; font-family:'Montserrat',sans-serif; font-weight:600; font-size:1.1rem; text-transform:uppercase;">
+                <i class="fas fa-comments"></i> DAHA FAZLA YORUM
+            </a>
+        </div>
+    </div>
+</section>
+
+<div id="yorumModal" class="modal" style="display:none;">
+    <div class="modal-content" style="max-width:550px;">
+        <span class="close-modal" onclick="document.getElementById('yorumModal').style.display='none'">&times;</span>
+        <div class="text-center mb-30">
+            <h3 style="color:var(--primary-color);">YORUM EKLE</h3>
+            <p>Deneyiminizi paylaşın, diğer velilere yol gösterin.</p>
+        </div>
+        <form action="https://formspree.io/f/mlgppdze" method="POST" onsubmit="setTimeout(function(){document.getElementById('yorumModal').style.display='none'},1000)">
+            <div class="form-group">
+                <input type="text" name="yorum_isim" class="form-control" placeholder="Adınız Soyadınız" required>
+            </div>
+            <div class="form-group">
+                <select name="yorum_sinif" class="form-control">
+                    <option value="">Hangi Program İçin?</option>
+                    <option>LGS Hazırlık</option>
+                    <option>Özel Ders</option>
+                    <option>Deneme Kulübü</option>
+                    <option>KGS 2028</option>
+                    <option>Yaz Okulu</option>
+                    <option>İlkokul Etüt</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <div style="display:flex; gap:8px; margin-bottom:5px; font-size:1.3rem;" id="star-row">
+                    <i class="fas fa-star" style="color:#ccc; cursor:pointer;" onclick="setStar(1)"></i>
+                    <i class="fas fa-star" style="color:#ccc; cursor:pointer;" onclick="setStar(2)"></i>
+                    <i class="fas fa-star" style="color:#ccc; cursor:pointer;" onclick="setStar(3)"></i>
+                    <i class="fas fa-star" style="color:#ccc; cursor:pointer;" onclick="setStar(4)"></i>
+                    <i class="fas fa-star" style="color:#ccc; cursor:pointer;" onclick="setStar(5)"></i>
+                </div>
+                <input type="hidden" name="puan" id="puan-input" value="5">
+            </div>
+            <div class="form-group">
+                <textarea name="yorum_metin" class="form-control" rows="4" placeholder="Yorumunuzu yazın..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">YORUMU GÖNDER</button>
+        </form>
+    </div>
+</div>
+
+<script>
+function setStar(n) {
+    document.getElementById('puan-input').value = n;
+    var stars = document.getElementById('star-row').querySelectorAll('i');
+    stars.forEach(function(s, i) {
+        s.style.color = i < n ? 'var(--accent-color)' : '#ccc';
+    });
+}
+</script>
+    <section id="contact" class="py-100">
         <div class="container">
             <div class="section-title text-center">
                 <span>BİZE ULAŞIN</span>
