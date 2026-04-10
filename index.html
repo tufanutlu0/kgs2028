@@ -27,11 +27,23 @@
     <meta name="twitter:description" content="LGS ve Özel Derste Başarının Adresi.">
     <meta name="twitter:image" content="img/logo.jpg">
 
+    <!-- PERF: Preconnect to critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- PERF: Preload critical font files (display swap ensures no FOIT) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"></noscript>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- PERF: Load Font Awesome asynchronously (non-render-blocking) -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <!-- PERF: Preload hero poster image (LCP optimization) -->
+    <link rel="preload" as="image" href="img/slider-ana.jpg">
+    <!-- PERF: Preload logo -->
+    <link rel="preload" as="image" href="img/logo.jpg">
 
     <style>
         /* ---------------------------------------------------------
@@ -499,6 +511,8 @@
             transition: var(--transition-normal);
             height: 100%;
             border-bottom: 4px solid transparent;
+            /* PERF: will-change for hover transforms */
+            will-change: transform;
         }
 
         .feature-box:hover {
@@ -548,6 +562,8 @@
             transition: var(--transition-normal);
             margin-bottom: 30px;
             position: relative;
+            /* PERF: will-change for hover transforms */
+            will-change: transform;
             group: 'service';
         }
 
@@ -567,6 +583,8 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition-slow);
+            /* PERF: GPU-accelerated scaling */
+            will-change: transform;
         }
 
         .service-item:hover .service-img img {
@@ -797,6 +815,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
+            /* PERF: contain layout for gallery repaints */
+            contain: layout style;
         }
 
         .gallery-item {
@@ -812,6 +832,8 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition-normal);
+            /* PERF: GPU layer for scale transform */
+            will-change: transform;
         }
 
         .gallery-item:hover img {
@@ -1228,6 +1250,8 @@
     box-shadow: var(--shadow-md);
     transition: var(--transition-normal);
     position: relative;
+    /* PERF: will-change for hover transforms */
+    will-change: transform;
 }
 
 .review-card:hover {
@@ -1497,7 +1521,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    <img src="img/logo.jpg" alt="Yıldız Kurs Logo">
+                    <img src="img/logo.jpg" alt="Yıldız Kurs Logo" width="195" height="65">
                 </a>
 
                 <div class="mobile-toggle">
@@ -1541,7 +1565,8 @@
     </header>
 
     <section class="hero-section">
-        <video autoplay muted loop playsinline class="hero-video-bg" poster="img/slider-ana.jpg">
+        <!-- PERF: Added preload attribute for faster video start -->
+        <video autoplay muted loop playsinline preload="metadata" class="hero-video-bg" poster="img/slider-ana.jpg">
             <source src="img/slider-video.mp4" type="video/mp4">
         </video>
         
@@ -1579,7 +1604,8 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="img/kutu-lgs.jpg" alt="LGS Hazırlık">
+                            <!-- PERF: loading="lazy" for below-fold images, explicit dimensions -->
+                            <img src="img/kutu-lgs.jpg" alt="LGS Hazırlık" loading="lazy" decoding="async" width="400" height="250">
                             <div class="service-overlay">
                                 <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
                             </div>
@@ -1599,7 +1625,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="img/kutu-ozel.jpg" alt="Özel Ders">
+                            <img src="img/kutu-ozel.jpg" alt="Özel Ders" loading="lazy" decoding="async" width="400" height="250">
                             <div class="service-overlay">
                                 <div class="service-icon"><i class="fas fa-user-graduate"></i></div>
                             </div>
@@ -1619,7 +1645,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="img/kutu-deneme.jpg" alt="Deneme Kulübü">
+                            <img src="img/kutu-deneme.jpg" alt="Deneme Kulübü" loading="lazy" decoding="async" width="400" height="250">
                             <div class="service-overlay">
                                 <div class="service-icon"><i class="fas fa-file-alt"></i></div>
                             </div>
@@ -1639,7 +1665,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="img/kutu-etut.jpg" alt="Etüt Sistemi">
+                            <img src="img/kutu-etut.jpg" alt="Etüt Sistemi" loading="lazy" decoding="async" width="400" height="250">
                             <div class="service-overlay">
                                 <div class="service-icon"><i class="fas fa-book-reader"></i></div>
                             </div>
@@ -1659,7 +1685,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="img/kutu-yaz.jpg" alt="Yaz Okulu">
+                            <img src="img/kutu-yaz.jpg" alt="Yaz Okulu" loading="lazy" decoding="async" width="400" height="250">
                             <div class="service-overlay">
                                 <div class="service-icon"><i class="fas fa-sun"></i></div>
                             </div>
@@ -1679,7 +1705,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="img/kutu-ingilizce.jpg" alt="İngilizce Kursu">
+                            <img src="img/kutu-ingilizce.jpg" alt="İngilizce Kursu" loading="lazy" decoding="async" width="400" height="250">
                             <div class="service-overlay">
                                 <div class="service-icon"><i class="fas fa-language"></i></div>
                             </div>
@@ -1715,49 +1741,49 @@
 
             <div class="gallery-grid">
                 <div class="gallery-item category-sinif">
-                    <img src="img/galeri-1.jpg" alt="Sınıf">
+                    <img src="img/galeri-1.jpg" alt="Sınıf" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
                 <div class="gallery-item category-kampus">
-                    <img src="img/galeri-2.jpg" alt="Kampüs">
+                    <img src="img/galeri-2.jpg" alt="Kampüs" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
                 <div class="gallery-item category-etkinlik">
-                    <img src="img/galeri-3.jpg" alt="Etkinlik">
+                    <img src="img/galeri-3.jpg" alt="Etkinlik" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
                 <div class="gallery-item category-sinif">
-                    <img src="img/galeri-4.jpg" alt="Sınıf">
+                    <img src="img/galeri-4.jpg" alt="Sınıf" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
                 <div class="gallery-item category-kampus">
-                    <img src="img/galeri-5.jpg" alt="Kampüs">
+                    <img src="img/galeri-5.jpg" alt="Kampüs" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
                 <div class="gallery-item category-etkinlik">
-                    <img src="img/galeri-6.jpg" alt="Etkinlik">
+                    <img src="img/galeri-6.jpg" alt="Etkinlik" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
                 <div class="gallery-item category-sinif">
-                    <img src="img/galeri-7.jpg" alt="Sınıf">
+                    <img src="img/galeri-7.jpg" alt="Sınıf" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
                 <div class="gallery-item category-kampus">
-                    <img src="img/galeri-8.jpg" alt="Kampüs">
+                    <img src="img/galeri-8.jpg" alt="Kampüs" loading="lazy" decoding="async">
                     <div class="gallery-overlay">
                         <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
                     </div>
@@ -1989,6 +2015,7 @@ function setStar(n) {
 
                <div class="col-lg-8">
     <div style="width:100%; border-radius:10px; overflow:hidden; box-shadow:var(--shadow-md); margin-bottom:40px;">
+        <!-- PERF: Google Maps iframe lazy loaded -->
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.2!2d32.7744399!3d39.9852776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34bd7d69c4d29%3A0x381942e4201bc05a!2zWcSxbGTEsXoga3Vycw!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str"
             width="100%" 
@@ -2132,38 +2159,76 @@ function setStar(n) {
         </div>
     </div>
 
+    <!-- PERF: Script moved to end + defer where possible -->
     <script>
         /**
          * YILDIZ KURS ENTERPRISE JS CORE
          * Tüm dinamik fonksiyonlar buradadır.
+         * PERF: Optimized with passive listeners, requestAnimationFrame, debounced scroll
          */
 
         // 1. Preloader (Sayfa Yükleme Animasyonu)
         window.addEventListener('load', function() {
-            const loader = document.getElementById('loader-wrapper');
+            var loader = document.getElementById('loader-wrapper');
             loader.style.opacity = '0';
-            setTimeout(() => {
+            setTimeout(function() {
                 loader.style.display = 'none';
             }, 500);
         });
 
-        // 2. Sticky Header (Kaydırınca Sabitlenen Menü)
-       window.addEventListener('scroll', function() {
-            const scrollTopBtn = document.querySelector('.scroll-top-btn');
-            
-            if (window.scrollY > 100) {
-                scrollTopBtn.classList.add('active');
-            } else {
-                scrollTopBtn.classList.remove('active');
+        // PERF: Debounced scroll handler using requestAnimationFrame
+        var scrollTicking = false;
+        var scrollTopBtn = document.querySelector('.scroll-top-btn');
+        var counterSection = document.querySelector('.counter-section');
+        var counters = document.querySelectorAll('.counter-number');
+        var counted = false;
+
+        // 2. Sticky Header + Counter combined scroll handler
+        window.addEventListener('scroll', function() {
+            if (!scrollTicking) {
+                requestAnimationFrame(function() {
+                    var scrollY = window.scrollY || window.pageYOffset;
+                    
+                    // Scroll top button visibility
+                    if (scrollY > 100) {
+                        scrollTopBtn.classList.add('active');
+                    } else {
+                        scrollTopBtn.classList.remove('active');
+                    }
+                    
+                    // 4. Counter animation (scroll-triggered)
+                    if (!counted && counterSection && scrollY + window.innerHeight > counterSection.offsetTop + 100) {
+                        counters.forEach(function(counter) {
+                            var target = +counter.getAttribute('data-target');
+                            var duration = 2000;
+                            var step = target / (duration / 20);
+                            var current = 0;
+                            var timer = setInterval(function() {
+                                current += step;
+                                if (current >= target) {
+                                    counter.innerText = target;
+                                    clearInterval(timer);
+                                } else {
+                                    counter.innerText = Math.ceil(current);
+                                }
+                            }, 20);
+                        });
+                        counted = true;
+                    }
+                    
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
             }
-        });
+        }, { passive: true }); // PERF: passive listener
+
         // 3. Mobil Menü Toggle
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navMenu = document.querySelector('.nav-menu');
+        var mobileToggle = document.querySelector('.mobile-toggle');
+        var navMenu = document.querySelector('.nav-menu');
 
         mobileToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
-            const icon = mobileToggle.querySelector('i');
+            var icon = mobileToggle.querySelector('i');
             if (navMenu.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
@@ -2173,46 +2238,17 @@ function setStar(n) {
             }
         });
 
-        // 4. Sayaç Animasyonu (Scroll'a Duyarlı)
-        let counted = false;
-        const counterSection = document.querySelector('.counter-section');
-        const counters = document.querySelectorAll('.counter-number');
-
-        window.addEventListener('scroll', function() {
-            if (!counted && window.scrollY + window.innerHeight > counterSection.offsetTop + 100) {
-                counters.forEach(counter => {
-                    const target = +counter.getAttribute('data-target');
-                    const duration = 2000; // ms
-                    const step = target / (duration / 20);
-                    
-                    let current = 0;
-                    const timer = setInterval(() => {
-                        current += step;
-                        if (current >= target) {
-                            counter.innerText = target;
-                            clearInterval(timer);
-                        } else {
-                            counter.innerText = Math.ceil(current);
-                        }
-                    }, 20);
-                });
-                counted = true;
-            }
-        });
-
         // 5. Accordion (SSS)
-        const accordions = document.querySelectorAll('.accordion-header');
-        accordions.forEach(acc => {
+        var accordions = document.querySelectorAll('.accordion-header');
+        accordions.forEach(function(acc) {
             acc.addEventListener('click', function() {
-                const item = this.parentElement;
-                const isActive = item.classList.contains('active');
+                var item = this.parentElement;
+                var isActive = item.classList.contains('active');
                 
-                // Hepsini kapat
-                document.querySelectorAll('.accordion-item').forEach(i => {
+                document.querySelectorAll('.accordion-item').forEach(function(i) {
                     i.classList.remove('active');
                 });
 
-                // Tıklananı aç (eğer zaten açık değilse)
                 if (!isActive) {
                     item.classList.add('active');
                 }
@@ -2221,19 +2257,17 @@ function setStar(n) {
 
         // 6. Galeri Filtreleme
         function filterGallery(category) {
-            const items = document.querySelectorAll('.gallery-item');
-            const buttons = document.querySelectorAll('.filter-btn');
+            var items = document.querySelectorAll('.gallery-item');
+            var buttons = document.querySelectorAll('.filter-btn');
 
-            // Buton aktiflik durumu
-            buttons.forEach(btn => btn.classList.remove('active'));
+            buttons.forEach(function(btn) { btn.classList.remove('active'); });
             event.target.classList.add('active');
 
-            items.forEach(item => {
+            items.forEach(function(item) {
                 if (category === 'all' || item.classList.contains('category-' + category)) {
                     item.style.display = 'block';
-                    // Animasyonlu görünüm
                     item.style.opacity = '0';
-                    setTimeout(() => item.style.opacity = '1', 50);
+                    setTimeout(function() { item.style.opacity = '1'; }, 50);
                 } else {
                     item.style.display = 'none';
                 }
@@ -2241,7 +2275,7 @@ function setStar(n) {
         }
 
         // 7. Modal (Popup) İşlemleri
-        const modal = document.getElementById('kayitModal');
+        var modal = document.getElementById('kayitModal');
         
         function openModal() {
             modal.style.display = 'block';
@@ -2251,7 +2285,6 @@ function setStar(n) {
             modal.style.display = 'none';
         }
 
-        // Modal dışına tıklayınca kapatma
         window.onclick = function(event) {
             if (event.target == modal) {
                 closeModal();
@@ -2276,21 +2309,20 @@ function setStar(n) {
             });
         });
 
-        // 9. Form Validasyon (Basit Kontrol)
-        const forms = document.querySelectorAll('form');
-        forms.forEach(form => {
-            const inputs = form.querySelectorAll('input, textarea');
-            inputs.forEach(input => {
-                input.addEventListener('focus', () => {
-                    input.style.borderColor = 'var(--secondary-color)';
-                });
-                input.addEventListener('blur', () => {
-                    if(input.value === '') {
-                        input.style.borderColor = '#e9ecef';
-                    }
-                });
-            });
-        });
+        // 9. Form Validasyon (Basit Kontrol) - PERF: using event delegation
+        document.addEventListener('focusin', function(e) {
+            if (e.target.matches && e.target.matches('input, textarea')) {
+                e.target.style.borderColor = 'var(--secondary-color)';
+            }
+        }, { passive: true });
+        
+        document.addEventListener('focusout', function(e) {
+            if (e.target.matches && e.target.matches('input, textarea')) {
+                if (e.target.value === '') {
+                    e.target.style.borderColor = '#e9ecef';
+                }
+            }
+        }, { passive: true });
         
     </script>
 </body>
