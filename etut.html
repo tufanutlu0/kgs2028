@@ -1,321 +1,552 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İlkokul Etüt Sistemi | Yıldız Kurs</title>
-    <meta name="description" content="Yıldız Kurs İlkokul Etüt Sistemi - Okul sonrası afterschool programı, servis ve yemek imkanıyla çocuğunuzun yanındayız.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#0f1738">
+    
+    <title>İlkokul Etüt Sistemi | Yıldız Kurs Ankara - After School Programı</title>
+    <meta name="description" content="Ankara Yenimahalle'de ilkokul etüt programı. Okul sonrası ödev takibi, konu tekrarı, servis ve yemek imkanı. Çalışan aileler için güvenli After School sistemi.">
+    <meta name="keywords" content="etüt merkezi ankara, after school ankara, ilkokul etüt, ödev takibi, yenimahalle etüt, okul sonrası program">
+    <meta name="author" content="Yıldız Kurs Kurumsal">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="language" content="Turkish">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yildizkurs.com.tr/etut.html">
+    <meta property="og:title" content="İlkokul Etüt Sistemi | Yıldız Kurs Ankara">
+    <meta property="og:description" content="Okul sonrası güvenli, verimli ve eğlenceli etüt programı. Servis ve yemek dahil.">
+    <meta property="og:image" content="img/logo.jpg">
+    <meta property="og:site_name" content="Yıldız Kurs">
+    <meta property="og:locale" content="tr_TR">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"></noscript>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <link rel="preload" as="image" href="img/logo.jpg">
+
     <style>
-        :root {
-            --primary-color: #0f1738;
-            --primary-light: #1a2355;
-            --secondary-color: #e30613;
-            --secondary-hover: #c20510;
-            --accent-color: #ffb700;
-            --text-main: #333333;
-            --text-light: #666666;
-            --bg-light: #f8f9fa;
-            --bg-white: #ffffff;
-            --border-color: #e9ecef;
-            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-            --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
-            --shadow-lg: 0 8px 16px rgba(0,0,0,0.15);
-            --shadow-xl: 0 20px 40px rgba(0,0,0,0.2);
-            --transition-normal: all 0.3s ease-in-out;
-            --container-width: 1200px;
-            --header-height: 90px;
-        }
+        :root{--primary-color:#0f1738;--primary-light:#1a2355;--primary-dark:#05081c;--secondary-color:#e30613;--secondary-hover:#c20510;--accent-color:#ffb700;--text-main:#333;--text-light:#666;--bg-light:#f8f9fa;--bg-white:#fff;--border-color:#e9ecef;--success:#28a745;--shadow-sm:0 2px 4px rgba(0,0,0,.05);--shadow-md:0 4px 8px rgba(0,0,0,.1);--shadow-lg:0 8px 16px rgba(0,0,0,.15);--shadow-xl:0 20px 40px rgba(0,0,0,.2);--transition-fast:all .2s ease;--transition-normal:all .3s ease-in-out;--transition-slow:all .5s cubic-bezier(.4,0,.2,1);--container-width:1200px;--header-height:90px}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+        html{font-size:16px;scroll-behavior:smooth;overflow-x:hidden}body{font-family:'Open Sans',sans-serif;font-weight:400;line-height:1.6;color:var(--text-main);background:var(--bg-white);overflow-x:hidden}
+        h1,h2,h3,h4,h5,h6{font-family:'Montserrat',sans-serif;font-weight:700;color:var(--primary-color);margin-bottom:1rem;line-height:1.3}
+        h1{font-size:3.5rem;letter-spacing:-1px}h2{font-size:2.5rem;letter-spacing:-.5px}h3{font-size:1.75rem}h4{font-size:1.5rem}h5{font-size:1.25rem}
+        p{margin-bottom:1.5rem}a{text-decoration:none;color:inherit;transition:var(--transition-normal)}ul,ol{list-style:none}img,video{max-width:100%;height:auto;display:block}
 
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { font-size: 16px; scroll-behavior: smooth; }
-        body { font-family: 'Open Sans', sans-serif; color: var(--text-main); background: var(--bg-white); overflow-x: hidden; }
-        h1,h2,h3,h4,h5,h6 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary-color); line-height: 1.3; margin-bottom: 1rem; }
-        p { margin-bottom: 1.2rem; line-height: 1.7; }
-        a { text-decoration: none; color: inherit; transition: var(--transition-normal); }
-        ul { list-style: none; }
-        img { max-width: 100%; height: auto; display: block; }
+        .container{width:100%;max-width:var(--container-width);padding:0 15px;margin:0 auto}
+        .row{display:flex;flex-wrap:wrap;margin:0 -15px}
+        .col-md-3,.col-md-4,.col-md-6,.col-lg-3,.col-lg-4,.col-lg-6,.col-lg-8{position:relative;width:100%;padding:0 15px}
+        @media(min-width:768px){.col-md-3{flex:0 0 25%;max-width:25%}.col-md-4{flex:0 0 33.333%;max-width:33.333%}.col-md-6{flex:0 0 50%;max-width:50%}}
+        @media(min-width:992px){.col-lg-3{flex:0 0 25%;max-width:25%}.col-lg-4{flex:0 0 33.333%;max-width:33.333%}.col-lg-6{flex:0 0 50%;max-width:50%}.col-lg-8{flex:0 0 66.667%;max-width:66.667%}}
 
-        .container { width: 100%; max-width: var(--container-width); padding: 0 15px; margin: 0 auto; }
+        .text-center{text-align:center!important}.text-left{text-align:left!important}.text-right{text-align:right!important}
+        .text-white{color:#fff!important}.bg-light{background-color:var(--bg-light)!important}.bg-primary{background-color:var(--primary-color)!important}
+        .d-flex{display:flex!important}.align-items-center{align-items:center!important}.justify-content-center{justify-content:center!important}
+        .mb-30{margin-bottom:30px}.mb-50{margin-bottom:50px}.w-100{width:100%!important}.h-100{height:100%!important}
 
-        /* TOP BAR */
-        .top-bar { background-color: var(--primary-color); color: rgba(255,255,255,0.85); padding: 10px 0; font-size: 0.85rem; }
-        .top-bar-inner { display: flex; align-items: center; justify-content: space-between; }
-        .top-bar-info { display: flex; flex-wrap: wrap; gap: 20px; }
-        .top-bar-info span a { color: inherit; }
-        .top-bar-info i { color: var(--secondary-color); margin-right: 6px; }
-        .top-bar-social { display: flex; gap: 15px; }
-        .top-bar-social a { color: #fff; }
-        .top-bar-social a:hover { color: var(--secondary-color); }
+        .btn{display:inline-block;font-family:'Montserrat',sans-serif;font-weight:600;text-align:center;white-space:nowrap;vertical-align:middle;user-select:none;border:2px solid transparent;padding:12px 35px;font-size:.95rem;line-height:1.5;border-radius:5px;transition:var(--transition-normal);cursor:pointer;text-transform:uppercase;letter-spacing:.5px}
+        .btn-primary{color:#fff;background:var(--secondary-color);border-color:var(--secondary-color);box-shadow:0 5px 15px rgba(227,6,19,.3)}
+        .btn-primary:hover{background:var(--secondary-hover);border-color:var(--secondary-hover);transform:translateY(-3px);box-shadow:0 8px 20px rgba(227,6,19,.4)}
+        .btn-outline-white{color:#fff;background:transparent;border-color:#fff}.btn-outline-white:hover{color:var(--primary-color);background:#fff}
+        .btn-outline-primary{color:var(--primary-color);background:transparent;border-color:var(--primary-color)}.btn-outline-primary:hover{color:#fff;background:var(--primary-color)}
+        .btn-lg{padding:15px 45px;font-size:1.1rem}
 
-        /* HEADER */
-        .main-header { background: #fff; box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 1000; height: var(--header-height); display: flex; align-items: center; }
-        .navbar { display: flex; align-items: center; justify-content: space-between; width: 100%; }
-        .logo img { max-height: 65px; width: auto; }
-        .nav-menu { display: flex; align-items: center; margin-left: auto; }
-        .nav-item { margin-left: 30px; }
-        .nav-link { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; color: var(--primary-color); position: relative; padding: 10px 0; }
-        .nav-link::before { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--secondary-color); transition: var(--transition-normal); }
-        .nav-link:hover { color: var(--secondary-color); }
-        .nav-link:hover::before { width: 100%; }
-        .header-btn { margin-left: 30px; }
-        .mobile-toggle { display: none; font-size: 1.8rem; color: var(--primary-color); cursor: pointer; }
+        .section-title{margin-bottom:60px;position:relative;z-index:1}
+        .section-title span{color:var(--secondary-color);font-weight:700;display:block;margin-bottom:10px;text-transform:uppercase;letter-spacing:2px;font-size:.9rem}
+        .section-title h2{font-size:2.5rem;color:var(--primary-color);position:relative;padding-bottom:20px}
+        .section-title h2::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80px;height:4px;background:var(--secondary-color);border-radius:2px}
+        .text-left .section-title h2::after,.section-title.text-left h2::after{left:0;transform:none}
 
-        /* BUTTONS */
-        .btn { display: inline-block; font-family: 'Montserrat', sans-serif; font-weight: 600; text-align: center; border: 2px solid transparent; padding: 12px 35px; font-size: 0.95rem; border-radius: 5px; transition: var(--transition-normal); cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; }
-        .btn-primary { color: #fff; background-color: var(--secondary-color); border-color: var(--secondary-color); box-shadow: 0 5px 15px rgba(227,6,19,0.3); }
-        .btn-primary:hover { background-color: var(--secondary-hover); border-color: var(--secondary-hover); transform: translateY(-3px); }
-        .btn-lg { padding: 15px 45px; font-size: 1.1rem; }
-        .w-100 { width: 100% !important; }
+        .top-bar{background:var(--primary-color);color:rgba(255,255,255,.85);padding:10px 0;font-size:.85rem;border-bottom:1px solid rgba(255,255,255,.1)}
+        .top-bar-info i{color:var(--secondary-color);margin-right:8px}.top-bar-info span{margin-right:25px}
+        .top-bar-social a{color:#fff;margin-left:15px;font-size:.9rem}.top-bar-social a:hover{color:var(--secondary-color)}
 
-        /* SECTION TITLE */
-        .section-title { margin-bottom: 50px; }
-        .section-title span { color: var(--secondary-color); font-weight: 700; display: block; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
-        .section-title h2 { font-size: 2.2rem; position: relative; padding-bottom: 20px; }
-        .section-title h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 60px; height: 4px; background: var(--secondary-color); border-radius: 2px; }
-        .section-title.center { text-align: center; }
-        .section-title.center h2::after { left: 50%; transform: translateX(-50%); }
+        .main-header{background:#fff;box-shadow:var(--shadow-sm);position:sticky;top:0;z-index:1000;height:var(--header-height);display:flex;align-items:center}
+        .navbar{display:flex;align-items:center;justify-content:space-between;width:100%}
+        .logo img{max-height:65px;width:auto}
+        .nav-menu{display:flex;align-items:center;margin-left:auto}.nav-item{margin-left:30px}
+        .nav-link{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.9rem;text-transform:uppercase;color:var(--primary-color);position:relative;padding:10px 0}
+        .nav-link::before{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--secondary-color);transition:var(--transition-normal)}
+        .nav-link:hover{color:var(--secondary-color)}.nav-link:hover::before{width:100%}
+        .header-btn{margin-left:30px}.mobile-toggle{display:none;font-size:1.8rem;color:var(--primary-color);cursor:pointer}
+        .dropdown{position:relative}
+        .dropdown-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;box-shadow:var(--shadow-lg);border-radius:8px;min-width:220px;z-index:2000;border-top:3px solid var(--secondary-color);padding:10px 0}
+        .dropdown:hover .dropdown-menu,.dropdown-menu:hover{display:block}
+        .dropdown-menu a{display:flex;align-items:center;gap:10px;padding:10px 20px;font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:600;color:var(--primary-color);text-transform:uppercase;transition:var(--transition-fast)}
+        .dropdown-menu a:hover{background:var(--bg-light);color:var(--secondary-color);padding-left:28px}
+        .dropdown-menu a i.icon-prog{color:var(--secondary-color);font-size:.8rem;width:16px}
+        .dropdown-toggle i.fa-chevron-down{font-size:.7rem;margin-left:4px;transition:transform .3s}
+        .dropdown:hover .dropdown-toggle i.fa-chevron-down{transform:rotate(180deg)}
 
-        .py-80 { padding: 80px 0; }
+        /* PAGE HERO */
+        .page-hero{background:var(--primary-color);position:relative;padding:100px 0 80px;overflow:hidden;text-align:center}
+        .page-hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background-image:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=');z-index:1}
+        .page-hero::after{content:'';position:absolute;bottom:-2px;left:0;width:100%;height:80px;background:linear-gradient(to top,var(--bg-white),transparent);z-index:2}
+        .page-hero .container{position:relative;z-index:3}
+        .page-hero h1{color:#fff;font-size:3.2rem;font-weight:800;text-transform:uppercase;margin-bottom:15px;animation:fadeInUp .8s ease forwards}
+        .page-hero .breadcrumb{display:flex;justify-content:center;gap:10px;font-size:.95rem;color:rgba(255,255,255,.7);animation:fadeInUp .8s ease .2s forwards;opacity:0}
+        .page-hero .breadcrumb a{color:rgba(255,255,255,.9)}.page-hero .breadcrumb a:hover{color:var(--secondary-color)}
+        .page-hero .breadcrumb .separator{color:var(--secondary-color)}
+        .page-hero-badge{display:inline-block;background:rgba(227,6,19,.15);border:1px solid var(--secondary-color);color:#fff;padding:6px 18px;border-radius:50px;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:20px;animation:fadeInDown .8s ease}
 
-        /* FEATURES GRID */
-        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
-        .feature-card { background: #fff; border-radius: 10px; padding: 35px 30px; box-shadow: var(--shadow-md); transition: var(--transition-normal); border-left: 4px solid transparent; }
-        .feature-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-left-color: var(--secondary-color); }
-        .feature-card-icon { width: 65px; height: 65px; background: rgba(15,23,56,0.07); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary-color); margin-bottom: 20px; transition: var(--transition-normal); }
-        .feature-card:hover .feature-card-icon { background: var(--primary-color); color: #fff; }
-        .feature-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
-        .feature-card p { font-size: 0.9rem; color: var(--text-light); margin: 0; }
+        /* INTRO */
+        .intro-section{padding:80px 0 60px}
+        .intro-icon-box{width:70px;height:70px;background:rgba(227,6,19,.08);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:var(--secondary-color);margin-bottom:20px}
+        .intro-text h2{margin-bottom:20px}.intro-text p{color:var(--text-light);font-size:1.05rem}
+        .intro-img-wrap{position:relative;padding:15px}
+        .intro-img-wrap img{border-radius:12px;box-shadow:var(--shadow-lg);width:100%;height:400px;object-fit:cover}
+        .intro-img-wrap::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;border:3px solid var(--secondary-color);border-radius:12px;transform:translate(15px,15px);z-index:-1}
 
-        /* INFO SECTION */
-        .info-section { background: var(--bg-light); }
-        .info-flex { display: flex; gap: 40px; align-items: flex-start; }
-        .info-left { flex: 0 0 58%; }
-        .info-right { flex: 0 0 38%; }
-        .info-list li { display: flex; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid var(--border-color); gap: 15px; }
-        .info-list li:last-child { border-bottom: none; }
-        .info-list li i { color: var(--secondary-color); font-size: 1.1rem; margin-top: 3px; flex-shrink: 0; }
-        .info-list li span { font-size: 0.95rem; line-height: 1.6; }
+        /* ÖZELLİK KARTLARI */
+        .features-section{padding:60px 0 80px}
+        .ft-card{background:#fff;border-radius:10px;padding:35px 25px;text-align:center;box-shadow:var(--shadow-md);transition:var(--transition-normal);will-change:transform;height:100%;border-bottom:4px solid transparent;margin-bottom:30px}
+        .ft-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-xl);border-bottom-color:var(--secondary-color)}
+        .ft-icon{width:75px;height:75px;background:var(--bg-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:var(--primary-color);margin:0 auto 20px;transition:var(--transition-normal)}
+        .ft-card:hover .ft-icon{background:var(--primary-color);color:#fff}
+        .ft-card h4{font-size:1.15rem;margin-bottom:10px}.ft-card p{font-size:.9rem;color:var(--text-light);margin-bottom:0}
 
-        /* SAAT KUTUSU */
-        .saat-kutu { background: var(--primary-color); border-radius: 12px; padding: 40px; color: #fff; }
-        .saat-kutu h3 { color: #fff; margin-bottom: 25px; font-size: 1.4rem; }
-        .saat-satir { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.95rem; }
-        .saat-satir:last-of-type { border-bottom: none; }
-        .saat-satir span:first-child { color: rgba(255,255,255,0.7); }
-        .saat-satir span:last-child { color: var(--accent-color); font-weight: 700; }
+        /* GÜNLÜK PROGRAM */
+        .daily-section{padding:80px 0}
+        .timeline{position:relative;max-width:700px;margin:0 auto}
+        .timeline::before{content:'';position:absolute;left:30px;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--secondary-color),var(--primary-color));border-radius:2px}
+        .timeline-item{display:flex;gap:25px;margin-bottom:35px;position:relative}
+        .timeline-dot{width:20px;height:20px;background:var(--secondary-color);border-radius:50%;border:4px solid #fff;box-shadow:0 0 0 3px var(--secondary-color);flex-shrink:0;margin-top:5px;position:relative;z-index:2;margin-left:21px}
+        .timeline-content{background:#fff;border-radius:10px;padding:22px 25px;box-shadow:var(--shadow-md);flex:1;transition:var(--transition-normal)}
+        .timeline-content:hover{box-shadow:var(--shadow-lg);transform:translateX(5px)}
+        .timeline-time{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;color:var(--secondary-color);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px;display:block}
+        .timeline-content h4{font-size:1.05rem;margin-bottom:5px}
+        .timeline-content p{font-size:.88rem;color:var(--text-light);margin-bottom:0}
 
-        /* CTA BANNER */
-        .cta-banner { background: var(--primary-color); padding: 70px 0; text-align: center; color: #fff; }
-        .cta-banner h2 { color: #fff; font-size: 2rem; margin-bottom: 15px; }
-        .cta-banner p { color: rgba(255,255,255,0.8); margin-bottom: 35px; font-size: 1.05rem; }
-        .cta-btns { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .btn-white { background: #fff; color: var(--primary-color); border: 2px solid #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; padding: 14px 40px; border-radius: 5px; font-size: 0.95rem; text-transform: uppercase; transition: var(--transition-normal); display: inline-block; cursor: pointer; }
-        .btn-white:hover { background: transparent; color: #fff; }
-        .btn-outline-white { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.5); font-family: 'Montserrat', sans-serif; font-weight: 700; padding: 14px 40px; border-radius: 5px; font-size: 0.95rem; text-transform: uppercase; transition: var(--transition-normal); display: inline-block; cursor: pointer; }
-        .btn-outline-white:hover { border-color: #fff; }
+        /* VELİ HUZURU */
+        .peace-section{padding:80px 0}
+        .peace-card{background:#fff;border-radius:12px;padding:40px 35px;box-shadow:var(--shadow-lg);text-align:center;transition:var(--transition-normal);will-change:transform;height:100%;margin-bottom:30px}
+        .peace-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-xl)}
+        .peace-emoji{font-size:3rem;margin-bottom:15px;display:block}
+        .peace-card h4{font-size:1.1rem;margin-bottom:10px}
+        .peace-card p{font-size:.9rem;color:var(--text-light);margin-bottom:0}
 
-        /* FORM */
-        .form-section { background: #fff; }
-        .form-wrapper { background: #fff; border-radius: 12px; box-shadow: var(--shadow-xl); padding: 50px; max-width: 700px; margin: 0 auto; }
-        .form-wrapper h3 { font-size: 1.8rem; margin-bottom: 10px; }
-        .form-wrapper > p { color: var(--text-light); margin-bottom: 35px; }
-        .form-group { margin-bottom: 20px; }
-        .form-control { width: 100%; padding: 14px 18px; border: 1.5px solid var(--border-color); border-radius: 8px; font-family: 'Open Sans', sans-serif; font-size: 0.95rem; transition: var(--transition-normal); background: var(--bg-light); }
-        .form-control:focus { border-color: var(--primary-color); outline: none; background: #fff; box-shadow: 0 0 0 3px rgba(15,23,56,0.08); }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        /* AVANTAJLAR */
+        .advantages-section{padding:80px 0}
+        .advantage-item{display:flex;align-items:flex-start;gap:20px;margin-bottom:30px}
+        .advantage-icon{width:50px;height:50px;background:rgba(227,6,19,.08);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--secondary-color);flex-shrink:0}
+        .advantage-item h4{font-size:1.05rem;margin-bottom:5px}.advantage-item p{font-size:.92rem;color:var(--text-light);margin-bottom:0}
+
+        /* COUNTER */
+        .counter-section{background:var(--primary-color);background-image:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=');color:#fff;padding:60px 0}
+        .counter-item{text-align:center;padding:20px}
+        .counter-number{font-size:3.5rem;font-weight:800;font-family:'Montserrat',sans-serif;color:var(--secondary-color);line-height:1;margin-bottom:10px;display:block}
+        .counter-text{font-size:1rem;font-weight:600;text-transform:uppercase;opacity:.9}
+
+        /* CTA */
+        .cta-section{background:var(--primary-color);padding:70px 0;text-align:center;position:relative;overflow:hidden}
+        .cta-section::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background-image:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')}
+        .cta-section .container{position:relative;z-index:2}
+        .cta-section h2{color:#fff;margin-bottom:15px}.cta-section p{color:rgba(255,255,255,.8);font-size:1.1rem;max-width:650px;margin:0 auto 30px}
+        .cta-section .btn{margin:0 8px}
+
+        /* FAQ */
+        .faq-section{padding:80px 0}
+        .accordion-item{background:#fff;border:1px solid var(--border-color);border-radius:5px;margin-bottom:15px;overflow:hidden}
+        .accordion-header{padding:20px;background:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;color:var(--primary-color);transition:var(--transition-fast)}
+        .accordion-header:hover{background:var(--bg-light)}
+        .accordion-header i{transition:transform .3s ease}
+        .accordion-content{max-height:0;overflow:hidden;transition:max-height .3s ease-out;background:var(--bg-light)}
+        .accordion-body{padding:20px;color:var(--text-light);font-size:.95rem;line-height:1.8}
+        .accordion-item.active .accordion-header{color:var(--secondary-color);border-bottom:1px solid var(--border-color)}
+        .accordion-item.active .accordion-header i{transform:rotate(180deg)}
+        .accordion-item.active .accordion-content{max-height:500px}
 
         /* FOOTER */
-        .footer-area { background-color: #0b1129; color: #aab0c6; padding-top: 80px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 60px; }
-        .footer-widget h3 { color: #fff; font-size: 1.3rem; margin-bottom: 25px; position: relative; padding-bottom: 15px; }
-        .footer-widget h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: var(--secondary-color); }
-        .footer-links li { margin-bottom: 12px; }
-        .footer-links a { color: #aab0c6; display: inline-block; transition: var(--transition-normal); }
-        .footer-links a:hover { color: var(--secondary-color); transform: translateX(5px); }
-        .footer-contact li { display: flex; margin-bottom: 18px; gap: 12px; }
-        .footer-contact i { color: var(--secondary-color); font-size: 1rem; margin-top: 3px; flex-shrink: 0; }
-        .footer-social { display: flex; gap: 12px; margin-top: 20px; }
-        .footer-social a { color: #aab0c6; font-size: 1.1rem; }
-        .footer-social a:hover { color: var(--secondary-color); }
-        .copyright-area { background: #050814; padding: 25px 0; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
-        .copyright-inner { display: flex; align-items: center; justify-content: space-between; }
+        .footer-area{background:#0b1129;color:#aab0c6;padding-top:80px}
+        .footer-widget h3{color:#fff;font-size:1.4rem;margin-bottom:30px;position:relative;padding-bottom:15px}
+        .footer-widget h3::after{content:'';position:absolute;bottom:0;left:0;width:50px;height:3px;background:var(--secondary-color)}
+        .footer-links li{margin-bottom:12px}.footer-links a{color:#aab0c6;transition:var(--transition-fast);display:inline-block}.footer-links a:hover{color:var(--secondary-color);transform:translateX(5px)}
+        .footer-contact li{display:flex;margin-bottom:20px}.footer-contact i{color:var(--secondary-color);margin-right:15px;font-size:1.1rem;margin-top:5px}
+        .copyright-area{background:#050814;padding:25px 0;margin-top:60px;border-top:1px solid rgba(255,255,255,.05);font-size:.9rem}
 
-        /* WHATSAPP & RANDEVU */
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000; transition: var(--transition-normal); }
-        .whatsapp-float:hover { transform: scale(1.1); background: #20b857; }
-        .randevu-float { position: fixed; bottom: 100px; right: 30px; background: var(--secondary-color); color: #fff; width: 60px; height: 60px; border-radius: 50px; display: none; align-items: center; justify-content: center; font-size: 26px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000; cursor: pointer; transition: var(--transition-normal); }
-        .randevu-float:hover { transform: scale(1.1); }
+        .whatsapp-float{position:fixed;bottom:30px;right:30px;background:#25d366;color:#FFF;width:60px;height:60px;border-radius:50px;font-size:30px;box-shadow:2px 2px 3px #999;z-index:1000;display:flex;align-items:center;justify-content:center;transition:var(--transition-normal)}
+        .whatsapp-float:hover{transform:scale(1.1);background:#20b857}
+        .randevu-float{position:fixed;bottom:100px;right:30px;background:var(--secondary-color);color:#fff;width:60px;height:60px;border-radius:50px;font-size:26px;box-shadow:2px 2px 3px #999;z-index:1000;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--transition-normal)}
+        .randevu-float:hover{transform:scale(1.1);background:var(--secondary-hover)}
+        .scroll-top-btn{position:fixed;bottom:30px;left:30px;background:var(--primary-color);color:#fff;width:45px;height:45px;border-radius:5px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:var(--transition-normal);z-index:999}
+        .scroll-top-btn.active{opacity:1;visibility:visible}
 
-        /* MODAL */
-        .modal { display: none; position: fixed; z-index: 10001; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
-        .modal-content { background: #fff; margin: 5% auto; padding: 40px; width: 90%; max-width: 600px; border-radius: 10px; position: relative; }
-        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #aaa; }
-        .close-modal:hover { color: #000; }
-        .text-center { text-align: center; }
-        .mb-20 { margin-bottom: 20px; }
+        .modal{display:none;position:fixed;z-index:10001;left:0;top:0;width:100%;height:100%;overflow:auto;background:rgba(0,0,0,.8);backdrop-filter:blur(5px)}
+        .modal-content{background:#fefefe;margin:5% auto;padding:40px;border:1px solid #888;width:90%;max-width:600px;border-radius:10px;position:relative;animation:fadeInDown .4s}
+        .close-modal{color:#aaa;float:right;font-size:28px;font-weight:bold;cursor:pointer;position:absolute;top:15px;right:20px}.close-modal:hover{color:#000}
+        .form-group{margin-bottom:20px}
+        .form-control{width:100%;padding:15px;border:1px solid var(--border-color);border-radius:5px;font-family:inherit;font-size:.95rem;transition:var(--transition-fast)}
+        .form-control:focus{border-color:var(--primary-color);outline:none;box-shadow:0 0 0 3px rgba(15,23,56,.1)}
 
-        /* RESPONSIVE */
-        @media (max-width: 991px) {
-            .mobile-toggle { display: block; }
-            .nav-menu { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; flex-direction: column; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: none; }
-            .nav-menu.active { display: flex; }
-            .nav-item { margin: 10px 0; margin-left: 0; }
-            .header-btn { display: none; }
-            .top-bar { display: none; }
-            .features-grid { grid-template-columns: repeat(2, 1fr); }
-            .info-flex { flex-direction: column; }
-            .info-left, .info-right { flex: 0 0 100%; width: 100%; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .form-row { grid-template-columns: 1fr; }
-            .form-wrapper { padding: 30px 20px; }
-            .randevu-float { display: flex; }
+        #loader-wrapper{position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;background:var(--primary-color);display:flex;justify-content:center;align-items:center;transition:opacity .5s ease}
+        .loader{width:50px;height:50px;border:3px solid rgba(255,255,255,.3);border-radius:50%;border-top-color:var(--secondary-color);animation:spin 1s ease-in-out infinite}
+
+        @keyframes spin{to{transform:rotate(360deg)}}
+        @keyframes fadeInUp{from{opacity:0;transform:translate3d(0,40px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+        @keyframes fadeInDown{from{opacity:0;transform:translate3d(0,-40px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+
+        @media(max-width:991px){
+            h1{font-size:2.8rem}h2{font-size:2rem}.mobile-toggle{display:block}
+            .nav-menu{position:absolute;top:100%;left:0;width:100%;background:#fff;flex-direction:column;padding:20px;box-shadow:0 10px 20px rgba(0,0,0,.1);display:none}
+            .nav-menu.active{display:flex}.nav-item{margin:10px 0;margin-left:0}.header-btn{display:none}.top-bar{display:none}
+            .intro-img-wrap{margin-bottom:40px}.counter-number{font-size:2.8rem}
+            .dropdown-menu{position:static;transform:none;box-shadow:none;border-top:none;border-left:3px solid var(--secondary-color);border-radius:0;padding:0;margin:5px 0 5px 15px}
+            .dropdown-menu a{padding:8px 15px;font-size:.8rem}.mobile-dropdown-open .dropdown-menu{display:block}
         }
-
-        @media (max-width: 576px) {
-            .features-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-            .feature-card { padding: 20px 15px; }
-            .feature-card-icon { width: 50px; height: 50px; font-size: 1.4rem; }
-            .feature-card h3 { font-size: 0.95rem; }
-            .feature-card p { font-size: 0.8rem; }
-            .cta-btns { flex-direction: column; align-items: center; }
-            .copyright-inner { flex-direction: column; gap: 10px; text-align: center; }
+        @media(max-width:576px){
+            h1{font-size:2.2rem}.page-hero{padding:80px 0 60px}.page-hero h1{font-size:2rem}
+            .intro-img-wrap img{height:250px}.ft-card{padding:25px 18px}
+            .cta-section .btn{width:100%;margin:6px 0}
+            .timeline::before{left:20px}.timeline-dot{margin-left:11px;width:18px;height:18px}
+            .timeline-content{padding:18px 20px}
+            .peace-card{padding:25px 20px}
         }
     </style>
 </head>
 <body>
 
-    <!-- TOP BAR -->
+    <div id="loader-wrapper"><div class="loader"></div></div>
+
     <div class="top-bar">
         <div class="container">
-            <div class="top-bar-inner">
-                <div class="top-bar-info">
-                    <span><a href="tel:03123460633"><i class="fas fa-phone-alt"></i> 0312 346 06 33</a></span>
-                    <span><a href="https://www.google.com/maps/search/?api=1&query=Aşağı+Yahyalar+Mah.+994+Cad.+No:6/A+Yenimahalle+ANKARA" target="_blank"><i class="fas fa-map-marker-alt"></i> Aşağı Yahyalar Mah. 994 Cad. No:6/A Yenimahalle/ANKARA</a></span>
+            <div class="row align-items-center">
+                <div class="col-lg-8"><div class="top-bar-info d-flex">
+                    <span><a href="tel:03123460633" style="color:inherit;"><i class="fas fa-phone-alt"></i> 0312 346 06 33</a></span>
+                    <span><a href="https://www.google.com/maps/search/?api=1&query=Aşağı+Yahyalar+Mah.+994+Cad.+No:6/A+Yenimahalle+ANKARA" target="_blank" style="color:inherit;"><i class="fas fa-map-marker-alt"></i> Aşağı Yahyalar Mah. 994 Cad. No:6/A Yenimahalle/ANKARA</a></span>
                     <span><i class="far fa-clock"></i> Her Gün: 08:00 - 20:00</span>
-                </div>
-                <div class="top-bar-social">
+                </div></div>
+                <div class="col-lg-4 text-right"><div class="top-bar-social">
                     <a href="https://instagram.com/yildizkursankara" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.facebook.com/p/Y%C4%B1ld%C4%B1z-Kurs-Ankara-61575208704331/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                </div>
+                </div></div>
             </div>
         </div>
     </div>
 
-    <!-- HEADER -->
     <header class="main-header">
         <div class="container">
             <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <img src="img/logo.jpg" alt="Yıldız Kurs Logo">
-                </a>
+                <a href="index.html" class="logo"><img src="img/logo.jpg" alt="Yıldız Kurs Logo" width="195" height="65"></a>
                 <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
                 <div class="nav-menu">
                     <div class="nav-item"><a href="index.html" class="nav-link">Anasayfa</a></div>
-                    <div class="nav-item"><a href="index.html#services" class="nav-link">Eğitimler</a></div>
+                    <div class="nav-item"><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Programlar <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="lgs.html"><i class="fas fa-graduation-cap icon-prog"></i> LGS Hazırlık</a>
+                            <a href="ozel-ders.html"><i class="fas fa-user-graduate icon-prog"></i> Özel Ders</a>
+                            <a href="deneme.html"><i class="fas fa-file-alt icon-prog"></i> Deneme Kulübü</a>
+                            <a href="etut.html"><i class="fas fa-book-reader icon-prog"></i> İlkokul Etüt</a>
+                            <a href="yaz-okulu.html"><i class="fas fa-sun icon-prog"></i> Yaz Okulu</a>
+                            <a href="kgs.html"><i class="fas fa-star icon-prog"></i> KGS 2028</a>
+                        </div>
+                    </div>
                     <div class="nav-item"><a href="index.html#gallery" class="nav-link">Galeri</a></div>
+                    <div class="nav-item"><a href="sss.html" class="nav-link">S.S.S.</a></div>
                     <div class="nav-item"><a href="index.html#contact" class="nav-link">İletişim</a></div>
                 </div>
-                <div class="header-btn">
-                    <button onclick="openModal()" class="btn btn-primary">RANDEVU AL</button>
-                </div>
+                <div class="header-btn"><button onclick="openModal()" class="btn btn-primary">RANDEVU AL</button></div>
             </nav>
         </div>
     </header>
 
-    <!-- ÖZELLİKLER -->
-    <section class="py-80">
+    <!-- PAGE HERO -->
+    <section class="page-hero">
         <div class="container">
-            <div class="section-title center">
-                <span>NELER SUNUYORUZ?</span>
-                <h2>İlkokul Etüt Sisteminin Avantajları</h2>
+            <span class="page-hero-badge"><i class="fas fa-book-reader"></i> AFTER SCHOOL PROGRAMI</span>
+            <h1>İlkokul Etüt Sistemi</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Anasayfa</a>
+                <span class="separator">/</span>
+                <span>İlkokul Etüt</span>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-card-icon"><i class="fas fa-bus-alt"></i></div>
-                    <h3>Servis İmkanı</h3>
-                    <p>Yenimahalle bölgesinde güvenli ve düzenli servis hizmeti ile çocuğunuzu kapınızdan alıyoruz.</p>
+        </div>
+    </section>
+
+    <!-- GİRİŞ -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-50">
+                    <div class="intro-img-wrap">
+                        <img src="img/kutu-etut.jpg" alt="İlkokul Etüt - Yıldız Kurs" loading="lazy" decoding="async">
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-card-icon"><i class="fas fa-utensils"></i></div>
-                    <h3>Yemek Hizmeti</h3>
-                    <p>Sağlıklı ve dengeli öğle yemeği ile çocuğunuzun gün boyu enerjik kalmasını sağlıyoruz.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card-icon"><i class="fas fa-pencil-alt"></i></div>
-                    <h3>Ödev Takibi</h3>
-                    <p>Deneyimli öğretmenlerimiz eşliğinde tüm ödevler eksiksiz tamamlanır.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card-icon"><i class="fas fa-redo-alt"></i></div>
-                    <h3>Konu Tekrarı</h3>
-                    <p>Okulda anlaşılmayan konular tekrar edilir, eksikler kapatılır.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card-icon"><i class="fas fa-user-shield"></i></div>
-                    <h3>Güvenli Ortam</h3>
-                    <p>Çocuğunuz siz işte olduğunuzda güvenli, sıcak ve denetimli bir ortamda vakit geçirir.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card-icon"><i class="fas fa-bell"></i></div>
-                    <h3>Veli Bilgilendirme</h3>
-                    <p>Günlük gelişmeler ve etkinlikler hakkında veli paneli üzerinden düzenli bilgi paylaşımı yapılır.</p>
+                <div class="col-lg-6">
+                    <div class="intro-text">
+                        <div class="intro-icon-box"><i class="fas fa-book-reader"></i></div>
+                        <div class="section-title text-left" style="margin-bottom:25px;">
+                            <span>İLKOKUL ETÜT SİSTEMİ</span>
+                            <h2>Okul Bitti,<br>Öğrenme Devam Ediyor</h2>
+                        </div>
+                        <p>
+                            Çalışan aileler için en büyük endişe, çocuklarının okul sonrasında güvenli ve verimli bir ortamda vakit geçirmesidir. Yıldız Kurs İlkokul Etüt Sistemi, 1-4. sınıf öğrencilerine okul çıkışından itibaren ödev takibi, konu tekrarı, rehberlik ve sosyal aktivite imkanı sunan kapsamlı bir After School programıdır.
+                        </p>
+                        <p>
+                            Servis ve yemek hizmeti dahil, iş çıkışına kadar çocuğunuz güvende ve üretken.
+                        </p>
+                        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;">
+                            <a onclick="openModal()" class="btn btn-primary" style="cursor:pointer;">KAYIT BİLGİSİ ALIN</a>
+                            <a href="https://wa.me/905324790668?text=Merhaba%2C%20ilkokul%20et%C3%BCt%20program%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="btn btn-outline-primary"><i class="fab fa-whatsapp"></i> BİLGİ ALIN</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROGRAM DETAYLARI -->
-    <section class="py-80 info-section">
+    <!-- ÖZELLİKLER -->
+    <section class="features-section bg-light">
         <div class="container">
-            <div class="section-title">
-                <span>PROGRAM DETAYLARI</span>
-                <h2>Afterschool Programı Hakkında</h2>
+            <div class="section-title text-center">
+                <span>PROGRAM İÇERİĞİ</span>
+                <h2>Etüt Sistemimizde<br>Neler Var?</h2>
             </div>
-            <div class="info-flex">
-                <div class="info-left">
-                    <p style="font-size:1.05rem; color: var(--text-light);">
-                        Yıldız Kurs İlkokul Etüt Sistemi, çalışan ebeveynlerin en büyük sorunlarından biri olan "okul çıkışı çocuğum nerede olacak?" sorusuna kalıcı ve güvenilir bir çözüm sunuyor.
-                    </p>
-                    <ul class="info-list">
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Afterschool Mantığı:</strong> Okul çıkışından akşama kadar çocuğunuz bizimle. Ödev, konu tekrarı, oyun ve dinlenme dengeli şekilde planlanmış.</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Servis İmkanı:</strong> Yenimahalle bölgesinde anlaşmalı güvenilir servis araçlarıyla kapıdan kapıya ulaşım sağlanır.</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Yemek Hizmeti:</strong> Günlük taze hazırlanan sağlıklı öğle yemeği program dahilindedir.</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Ödev & Ders Desteği:</strong> Deneyimli öğretmenler eşliğinde tüm dersler için ödev takibi ve konu pekiştirme yapılır.</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Sosyal Gelişim:</strong> Çocuğunuz akranlarıyla sosyalleşir, grup çalışmaları ve oyunlarla sosyal becerileri gelişir.</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Veli Paneli:</strong> Günlük raporlar, ödev durumu ve etkinlikler hakkında anlık bilgilendirme yapılır.</span>
-                        </li>
-                    </ul>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="ft-card">
+                        <div class="ft-icon"><i class="fas fa-pencil-alt"></i></div>
+                        <h4>Ödev Takibi</h4>
+                        <p>Her gün okul ödevleri rehber öğretmen eşliğinde eksiksiz tamamlanır, kontrol edilir.</p>
+                    </div>
                 </div>
-                <div class="info-right">
-                    <div class="saat-kutu">
-                        <h3>Program Saatleri</h3>
-                        <div class="saat-satir"><span>Servis Karşılama</span><span>12:00 - 14:00</span></div>
-                        <div class="saat-satir"><span>Öğle Yemeği</span><span>12:30 - 13:30</span></div>
-                        <div class="saat-satir"><span>Ödev Saati</span><span>13:30 - 15:30</span></div>
-                        <div class="saat-satir"><span>Konu Tekrarı</span><span>15:30 - 17:00</span></div>
-                        <div class="saat-satir"><span>Serbest Zaman</span><span>17:00 - 19:00</span></div>
-                        <button onclick="openModal()" class="btn btn-primary w-100" style="margin-top: 30px;">KAYIT OL</button>
+                <div class="col-lg-4 col-md-6">
+                    <div class="ft-card">
+                        <div class="ft-icon"><i class="fas fa-redo"></i></div>
+                        <h4>Konu Tekrarı</h4>
+                        <p>Okulda işlenen konuların günlük tekrarı ile kalıcı öğrenme sağlanır.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="ft-card">
+                        <div class="ft-icon"><i class="fas fa-utensils"></i></div>
+                        <h4>Yemek Hizmeti</h4>
+                        <p>Hijyenik ve besleyici öğle/ikindi yemeği ile çocuğunuz tok ve enerjik kalır.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="ft-card">
+                        <div class="ft-icon"><i class="fas fa-bus-alt"></i></div>
+                        <h4>Servis İmkanı</h4>
+                        <p>Okuldan kursa, kurstan eve güvenli servis hizmeti ile ulaşım sorunu ortadan kalkar.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="ft-card">
+                        <div class="ft-icon"><i class="fas fa-puzzle-piece"></i></div>
+                        <h4>Sosyal Aktiviteler</h4>
+                        <p>Oyun saati, resim, müzik, drama ve el becerisi atölyeleri ile dengeli gelişim.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="ft-card">
+                        <div class="ft-icon"><i class="fas fa-user-shield"></i></div>
+                        <h4>Güvenli Ortam</h4>
+                        <p>Kamera sistemi, kontrollü giriş-çıkış ve deneyimli rehber öğretmenlerle 7/24 güvende.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GÜNLÜK PROGRAM (TIMELINE) -->
+    <section class="daily-section">
+        <div class="container">
+            <div class="section-title text-center">
+                <span>GÜNLÜK AKIŞ</span>
+                <h2>Bir Günümüz Nasıl Geçiyor?</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time"><i class="fas fa-bus-alt" style="margin-right:5px;"></i> 12:00 – 13:00</span>
+                        <h4>Okuldan Alınma & Varış</h4>
+                        <p>Servis aracımız öğrenciyi okuldan alır, kursa güvenli şekilde getirir.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time"><i class="fas fa-utensils" style="margin-right:5px;"></i> 13:00 – 13:45</span>
+                        <h4>Öğle Yemeği</h4>
+                        <p>Hijyenik mutfağımızda hazırlanan sıcak ve besleyici öğle yemeği servisi.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time"><i class="fas fa-pencil-alt" style="margin-right:5px;"></i> 14:00 – 15:30</span>
+                        <h4>Ödev Çalışması</h4>
+                        <p>Rehber öğretmen eşliğinde tüm okul ödevlerinin tamamlanması ve kontrolü.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time"><i class="fas fa-book" style="margin-right:5px;"></i> 15:30 – 16:30</span>
+                        <h4>Konu Tekrarı & Pekiştirme</h4>
+                        <p>Okulda o gün işlenen konuların tekrarı, çalışma kağıtları ve mini testler.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time"><i class="fas fa-cookie-bite" style="margin-right:5px;"></i> 16:30 – 16:45</span>
+                        <h4>İkindi Molası</h4>
+                        <p>Meyve, süt veya atıştırmalık ile kısa bir enerji molası.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time"><i class="fas fa-puzzle-piece" style="margin-right:5px;"></i> 16:45 – 17:45</span>
+                        <h4>Sosyal Aktivite & Oyun</h4>
+                        <p>Drama, resim, satranç, el becerisi atölyeleri veya serbest oyun zamanı.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time"><i class="fas fa-home" style="margin-right:5px;"></i> 18:00 – 19:00</span>
+                        <h4>Veli Teslim / Servis</h4>
+                        <p>Veliler tarafından alınma veya servis ile eve güvenli ulaşım.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VELİ HUZURU -->
+    <section class="peace-section bg-light">
+        <div class="container">
+            <div class="section-title text-center">
+                <span>ÇALIŞAN AİLELER İÇİN</span>
+                <h2>Veli Huzuru Garantisi</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="peace-card">
+                        <span class="peace-emoji"><i class="fas fa-shield-alt" style="color:var(--primary-color);"></i></span>
+                        <h4>Güvenli Teslim</h4>
+                        <p>Kontrollü giriş-çıkış sistemi. Sadece yetkilendirilmiş kişilere teslim.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="peace-card">
+                        <span class="peace-emoji"><i class="fas fa-mobile-alt" style="color:var(--secondary-color);"></i></span>
+                        <h4>Anlık Bilgilendirme</h4>
+                        <p>WhatsApp grubu ile gün boyunca fotoğraflı bilgilendirme ve etkinlik paylaşımı.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="peace-card">
+                        <span class="peace-emoji"><i class="fas fa-video" style="color:var(--accent-color);"></i></span>
+                        <h4>Kamera Sistemi</h4>
+                        <p>Tüm alanlar kamera ile izlenir. Veliler isterlerse canlı görüntü alabilir.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="peace-card">
+                        <span class="peace-emoji"><i class="fas fa-clipboard-check" style="color:var(--success);"></i></span>
+                        <h4>Günlük Rapor</h4>
+                        <p>Her gün sonunda ödev durumu, davranış ve etkinlik raporu veliye iletilir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAYAÇLAR -->
+    <section class="counter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="7">0</span>
+                        <span class="counter-text">Saatlik Günlük Program</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="12">0</span>
+                        <span class="counter-text">Kişilik Grup Mevcudu</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="5">0</span>
+                        <span class="counter-text">Gün Haftalık Program</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="4">0</span>
+                        <span class="counter-text">Farklı Aktivite Alanı</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AVANTAJLAR -->
+    <section class="advantages-section">
+        <div class="container">
+            <div class="section-title text-center">
+                <span>NEDEN YILDIZ KURS ETÜT?</span>
+                <h2>After School Avantajları</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="advantage-item">
+                        <div class="advantage-icon"><i class="fas fa-apple-alt"></i></div>
+                        <div>
+                            <h4>Besleyici Yemek</h4>
+                            <p>Diyetisyen onaylı menülerle hazırlanan hijyenik yemek servisi. Alerjisi olan öğrenciler için özel menü.</p>
+                        </div>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon"><i class="fas fa-bus-alt"></i></div>
+                        <div>
+                            <h4>Kapıdan Kapıya Servis</h4>
+                            <p>Okuldan kursa, kurstan eve güvenli ve sigortalı servis araçlarıyla ulaşım.</p>
+                        </div>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div>
+                            <h4>Deneyimli Rehber Öğretmenler</h4>
+                            <p>Sınıf öğretmenliği mezunu, ilkokul pedagojisine hakim rehber kadro.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="advantage-item">
+                        <div class="advantage-icon"><i class="fas fa-palette"></i></div>
+                        <div>
+                            <h4>Zengin Aktivite Programı</h4>
+                            <p>Drama, resim, müzik, satranç, kodlama ve el becerisi atölyeleri ile dengeli gelişim.</p>
+                        </div>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon"><i class="fas fa-chart-line"></i></div>
+                        <div>
+                            <h4>Akademik Takip</h4>
+                            <p>Aylık ilerleme raporu, yazılı hazırlık desteği ve veli görüşmeleri ile sürekli takip.</p>
+                        </div>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>Esnek Alım Saati</h4>
+                            <p>17:00 ile 19:00 arası esnek veli teslim saati. Mesai saatlerinize uygun planlama.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -323,52 +554,49 @@
     </section>
 
     <!-- CTA -->
-    <section class="cta-banner">
+    <section class="cta-section">
         <div class="container">
-            <h2>Çocuğunuzun Geleceğini Birlikte Şekillendirelim</h2>
-            <p>Hemen arayın, eğitim danışmanlarımız size özel program önerisi sunsun.</p>
-            <div class="cta-btns">
-                <a href="tel:03123460633" class="btn-white"><i class="fas fa-phone-alt"></i> 0312 346 06 33</a>
-                <a href="https://wa.me/905324790668?text=Merhaba%2C%20%C4%B0lkokul%20Et%C3%BCt%20Sistemi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="btn-outline-white"><i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz</a>
+            <h2>Çocuğunuz Güvende, Siz Huzurlu</h2>
+            <p>Okul sonrası için en doğru adres. Ücretsiz deneme günü ile ortamı tanıyın, çocuğunuz karar versin.</p>
+            <div>
+                <a onclick="openModal()" class="btn btn-primary btn-lg" style="cursor:pointer;">ÜCRETSİZ DENEME GÜNÜ</a>
+                <a href="https://wa.me/905324790668?text=Merhaba%2C%20ilkokul%20et%C3%BCt%20program%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="btn btn-outline-white btn-lg"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
             </div>
         </div>
     </section>
 
-    <!-- RANDEVU FORMU -->
-    <section class="py-80 form-section">
+    <!-- SSS -->
+    <section class="faq-section">
         <div class="container">
-            <div class="form-wrapper">
-                <h3>Randevu & Kayıt Formu</h3>
-                <p>Formu doldurun, eğitim danışmanımız sizi en kısa sürede arasın.</p>
-                <form action="https://formspree.io/f/mlgppdze" method="POST">
-                    <input type="hidden" name="program" value="İlkokul Etüt Sistemi">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" name="isim" class="form-control" placeholder="Adınız Soyadınız" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="telefon" class="form-control" placeholder="Telefon Numaranız" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" name="ogrenci_adi" class="form-control" placeholder="Öğrenci Adı Soyadı">
-                        </div>
-                        <div class="form-group">
-                            <select name="sinif" class="form-control">
-                                <option value="">Sınıf Seçiniz</option>
-                                <option value="1.Sınıf">1. Sınıf</option>
-                                <option value="2.Sınıf">2. Sınıf</option>
-                                <option value="3.Sınıf">3. Sınıf</option>
-                                <option value="4.Sınıf">4. Sınıf</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="not" class="form-control" rows="4" placeholder="Eklemek istediğiniz notlar..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100 btn-lg">FORMU GÖNDER</button>
-                </form>
+            <div class="section-title text-center">
+                <span>SIK SORULAN SORULAR</span>
+                <h2>Etüt Programı Hakkında</h2>
+            </div>
+            <div style="max-width:800px;margin:0 auto;">
+                <div class="accordion-item">
+                    <div class="accordion-header"><span>Hangi sınıf düzeyleri kabul ediliyor?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="accordion-content"><div class="accordion-body">İlkokul etüt programımız 1. sınıftan 4. sınıfa kadar tüm ilkokul öğrencilerine açıktır. Her sınıf düzeyi kendi grubu içinde çalışır, karma yaş grubu oluşturulmaz.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header"><span>Servis hizmeti hangi bölgeleri kapsıyor?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="accordion-content"><div class="accordion-body">Servis hizmetimiz Yenimahalle, Batıkent, Demetevler, Ostim, Şentepe ve çevre mahallelerini kapsar. Güzergah bilgisi için kayıt öncesi detaylı bilgi verilmektedir. Servis araçları sigortalı ve kameralıdır.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header"><span>Yemekte ne tür menüler çıkıyor?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="accordion-content"><div class="accordion-body">Haftalık menümüz çorba, ana yemek, pilav/makarna, salata ve meyveden oluşur. Menüler dönemsel olarak güncellenir. Gıda alerjisi veya özel diyet gerektiren öğrenciler için alternatif menü hazırlanır.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header"><span>Çocuğumu akşam kaça kadar alabilirim?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="accordion-content"><div class="accordion-body">Standart program 18:00'de sona erer, ancak 19:00'a kadar esnek alım imkanı mevcuttur. Geç alım durumunda çocuğunuz güvenli bir şekilde rehber öğretmen gözetiminde bekler.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header"><span>Hafta sonları da etüt var mı?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="accordion-content"><div class="accordion-body">Standart etüt programı hafta içi 5 gün uygulanmaktadır. Hafta sonu programı şu an için aktif değildir, ancak dönemsel etkinlik ve atölye çalışmaları Cumartesi günleri düzenlenebilmektedir.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header"><span>Ücretsiz deneme günü nasıl işliyor?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="accordion-content"><div class="accordion-body">Kayıt öncesi 1 tam gün ücretsiz deneme imkanı sunuyoruz. Çocuğunuz bir günlüğüne programa katılır, yemek yer, etkinliklere dahil olur ve ortamı tanır. Herhangi bir kayıt zorunluluğu yoktur, karar tamamen size aittir.</div></div>
+                </div>
             </div>
         </div>
     </section>
@@ -376,101 +604,101 @@
     <!-- FOOTER -->
     <footer class="footer-area">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-widget">
-                    <h3>Hakkımızda</h3>
-                    <p>Yıldız Kurs, eğitimde kaliteyi ve öğrenci başarısını ilke edinmiş Ankara'nın öncü eğitim kurumlarından biridir.</p>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/p/Y%C4%B1ld%C4%B1z-Kurs-Ankara-61575208704331/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://instagram.com/yildizkursankara" target="_blank"><i class="fab fa-instagram"></i></a>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <h3>Hakkımızda</h3>
+                        <p style="line-height:1.8;">Yıldız Kurs, eğitimde kaliteyi ve öğrenci başarısını ilke edinmiş, Ankara'nın öncü eğitim kurumlarından biridir. Modern sınıflarımız, teknolojik altyapımız ve uzman kadromuzla geleceği inşa ediyoruz.</p>
+                        <div class="top-bar-social" style="margin-top:20px;">
+                            <a href="https://www.facebook.com/p/Y%C4%B1ld%C4%B1z-Kurs-Ankara-61575208704331/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://instagram.com/yildizkursankara" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="footer-widget">
-                    <h3>Programlar</h3>
-                    <ul class="footer-links">
-                        <li><a href="etut.html"><i class="fas fa-angle-right"></i> İlkokul Etüt Sistemi</a></li>
-                        <li><a href="lgs.html"><i class="fas fa-angle-right"></i> LGS Hazırlık</a></li>
-                        <li><a href="ozel-ders.html"><i class="fas fa-angle-right"></i> Özel Ders</a></li>
-                        <li><a href="kgs.html"><i class="fas fa-angle-right"></i> KGS 2028</a></li>
-                        <li><a href="yaz-okulu.html"><i class="fas fa-angle-right"></i> Yaz Okulu</a></li>
-                        <li><a href="deneme.html"><i class="fas fa-angle-right"></i> Deneme Kulübü</a></li>
-                    </ul>
+                <div class="col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <h3>Hızlı Menü</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-angle-right"></i> Anasayfa</a></li>
+                            <li><a href="hakkimizda.html"><i class="fas fa-angle-right"></i> Hakkımızda</a></li>
+                            <li><a href="index.html#gallery"><i class="fas fa-angle-right"></i> Galeri</a></li>
+                            <li><a href="sss.html"><i class="fas fa-angle-right"></i> S.S.S.</a></li>
+                            <li><a href="index.html#contact"><i class="fas fa-angle-right"></i> İletişim</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-widget">
-                    <h3>İletişim</h3>
-                    <ul class="footer-contact">
-                        <li><i class="fas fa-map-marker-alt"></i><span>Aşağı Yahyalar Mah. 994 Cad. No:6/A Yenimahalle/ANKARA</span></li>
-                        <li><i class="fas fa-phone-alt"></i><span>0312 346 06 33</span></li>
-                        <li><i class="fas fa-envelope"></i><span>bilgi@yildizkurs.com</span></li>
-                    </ul>
+                <div class="col-lg-3 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <h3>Programlar</h3>
+                        <ul class="footer-links">
+                            <li><a href="lgs.html"><i class="fas fa-angle-right"></i> LGS Hazırlık</a></li>
+                            <li><a href="ozel-ders.html"><i class="fas fa-angle-right"></i> Özel Ders</a></li>
+                            <li><a href="deneme.html"><i class="fas fa-angle-right"></i> Deneme Kulübü</a></li>
+                            <li><a href="etut.html"><i class="fas fa-angle-right"></i> Etüt Sistemi</a></li>
+                            <li><a href="yaz-okulu.html"><i class="fas fa-angle-right"></i> Yaz Okulu</a></li>
+                            <li><a href="kgs.html"><i class="fas fa-angle-right"></i> KGS 2028</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <h3>İletişim</h3>
+                        <ul class="footer-contact">
+                            <li><i class="fas fa-map-marker-alt"></i><a href="https://www.google.com/maps/search/?api=1&query=Aşağı+Yahyalar+Mah.+994+Cad.+No:6/A+Yenimahalle+Ankara" target="_blank" style="color:#aab0c6;">Aşağı Yahyalar Mah. 994 Cad. No:6/A Yenimahalle / ANKARA</a></li>
+                            <li><i class="fas fa-phone-alt"></i><a href="tel:03123460633" style="color:#aab0c6;">0312 346 06 33</a></li>
+                            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/905324790668" target="_blank" style="color:#25d366;">0532 479 06 68</a></li>
+                            <li><i class="fas fa-envelope"></i><a href="mailto:yildizkursankara@gmail.com" style="color:#aab0c6;">yildizkursankara@gmail.com</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="copyright-area">
-            <div class="container">
-                <div class="copyright-inner">
-                    <p>&copy; 2026 Yıldız Kurs Eğitim Kurumları. Tüm Hakları Saklıdır.</p>
-                    <p style="font-size:0.8rem; opacity:0.6;">Designed by Enterprise AI</p>
-                </div>
-            </div>
-        </div>
+        <div class="copyright-area"><div class="container"><div class="row align-items-center"><div class="col-md-6" style="text-align:left;"><p>&copy; 2025 Yıldız Kurs Eğitim Kurumları. Tüm Hakları Saklıdır.</p></div></div></div></div>
     </footer>
 
-    <!-- WHATSAPP & RANDEVU -->
-    <a href="https://wa.me/905324790668?text=Merhaba%2C%20Y%C4%B1ld%C4%B1z%20Kurs%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <div class="randevu-float" onclick="openModal()">
-        <i class="fas fa-calendar-check"></i>
-    </div>
+    <a href="https://wa.me/905324790668" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <div class="randevu-float" onclick="openModal()"><i class="fas fa-calendar-check"></i></div>
+    <div class="scroll-top-btn" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
 
-    <!-- MODAL -->
     <div id="kayitModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <div class="text-center mb-20">
-                <h3 style="color:var(--primary-color);">ERKEN KAYIT FIRSATI</h3>
-                <p>Formu doldurun, eğitim danışmanlarımız size özel indirimlerle dönüş yapsın.</p>
+            <div class="text-center mb-30">
+                <h3 style="color:var(--primary-color);">İLKOKUL ETÜT KAYDI</h3>
+                <p>Formu doldurun, ücretsiz deneme günü ve fiyat bilgisi için dönüş yapalım.</p>
             </div>
-            <form action="https://formspree.io/f/mlgppdze" method="POST" onsubmit="setTimeout(closeModal, 1000)">
-                <input type="hidden" name="program" value="İlkokul Etüt Sistemi - Modal">
+            <form action="https://formspree.io/f/mlgppdze" method="POST" onsubmit="setTimeout(closeModal,1000)">
+                <div class="form-group"><input type="text" name="isim" class="form-control" placeholder="Veli Adı Soyadı" required></div>
+                <div class="form-group"><input type="tel" name="telefon" class="form-control" placeholder="Telefon Numaranız" required></div>
                 <div class="form-group">
-                    <input type="text" name="isim" class="form-control" placeholder="Adınız Soyadınız" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" name="telefon" class="form-control" placeholder="Telefon Numaranız" required>
-                </div>
-                <div class="form-group">
-                    <select name="sinif" class="form-control">
-                        <option value="">Sınıf Seçiniz</option>
-                        <option value="1.Sınıf">1. Sınıf</option>
-                        <option value="2.Sınıf">2. Sınıf</option>
-                        <option value="3.Sınıf">3. Sınıf</option>
-                        <option value="4.Sınıf">4. Sınıf</option>
+                    <select name="program" class="form-control">
+                        <option value="İlkokul etüt" selected>İlkokul Etüt Sistemi</option>
+                        <option value="LGS">LGS Hazırlık</option>
+                        <option value="Ozel-ders">Özel Ders</option>
+                        <option value="Deneme-kulubu">Deneme Kulübü</option>
+                        <option value="kgs-2028">KGS 2028</option>
+                        <option value="YAZ okulu">Yaz Okulu</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <textarea name="not" class="form-control" rows="3" placeholder="Notunuz..."></textarea>
-                </div>
+                <div class="form-group"><textarea name="not" class="form-control" rows="3" placeholder="Çocuğunuzun sınıfı, okul adı ve servis ihtiyacı..."></textarea></div>
                 <button type="submit" class="btn btn-primary w-100">BENİ ARAYIN</button>
             </form>
         </div>
     </div>
 
     <script>
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        mobileToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            const icon = mobileToggle.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-
-        const modal = document.getElementById('kayitModal');
-        function openModal() { modal.style.display = 'block'; }
-        function closeModal() { modal.style.display = 'none'; }
-        window.onclick = function(e) { if (e.target == modal) closeModal(); }
+        window.addEventListener('load',function(){var l=document.getElementById('loader-wrapper');l.style.opacity='0';setTimeout(function(){l.style.display='none'},500)});
+        var scrollTicking=false,scrollTopBtn=document.querySelector('.scroll-top-btn'),counterSection=document.querySelector('.counter-section'),counters=document.querySelectorAll('.counter-number'),counted=false;
+        window.addEventListener('scroll',function(){if(!scrollTicking){requestAnimationFrame(function(){var s=window.scrollY||window.pageYOffset;if(s>100)scrollTopBtn.classList.add('active');else scrollTopBtn.classList.remove('active');if(!counted&&counterSection&&s+window.innerHeight>counterSection.offsetTop+100){counters.forEach(function(c){var t=+c.getAttribute('data-target'),d=2000,st=t/(d/20),cur=0;var ti=setInterval(function(){cur+=st;if(cur>=t){c.innerText=t;clearInterval(ti)}else c.innerText=Math.ceil(cur)},20)});counted=true}scrollTicking=false});scrollTicking=true}},{passive:true});
+        var mobileToggle=document.querySelector('.mobile-toggle'),navMenu=document.querySelector('.nav-menu');
+        mobileToggle.addEventListener('click',function(){navMenu.classList.toggle('active');var i=mobileToggle.querySelector('i');if(navMenu.classList.contains('active')){i.classList.remove('fa-bars');i.classList.add('fa-times')}else{i.classList.remove('fa-times');i.classList.add('fa-bars')}});
+        document.querySelectorAll('.accordion-header').forEach(function(a){a.addEventListener('click',function(){var it=this.parentElement,act=it.classList.contains('active');document.querySelectorAll('.accordion-item').forEach(function(i){i.classList.remove('active')});if(!act)it.classList.add('active')})});
+        var modal=document.getElementById('kayitModal');function openModal(){modal.style.display='block'}function closeModal(){modal.style.display='none'}
+        window.onclick=function(e){if(e.target==modal)closeModal()};
+        function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'})}
+        document.querySelectorAll('.dropdown .dropdown-toggle').forEach(function(t){t.addEventListener('click',function(e){if(window.innerWidth<=991){e.preventDefault();this.closest('.dropdown').classList.toggle('mobile-dropdown-open')}})});
+        document.addEventListener('focusin',function(e){if(e.target.matches&&e.target.matches('input,textarea,select'))e.target.style.borderColor='var(--secondary-color)'},{passive:true});
+        document.addEventListener('focusout',function(e){if(e.target.matches&&e.target.matches('input,textarea,select')&&e.target.value==='')e.target.style.borderColor='#e9ecef'},{passive:true});
     </script>
 </body>
 </html>
