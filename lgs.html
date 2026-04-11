@@ -430,110 +430,190 @@
                 <span>HAFTALIK PROGRAM</span>
                 <h2>Örnek Ders Çizelgesi</h2>
             </div>
-            <div class="schedule-table-wrap">
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Saat</th>
-                            <th>Pazartesi</th>
-                            <th>Salı</th>
-                            <th>Çarşamba</th>
-                            <th>Perşembe</th>
-                            <th>Cuma</th>
-                            <th>Cumartesi</th>
-                            <th>Pazar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>09:00 – 09:40</td>
-                            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                            <td><span class="schedule-badge badge-ing">İngilizce</span></td>
-                        </tr>
-                        <tr>
-                            <td>09:50 – 10:30</td>
-                            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                            <td><span class="schedule-badge badge-ing">İngilizce</span></td>
-                        </tr>
-                        <tr>
-                            <td>10:40 – 11:20</td>
-                            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                            <td><span class="schedule-badge badge-mat">Matematik</span></td>
-                        </tr>
-                        <tr>
-                            <td>11:30 – 12:10</td>
-                            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                            <td><span class="schedule-badge badge-mat">Matematik</span></td>
-                        </tr>
-                        <tr>
-                            <td>12:20 – 13:00</td>
-                            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                            <td><span class="schedule-badge badge-fen">Fen Bilimleri</span></td>
-                        </tr>
-                        <tr>
-                            <td>13:10 – 13:50</td>
-                            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                            <td><span class="schedule-badge" style="background:#e9ecef;color:#666;">Ö. Arası</span></td>
-                            <td><span class="schedule-badge badge-fen">Fen Bilimleri</span></td>
-                        </tr>
-                        <tr>
-                            <td>13:50 – 14:30</td>
-                            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                            <td><span class="schedule-badge badge-mat">Matematik</span></td>
-                            <td><span class="schedule-badge" style="background:#e9ecef;color:#666;">Ö. Arası</span></td>
-                        </tr>
-                        <tr>
-                            <td>14:30 – 15:10</td>
-                            <td>-</td><td>-</td><td>-</td><td>-</td>
-                            <td><span class="schedule-badge badge-dnm">Deneme S.</span></td>
-                            <td><span class="schedule-badge badge-mat">Matematik</span></td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>15:20 – 16:00</td>
-                            <td>-</td>
-                            <td><span class="schedule-badge badge-tur">Türkçe</span></td>
-                            <td><span class="schedule-badge badge-fen">Fen Bilimleri</span></td>
-                            <td><span class="schedule-badge badge-mat">Matematik</span></td>
-                            <td><span class="schedule-badge badge-dnm">Deneme S.</span></td>
-                            <td><span class="schedule-badge badge-sos">İnkılap</span></td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>16:10 – 16:50</td>
-                            <td>-</td>
-                            <td><span class="schedule-badge badge-tur">Türkçe</span></td>
-                            <td><span class="schedule-badge badge-fen">Fen Bilimleri</span></td>
-                            <td><span class="schedule-badge badge-mat">Matematik</span></td>
-                            <td><span class="schedule-badge badge-dnm">Deneme S.</span></td>
-                            <td><span class="schedule-badge badge-sos">İnkılap</span></td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>17:00 – 17:40</td>
-                            <td>-</td><td>-</td><td>-</td><td>-</td>
-                            <td><span class="schedule-badge badge-dnm">Deneme S.</span></td>
-                            <td><span class="schedule-badge badge-tur">Türkçe</span></td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>17:50 – 18:30</td>
-                            <td>-</td><td>-</td><td>-</td><td>-</td>
-                            <td><span class="schedule-badge badge-dnm">Deneme S.</span></td>
-                            <td><span class="schedule-badge badge-tur">Türkçe</span></td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>18:40 – 19:20</td>
-                            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
+            
+            <div class="modern-schedule">
+                <div class="schedule-tabs">
+                    <button class="tab-btn active" onclick="openDay(event, 'day-sali')">Salı</button>
+                    <button class="tab-btn" onclick="openDay(event, 'day-carsamba')">Çarşamba</button>
+                    <button class="tab-btn" onclick="openDay(event, 'day-persembe')">Perşembe</button>
+                    <button class="tab-btn" onclick="openDay(event, 'day-cuma')">Cuma</button>
+                    <button class="tab-btn" onclick="openDay(event, 'day-cumartesi')">Cumartesi</button>
+                    <button class="tab-btn" onclick="openDay(event, 'day-pazar')">Pazar</button>
+                </div>
+
+                <div id="day-sali" class="tab-content active">
+                    <div class="schedule-list">
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 17:00 – 17:40</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-tur">Türkçe</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 17:50 – 18:30</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-tur">Türkçe</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="day-carsamba" class="tab-content" style="display:none;">
+                    <div class="schedule-list">
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 17:00 – 17:40</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-fen">Fen Bilimleri</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 17:50 – 18:30</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-fen">Fen Bilimleri</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="day-persembe" class="tab-content" style="display:none;">
+                    <div class="schedule-list">
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 17:00 – 17:40</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-mat">Matematik</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 17:50 – 18:30</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-mat">Matematik</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="day-cuma" class="tab-content" style="display:none;">
+                    <div class="schedule-list">
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 15:20 – 16:00</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-dnm">Deneme Sınavı</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 16:10 – 16:50</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-dnm">Deneme Sınavı</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 17:00 – 17:40</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-dnm">Deneme Sınavı</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 17:50 – 18:30</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-dnm">Deneme Sınavı</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="day-cumartesi" class="tab-content" style="display:none;">
+                    <div class="schedule-list">
+                        <div class="schedule-list-item" style="background:var(--bg-white); border-color:var(--border-color);">
+                            <div class="sli-time"><i class="fas fa-utensils" style="color:#666;"></i> 13:50 – 14:30</div>
+                            <div class="sli-lesson"><span class="schedule-badge" style="background:#e9ecef;color:#666;">Öğle Arası</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 14:30 – 15:10</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-tur">Türkçe</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 15:20 – 16:00</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-tur">Türkçe</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 16:10 – 16:50</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-mat">Matematik</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 17:00 – 17:40</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-mat">Matematik</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 17:50 – 18:30</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-sos">İnkılap</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 18:40 – 19:20</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-sos">İnkılap</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="day-pazar" class="tab-content" style="display:none;">
+                    <div class="schedule-list">
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 09:00 – 09:40</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-fen">Fen Bilimleri</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 09:50 – 10:30</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-fen">Fen Bilimleri</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 10:40 – 11:20</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-tur">Türkçe</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 11:30 – 12:10</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-tur">Türkçe</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 12:20 – 13:00</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-mat">Matematik</span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                            <div class="sli-time"><i class="far fa-clock"></i> 13:10 – 13:50</div>
+                            <div class="sli-lesson"><span class="schedule-badge badge-mat">Matematik</span></div>
+                        </div>
+                        <div class="schedule-list-item" style="background:var(--bg-white); border-color:var(--border-color);">
+                            <div class="sli-time"><i class="fas fa-utensils" style="color:#666;"></i> 13:50 – 14:30</div>
+                            <div class="sli-lesson"><span class="schedule-badge" style="background:#e9ecef;color:#666;">Öğle Arası</span></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <p style="text-align:center;margin-top:20px;font-size:.85rem;color:var(--text-light);">
-                <i class="fas fa-info-circle" style="color:var(--secondary-color);"></i> Program, dönem ihtiyaçlarına göre güncellenebilir. Detaylı bilgi için iletişime geçiniz.
+                <i class="fas fa-info-circle" style="color:var(--secondary-color);"></i> Sadece ders olan saatler gösterilmektedir.
             </p>
         </div>
+
+        <style>
+            /* YENİ PROGRAM TASARIMI CSS'İ */
+            .modern-schedule { max-width: 800px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid var(--border-color); }
+            .schedule-tabs { display: flex; overflow-x: auto; background: var(--bg-light); border-bottom: 2px solid var(--border-color); }
+            .schedule-tabs::-webkit-scrollbar { height: 4px; }
+            .schedule-tabs::-webkit-scrollbar-thumb { background: var(--secondary-color); border-radius: 10px; }
+            .tab-btn { flex: 1; min-width: 110px; padding: 18px 10px; border: none; background: transparent; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: .95rem; color: var(--text-light); cursor: pointer; transition: var(--transition-normal); border-bottom: 3px solid transparent; text-transform: uppercase; letter-spacing: .5px; }
+            .tab-btn:hover { color: var(--primary-color); background: rgba(0,0,0,0.02); }
+            .tab-btn.active { color: var(--secondary-color); border-bottom-color: var(--secondary-color); background: #fff; }
+            .tab-content { padding: 30px; animation: fadeInUp .4s ease; }
+            .schedule-list { display: flex; flex-direction: column; gap: 15px; }
+            .schedule-list-item { display: flex; align-items: center; justify-content: space-between; padding: 18px 25px; background: var(--bg-light); border-radius: 8px; border-left: 4px solid var(--secondary-color); transition: transform .2s, box-shadow .2s; }
+            .schedule-list-item:hover { transform: translateX(5px); background: #fff; box-shadow: var(--shadow-md); border-left-color: var(--primary-color); }
+            .sli-time { font-weight: 700; color: var(--primary-color); display: flex; align-items: center; gap: 10px; font-size: 1.05rem; }
+            .sli-time i { color: var(--secondary-color); font-size: 1.2rem; }
+            .sli-lesson .schedule-badge { font-size: .9rem; padding: 6px 15px; }
+            @media(max-width: 576px) { 
+                .schedule-list-item { flex-direction: column; align-items: flex-start; gap: 12px; padding: 15px; } 
+                .tab-content { padding: 20px 15px; }
+                .tab-btn { padding: 15px 10px; font-size: .85rem; min-width: 90px; }
+            }
+        </style>
+
+        <script>
+            // SEKME DEĞİŞTİRME MANTIĞI
+            function openDay(evt, dayName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tab-content");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                    tabcontent[i].classList.remove("active");
+                }
+                tablinks = document.getElementsByClassName("tab-btn");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(dayName).style.display = "block";
+                document.getElementById(dayName).classList.add("active");
+                evt.currentTarget.className += " active";
+            }
+        </script>
     </section>
 
     <!-- ═══════════ SAYAÇLAR ═══════════ -->
