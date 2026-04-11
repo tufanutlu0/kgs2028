@@ -327,25 +327,28 @@
         }, 50 * Math.min(index, 20));
     }
 
-    // Sırayla fotoğraf yükleme
+    // Sırayla fotoğraf yükleme (Hata Toleranslı)
+    var failCount = 0; // Hata sayacı
+    var maxFails = 3;  // Peş peşe kaç boşluğu tolere edeceğini belirliyoruz (İstersen bu sayıyı artırabilirsin)
+
     function loadImage(index) {
         var src = 'img/galeri-' + index + '.jpg';
         var img = new Image();
         
         img.onload = function() {
+            failCount = 0; // Başarılı yüklemede sayacı sıfırla
             galleryImages.push(src);
             createGalleryItem(src, galleryImages.length - 1);
             totalCountEl.textContent = galleryImages.length;
-            // Sonraki fotoğrafı dene
             loadImage(index + 1);
         };
         
         img.onerror = function() {
-            // .jpg bulunamadı, .jpeg dene
             var srcJpeg = 'img/galeri-' + index + '.jpeg';
             var img2 = new Image();
             
             img2.onload = function() {
+                failCount = 0;
                 galleryImages.push(srcJpeg);
                 createGalleryItem(srcJpeg, galleryImages.length - 1);
                 totalCountEl.textContent = galleryImages.length;
@@ -353,11 +356,11 @@
             };
             
             img2.onerror = function() {
-                // .png dene
                 var srcPng = 'img/galeri-' + index + '.png';
                 var img3 = new Image();
                 
                 img3.onload = function() {
+                    failCount = 0;
                     galleryImages.push(srcPng);
                     createGalleryItem(srcPng, galleryImages.length - 1);
                     totalCountEl.textContent = galleryImages.length;
@@ -365,20 +368,24 @@
                 };
                 
                 img3.onerror = function() {
-                    // Hiçbir format bulunamadı — tarama bitti
-                    galleryLoading.style.display = 'none';
+                    // Hiçbir format bulunamadı -> Sayacı artır
+                    failCount++;
                     
-                    if (galleryImages.length === 0) {
-                        galleryGrid.innerHTML = '<p style="text-align:center;color:var(--text-light);grid-column:1/-1;padding:40px 0;">Henüz fotoğraf eklenmemiş.</p>';
+                    if (failCount >= maxFails) {
+                        // Tolere edilebilir sınırı aştık, taramayı bitir
+                        galleryLoading.style.display = 'none';
+                        if (galleryImages.length === 0) {
+                            galleryGrid.innerHTML = '<p style="text-align:center;color:var(--text-light);grid-column:1/-1;padding:40px 0;">Henüz fotoğraf eklenmemiş.</p>';
+                        }
+                    } else {
+                        // Sınır aşılmadıysa bir sonraki numarayı denemeye devam et
+                        loadImage(index + 1);
                     }
                 };
-                
                 img3.src = srcPng;
             };
-            
             img2.src = srcJpeg;
         };
-        
         img.src = src;
     }
 
