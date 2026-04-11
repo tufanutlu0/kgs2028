@@ -65,6 +65,13 @@ var yorumlarData = [
     },
 
     // ═══════════ EK YORUMLAR (20 adet) ═══════════
+   {
+        isim: "Kemal S.",
+        sinif: "8. Sınıf Velisi",
+        program: "Özel Ders",
+        puan: 5,
+        yorum: "Ankara Yenimahalle özel ders arayışımızda en doğru kararı burayı seçerek verdik. Kalabalık dershaneler yerine, üniversiteye hazırlık sürecinde aldığımız birebir YKS matematik özel dersleri sayesinde kızımın netleri inanılmaz yükseldi. Hocalarımızın ilgisi muazzam."
+    },
     {
         isim: "Elif B.",
         sinif: "8. Sınıf Velisi",
