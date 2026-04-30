@@ -693,6 +693,66 @@
         document.querySelectorAll('.dropdown .dropdown-toggle').forEach(function(t){t.addEventListener('click',function(e){if(window.innerWidth<=991){e.preventDefault();this.closest('.dropdown').classList.toggle('mobile-dropdown-open')}})});
         document.addEventListener('focusin',function(e){if(e.target.matches&&e.target.matches('input,textarea,select'))e.target.style.borderColor='var(--secondary-color)'},{passive:true});
         document.addEventListener('focusout',function(e){if(e.target.matches&&e.target.matches('input,textarea,select')&&e.target.value==='')e.target.style.borderColor='#e9ecef'},{passive:true});
-    </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "İlkokul Etüt Programı",
+  "description": "1-4. sınıf öğrencilerine yönelik okul sonrası ödev takibi, konu tekrarı ve rehberlik programı. Servis ve yemek imkanı dahil. Çalışan aileler için tam günlük after school sistemi.",
+  "url": "https://www.yildizkurs.com.tr/etut.html",
+  "provider": {
+    "@type": "EducationalOrganization",
+    "@id": "https://www.yildizkurs.com.tr/#organization",
+    "name": "Yıldız Kurs",
+    "url": "https://www.yildizkurs.com.tr",
+    "logo": "https://www.yildizkurs.com.tr/img/yildiz-kurs.png",
+    "telephone": "+90-312-346-06-33",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Aşağı Yahyalar Mahallesi 994. Cadde No:6/A",
+      "addressLocality": "Yenimahalle",
+      "addressRegion": "Ankara",
+      "postalCode": "06200",
+      "addressCountry": "TR"
+    }
+  },
+  "educationalLevel": "1, 2, 3, 4. Sınıf",
+  "courseMode": "onsite",
+  "inLanguage": "tr",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student"
+  },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "onsite",
+    "location": {
+      "@type": "Place",
+      "name": "Yıldız Kurs",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Aşağı Yahyalar Mahallesi 994. Cadde No:6/A",
+        "addressLocality": "Yenimahalle",
+        "addressRegion": "Ankara",
+        "addressCountry": "TR"
+      }
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "category": "İlkokul Etüt",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.yildizkurs.com.tr/etut.html"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://www.yildizkurs.com.tr/"},
+      {"@type": "ListItem", "position": 2, "name": "Programlar", "item": "https://www.yildizkurs.com.tr/"},
+      {"@type": "ListItem", "position": 3, "name": "İlkokul Etüt", "item": "https://www.yildizkurs.com.tr/etut.html"}
+    ]
+  }
+}
+</script>
 </body>
 </html>
