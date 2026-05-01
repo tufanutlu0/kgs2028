@@ -526,7 +526,9 @@
         document.querySelectorAll('.dropdown .dropdown-toggle').forEach(function(t){t.addEventListener('click',function(e){if(window.innerWidth<=991){e.preventDefault();this.closest('.dropdown').classList.toggle('mobile-dropdown-open')}})});
         document.addEventListener('focusin',function(e){if(e.target.matches&&e.target.matches('input,textarea,select'))e.target.style.borderColor='var(--secondary-color)'},{passive:true});
         document.addEventListener('focusout',function(e){if(e.target.matches&&e.target.matches('input,textarea,select')&&e.target.value==='')e.target.style.borderColor='#e9ecef'},{passive:true});
-   <script type="application/ld+json">
+   </script>
+        
+        <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "AboutPage",
